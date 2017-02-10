@@ -117,6 +117,9 @@ a:hover {
 }
 .section {
     padding-bottom: 24px;
+    max-width: 1000px;
+    display: table;
+    margin: 0 auto;
 }
 
 .link {
