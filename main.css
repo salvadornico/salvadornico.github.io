@@ -124,7 +124,7 @@ a:hover {
 
 .link {
     display: inline-table;
-    padding: 4px;
+    margin: 4px;
     width: 60px;
     text-decoration: none;
 }
