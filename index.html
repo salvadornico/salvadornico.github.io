@@ -5,6 +5,8 @@
         <link rel="icon" type="image/png" href="icon.png" />
         <link rel="stylesheet" href="main.css" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+        
+        <!-- Responsive design tweaks -->
         <base target="_blank">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
@@ -43,6 +45,8 @@
                 }
             }
         </style>
+        
+        <!--Google Analytics-->
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,10 +55,18 @@
 
   ga('create', 'UA-92196324-1', 'auto');
   ga('send', 'pageview');
-
         </script>
+        
+        <!-- Animate On Scroll Library-->
+        <link rel="stylesheet" href="aos-master/dist/aos.css" />
+        <script src="aos-master/dist/aos.js"></script>
+        
     </head>
     <body>
+        <script>
+            AOS.init();
+        </script>
+        
         <div class="container">
             <div class="splash">
                 <img class="header-image" src="portrait.png" alt="That's me!">
@@ -80,12 +92,12 @@
         <div class="divider"></div>
         <div class="content">
             <h2 class="subhead">Things I've Dabbled In</h2>
-            <div class="section">
+            <div data-aos="fade-up" class="section">
                 <ul class="list">
                   <li>Cool tech and tinkering with it
                       <ul>
                           <li>I've spent a lot of time optimizing and figuring out the best ways for me to use all the tech around me, particularly on Android devices <span class="comment">#nexusmasterrace #apkplz</span></li>
-                          <li>Currently learning how to code in Java/HTML/CSS for web and/or Android (I built this site from scratch!)</li>
+                          <li>Currently learning Java/HTML/CSS for web and/or Android (I built this site from scratch!)</li>
                       </ul>
                   </li>
                   <li>Rollerblading
@@ -108,7 +120,7 @@
             </div>
             <div class="spacer"></div>
             <h2 class="subhead">Things That Inspire Me</h2>
-            <div class="section">
+            <div data-aos="fade-up" class="section">
                 <ul class="list">
                   <li>Stories behind great ideas</li>
                   <li>Elegant solutions to awkward problems</li>
@@ -117,7 +129,7 @@
             </div>
             <div class="spacer"></div>
             <h2 class="subhead">Things I'm Enjoying Lately</h2>
-            <div class="thing-box">
+            <div data-aos="fade-up" class="thing-box">
                 <div class="thing">
                     <a href="https://www.tested.com/">
                         <img class="thing-pic" src="things/tested-logo.png">
@@ -179,9 +191,10 @@
                     </a>
                 </div>
             </div>
+            <div class="divider"></div>
         </div>
-        <div class="divider"></div>
-        <div class="content" id="contacts">
+
+        <div data-aos="fade" class="content" id="contacts">
             <h1 class="header">My Work</h1>
             <div class="link-list">
                 <a href="https://github.com/salvadornico"><img src="icons/github.png" class="link" alt="GitHub" width="60px"></a>
@@ -202,7 +215,9 @@
                 <a href="Nico_Salvador-CV2017.pdf">Resum&#233;</a>
             </p>
             <div class="divider"></div>
-            <p>&copy; Nico Salvador 2017</p>
+            <p data-aos="fade" data-aos-duration="800" class="copyrights">
+                &copy; 2017 Nico Salvador
+            </p>    
         </div>
     </body>
 </html>
