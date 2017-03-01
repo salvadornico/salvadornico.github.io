@@ -124,3 +124,15 @@ a:hover {
     width: 100px;
     text-decoration: none;
 }
+
+.music {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 80px;
+}
+
+.music:hover {
+    height: 280px;
+}
