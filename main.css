@@ -128,7 +128,7 @@ a:hover {
 .music {
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 20px;
     width: 350px;
     height: 80px;
 }
