@@ -3,7 +3,7 @@
     -moz-box-sizing:border-box;
     -ms-box-sizing:border-box;
     box-sizing:border-box;
-    background-color: #E8EAF6;
+    background-color: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -54,6 +54,7 @@ a:hover {
 
 .subhead {
     background-color: transparent;
+    padding: 14px;
 }
 
 .linkbox {
@@ -102,7 +103,6 @@ a:hover {
 
 .list {
     margin: 0 auto;
-    display: inline-block;
     text-align: left;
     line-height: 150%;
 }
@@ -135,4 +135,8 @@ a:hover {
 
 .music:hover {
     height: 280px;
+}
+
+#highlighted {
+    background-color: #F5F5F5;
 }
