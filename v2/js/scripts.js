@@ -14,8 +14,8 @@ var thingsList = [
 ]
 
 for (i = 0; i < thingsList.length; ++i) {    
-    thingBox.innerHTML += '<div class="thing col s12 m6 l4 xl3"><a href="' + thingsList[i][0] +
+    thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + thingsList[i][0] +
         '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + thingsList[i][1] + 
-        '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align">' + thingsList[i][2] +
+        '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align black-text">' + thingsList[i][2] +
         '</h5></div></div></a></div>'
 }

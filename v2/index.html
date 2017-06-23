@@ -6,7 +6,8 @@
         <link rel="icon" type="image/png" href="images/icon.png" />
         
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <!-- Materialize CSS -->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -31,20 +32,20 @@
         </script>
         
     </head>
-    <body>
+    <body class="indigo darken-1">
         
         <div class="container">
             
-            <div class="row">
+            <div class="row banner">
                 
                 <div class="col s12 l5">
-                    <div class="card large">
+                    <div class="card large hoverable">
                         <div class="card-image">
                             <img src="images/portrait.png" alt="That's me!">
                         </div>
                         <div class="card-content">
-                            <h4>All Sorts Of Things</h4>
-                            <p>
+                            <h1 class="black-text">All Sorts Of Things</h1>
+                            <p class="black-text">
                                 Nico Salvador<br>
                                 Quezon City, Philippines
                             </p>
@@ -52,8 +53,8 @@
                     </div>
                 </div>
                 
-                <div class="col s12 l7">                
-                    <h1>Hi, I'm Nico.</h1>                 
+                <div class="col s12 l7 sidebox">              
+                    <h2>Hi, I'm Nico.</h2>                 
                     <p>
                         I'm into all sorts of things.<br>
                         Maybe we can work on something together?
@@ -61,23 +62,24 @@
                     <p>
                         I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
                     </p>
-                    <h2>
-                        <a href="#contacts" target="_parent">Let's get in touch!</a>
-                    </h2>                
+                    
+                    <a href="#contacts" target="_parent">           <h3>Let's get in touch!</h3>
+                    </a>
+                                    
                 </div>
                 
             </div> <!-- /row -->
             
-            <h2 class="center-align">Things I've Dabbled In</h2>
-            <div class="row">
+            <h3 class="center-align section-header">Things I've Dabbled In</h3>
+            <div class="row page-section">
                 
                 <div class="col s12">
                     <ul class="collapsible popout" data-collapsible="accordion">
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text">
                                 Cool tech and tinkering with it
                             </div>
-                            <div class="collapsible-body">
+                            <div class="collapsible-body black-text">
                                 <p>
                                     I've spent a lot of time optimizing and figuring out the best ways for me to use all the tech around me, particularly on Android devices <span class="comment">#nexusmasterrace #apkplz</span>
                                 </p>
@@ -112,7 +114,12 @@
                         </li>
                         <li>
                             <div class="collapsible-header">
-                                Football (playing for fun with Xavier Alumni FC and supporting FC Barcelona with Penya Blaugrana Manila)
+                                Football
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                Playing for fun with Xavier Alumni FC and supporting FC Barcelona with Penya Blaugrana Manila  
+                                </p>
                             </div>
                         </li>
                         <li>
@@ -131,8 +138,8 @@
 
             </div> <!-- /row-->
 
-            <h2 class="center-align">Things That Inspire Me</h2>
-            <div class="row">
+            <h3 class="center-align section-header">Things That Inspire Me</h3>
+            <div class="row page-section">
 
                 <div class="col s12 m4">
                     Stories behind great ideas
@@ -146,12 +153,12 @@
 
             </div> <!-- /row-->
 
-            <h2 class="center-align">Things I'm Enjoying Lately</h2>
-            <div class="row" id="thingBox">
+            <h3 class="center-align section-header">Things I'm Enjoying Lately</h3>
+            <div class="row page-section" id="thingBox">
 
             </div> <!-- /thingBox row-->
 
-            <h1 class="center-align">My Work</h1>
+            <h3 class="center-align section-header">My Work</h3>
             <div class="row" id="contacts">
                 <div class="center-align">
                     <a href="https://github.com/salvadornico"><img src="images/icons/github.png" class="link" alt="GitHub"></a>
@@ -159,7 +166,7 @@
                     <a href="https://vimeo.com/roller4life"><img src="images/icons/vimeo.png" class="link" alt="Vimeo"></a>
                 </div>
 
-                <h1 class="center-align">Get In Touch</h1>
+                <h4 class="center-align">Get In Touch</h4>
 
                 <div class="center-align">
                     <a href="mailto:salvador.nico@gmail.com"><img src="images/icons/email.png" class="link" alt="Email"></a>
@@ -171,7 +178,10 @@
                     <a href="https://www.pinterest.com/roller4life/"><img src="images/icons/pinterest.png" class="link" alt="Pinterest"></a>
                 </div>
 
-                <p class="center-align"><a href="Nico_Salvador-CV2017.pdf">Resum&#233;</a></p>
+                <a class="waves-effect waves-light btn" href="Nico_Salvador-CV2017.pdf" id="resumeLink">
+                    <i class="material-icons left">library_books</i>
+                    Resum&#233;
+                </a>
 
             </div>
             
