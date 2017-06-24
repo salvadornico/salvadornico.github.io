@@ -13,7 +13,7 @@ var thingsList = [
     ['https://www.androidpolice.com', 'android-police.png', 'Android Police.com']
 ]
 
-var options = [
+var scrollfireOptions = [
     {selector: '#collapsible-1', offset: 300, callback: function() {
       $('.collapsible').collapsible('open', 0);
     } },
@@ -35,15 +35,15 @@ var options = [
 ]
 
 $(document).ready(function(){
-      $('.parallax').parallax();
+    // initializing Materialize plugins
+    $('.parallax').parallax();    
+    Materialize.scrollFire(scrollfireOptions);
     
-    Materialize.scrollFire(options);
-    
+    // generating Thing cards
     for (i = 0; i < thingsList.length; ++i) {    
-        thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + thingsList[i][0] +
-            '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + thingsList[i][1] + 
-            '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align black-text">' + thingsList[i][2] +
-            '</h5></div></div></a></div>'
+        thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + 
+            thingsList[i][0] + '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + 
+            thingsList[i][1] + '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align black-text">' + thingsList[i][2] + '</h5></div></div></a></div>'
     }
 });
 

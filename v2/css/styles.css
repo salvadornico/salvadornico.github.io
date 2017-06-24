@@ -5,16 +5,17 @@
     box-sizing:border-box;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-}
-
-html {
     position: relative;
-    min-height: 100%;
 }
 
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 a:visited {
@@ -28,6 +29,8 @@ a:visited {
     }
 }
 
+/* TODO: Bigger body copy font size, smaller for thing card headers for mobile */
+
 .banner {
     padding: 30px auto 50px;
 }
@@ -38,22 +41,34 @@ a:visited {
     font-size: 36px;
 }
 
-.banner .sidebox {
+.sidebox {
     padding-top: 30px;
     padding-left: 40px;
 }
 
-.banner .sidebox a:link,
+.sidebox a:link,
 .thing a:link {
     color: #000;
 }
 
-.section-header {
+.section-header,
+.collapsible-header {
     font-family: 'Montserrat', sans-serif;
 }
 
 .page-section {
     margin-bottom: 60px;
+}
+
+@media (max-width: 600px) {
+    .banner p,
+    .inspiration {
+        font-size: 16px;
+    }
+    
+    .collapsible {
+        font-size: 20px;
+    }
 }
 
 .thing {
@@ -73,9 +88,6 @@ a:visited {
     width: 180px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
+footer p {
+    line-height: 60px;
 }
