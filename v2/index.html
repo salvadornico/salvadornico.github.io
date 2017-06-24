@@ -33,67 +33,90 @@
         
     </head>
     <body class="indigo darken-1">
-        
-        <div class="container">
             
-            <div class="row banner">
+        <div class="container row banner">
+
+            <div class="col s12 l5">
+                <div class="card large hoverable">
+                    <div class="card-image">
+                        <img src="images/portrait.png" alt="That's me!">
+                    </div>
+                    <div class="card-content">
+                        <h1 class="black-text">All Sorts Of Things</h1>
+                        <p class="black-text">
+                            Nico Salvador<br>
+                            Quezon City, Philippines
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 l7 sidebox">
                 
-                <div class="col s12 l5">
-                    <div class="card large hoverable">
-                        <div class="card-image">
-                            <img src="images/portrait.png" alt="That's me!">
-                        </div>
-                        <div class="card-content">
-                            <h1 class="black-text">All Sorts Of Things</h1>
-                            <p class="black-text">
-                                Nico Salvador<br>
-                                Quezon City, Philippines
-                            </p>
-                        </div>
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Hi, I'm Nico.</h2>                 
+                        <p>
+                            I'm into all sorts of things.<br>
+                            Maybe we can work on something together?
+                        </p>
+                        <p>
+                            I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
+                        </p>
+                        <h3>Let's get in touch!</h3>
                     </div>
                 </div>
                 
-                <div class="col s12 l7 sidebox">              
-                    <h2>Hi, I'm Nico.</h2>                 
-                    <p>
-                        I'm into all sorts of things.<br>
-                        Maybe we can work on something together?
-                    </p>
-                    <p>
-                        I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
-                    </p>
-                    
-                    <a href="#contacts" target="_parent">           <h3>Let's get in touch!</h3>
-                    </a>
-                                    
+                <div class="row">
+                    <div class="col s6">
+                        <a class="waves-effect waves-dark btn-large red darken-4 hoverable" href="#contacts" target="_parent">
+                            <i class="material-icons left">library_books</i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+
+                    <div class="col s6">
+                        <a class="waves-effect waves-dark btn-large yellow hoverable" href="Nico_Salvador-CV2017.pdf">
+                            <i class="material-icons left black-text">library_books</i>
+                            <span class="black-text">Resum&#233;</span>
+                        </a>
+                    </div>
                 </div>
                 
-            </div> <!-- /row -->
+            </div> <!-- /sidebox -->
+
+        </div> <!-- /row -->
+        
+        <div class="parallax-container">
+            <div class="parallax"><img src="images/totoro.jpg"></div>
+        </div>
+        
+        <div class="section container">
             
             <h3 class="center-align section-header">Things I've Dabbled In</h3>
             <div class="row page-section">
                 
                 <div class="col s12">
-                    <ul class="collapsible popout" data-collapsible="accordion">
+                    <ul class="collapsible popout" data-collapsible="expandable">
                         <li>
-                            <div class="collapsible-header black-text">
+                            <div class="collapsible-header black-text" id="collapsible-1">
                                 Cool tech and tinkering with it
                             </div>
-                            <div class="collapsible-body black-text">
-                                <p>
-                                    I've spent a lot of time optimizing and figuring out the best ways for me to use all the tech around me, particularly on Android devices <span class="comment">#nexusmasterrace #apkplz</span>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
+                                    I've spent a lot of time optimizing and figuring out the best ways for me to use all the tech around me, particularly on Android devices <span class="grey-text text-darken-1">#nexusmasterrace #apkplz</span>
                                 </p>
-                                <p>
+                                <p class="black-text">
                                     Currently learning Java, HTML, CSS, Javascript, and Python
                                 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text" id="collapsible-2">
                                 Rollerblading
                             </div>
-                            <div class="collapsible-body">
-                                <p>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
                                     Been at it on and off since 2002 <a href="https://vimeo.com/31335546">(see my lame 2011-era video footage)</a>
                                     <br>
                                     Founded <a href="https://www.facebook.com/ElevateSkate/">Elevate Skate Co.</a> a while back (but it's closed now)
@@ -103,31 +126,41 @@
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text" id="collapsible-3">
                                 Cars, and high performance driving in particular
                             </div>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
+                                [TRS footage?]  
+                                </p>
+                            </div>
                         </li>
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text" id="collapsible-4">
                                 Cooking and eating all kinds of food from around the world
                             </div>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
+                                [Insert IG photos or something of things I've cooked]  
+                                </p>
+                            </div>
                         </li>
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text"  id="collapsible-5">
                                 Football
                             </div>
-                            <div class="collapsible-body">
-                                <p>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
                                 Playing for fun with Xavier Alumni FC and supporting FC Barcelona with Penya Blaugrana Manila  
                                 </p>
                             </div>
                         </li>
                         <li>
-                            <div class="collapsible-header">
+                            <div class="collapsible-header black-text"  id="collapsible-6">
                                 Working at a marketing/PR/events agency for over four years
                             </div>
-                            <div class="collapsible-body">
-                                <p>
+                            <div class="collapsible-body white">
+                                <p class="black-text">
                                     I've organized an <a href="https://youtu.be/hyKqQg_m8Ds">indie-orchestra mashup concert</a>, <a href="https://www.youtube.com/watch?v=iqqKuvqXKj4">football tournaments</a>, and an <a href="http://www.interaksyon.com/interaktv/kia-puts-up-contest-for-pba-team-name-15-finalists-to-win-us-trip-to-watch-nba-game">online contest to name a professional basketball team</a>, among many other less interesting things
                                 </p>
                             </div>
@@ -157,37 +190,45 @@
             <div class="row page-section" id="thingBox">
 
             </div> <!-- /thingBox row-->
+            
+        </div> <!-- /section-->
+        
+        <div class="parallax-container">
+            <div class="parallax"><img src="images/totoro.jpg"></div>
+        </div>
+        
+        <div class="section container">
 
             <h3 class="center-align section-header">My Work</h3>
             <div class="row" id="contacts">
                 <div class="center-align">
-                    <a href="https://github.com/salvadornico"><img src="images/icons/github.png" class="link" alt="GitHub"></a>
-                    <a href="http://codepen.io/salvadornico"><img src="images/icons/codepen.png" class="link" alt="CodePen"></a>
-                    <a href="https://vimeo.com/roller4life"><img src="images/icons/vimeo.png" class="link" alt="Vimeo"></a>
+                    <a href="https://github.com/salvadornico"><img src="images/icons/github.png" class="hoverable" alt="GitHub"></a>
+                    <a href="http://codepen.io/salvadornico"><img src="images/icons/codepen.png" class="hoverable" alt="CodePen"></a>
+                    <a href="https://vimeo.com/roller4life"><img src="images/icons/vimeo.png" class="hoverable" alt="Vimeo"></a>
                 </div>
 
                 <h4 class="center-align">Get In Touch</h4>
 
                 <div class="center-align">
-                    <a href="mailto:salvador.nico@gmail.com"><img src="images/icons/email.png" class="link" alt="Email"></a>
-                    <a href="https://www.linkedin.com/in/salvadornico"><img src="images/icons/linkedin.png" class="link" alt="LinkedIn"></a>
-                    <a href="https://plus.google.com/u/0/+NicoSalvador"><img src="images/icons/google.png" class="link" alt="Google+"></a>
-                    <a href="https://www.instagram.com/nicolrnzo"><img src="images/icons/instagram.png" class="link" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/salvador.nico"><img src="images/icons/fb.png" class="link" alt="Facebook"></a>
-                    <a href="https://twitter.com/nicoLorenzooo"><img src="images/icons/twitter.png" class="link" alt="Twitter"></a>
-                    <a href="https://www.pinterest.com/roller4life/"><img src="images/icons/pinterest.png" class="link" alt="Pinterest"></a>
+                    <a href="mailto:salvador.nico@gmail.com"><img src="images/icons/email.png" class="hoverable" alt="Email"></a>
+                    <a href="https://www.linkedin.com/in/salvadornico"><img src="images/icons/linkedin.png" class="hoverable" alt="LinkedIn"></a>
+                    <a href="https://plus.google.com/u/0/+NicoSalvador"><img src="images/icons/google.png" class="hoverable" alt="Google+"></a>
+                    <a href="https://www.instagram.com/nicolrnzo"><img src="images/icons/instagram.png" class="hoverable" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/salvador.nico"><img src="images/icons/fb.png" class="hoverable" alt="Facebook"></a>
+                    <a href="https://twitter.com/nicoLorenzooo"><img src="images/icons/twitter.png" class="hoverable" alt="Twitter"></a>
+                    <a href="https://www.pinterest.com/roller4life/"><img src="images/icons/pinterest.png" class="hoverable" alt="Pinterest"></a>
                 </div>
 
-                <a class="waves-effect waves-light btn" href="Nico_Salvador-CV2017.pdf" id="resumeLink">
-                    <i class="material-icons left">library_books</i>
-                    Resum&#233;
+                <a class="waves-effect waves-dark btn-large yellow hoverable" href="Nico_Salvador-CV2017.pdf" id="resumeLink">
+                    <i class="material-icons left black-text">library_books</i>
+                    <span class="black-text">Resum&#233;</span>
                 </a>
 
             </div>
             
-        </div> <!-- container -->
+        </div> <!-- /section-->
             
-        <footer>
+        <footer class="red darken-4">
             <p class="center-align">
                 &copy; 2017 Nico Salvador
             </p>

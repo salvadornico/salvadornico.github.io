@@ -13,9 +13,37 @@ var thingsList = [
     ['https://www.androidpolice.com', 'android-police.png', 'Android Police.com']
 ]
 
-for (i = 0; i < thingsList.length; ++i) {    
-    thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + thingsList[i][0] +
-        '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + thingsList[i][1] + 
-        '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align black-text">' + thingsList[i][2] +
-        '</h5></div></div></a></div>'
-}
+var options = [
+    {selector: '#collapsible-1', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 0);
+    } },
+    {selector: '#collapsible-2', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 1);
+    } },
+    {selector: '#collapsible-3', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 2);
+    } },
+    {selector: '#collapsible-4', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 3);
+    } },
+    {selector: '#collapsible-5', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 4);
+    } },
+    {selector: '#collapsible-5', offset: 300, callback: function() {
+      $('.collapsible').collapsible('open', 5);
+    } },
+]
+
+$(document).ready(function(){
+      $('.parallax').parallax();
+    
+    Materialize.scrollFire(options);
+    
+    for (i = 0; i < thingsList.length; ++i) {    
+        thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + thingsList[i][0] +
+            '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + thingsList[i][1] + 
+            '" alt ="' + thingsList[i][2] + '"></div><div class="card-content"><h5 class="center-align black-text">' + thingsList[i][2] +
+            '</h5></div></div></a></div>'
+    }
+});
+
