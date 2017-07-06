@@ -18,10 +18,6 @@ main {
     flex: 1 0 auto;
 }
 
-a:visited {
-    color: #000;
-}
-
 @media (min-width: 992px) {
     .banner {
         height: 100vh;
@@ -44,7 +40,16 @@ a:visited {
     padding-left: 40px;
 }
 
-.sidebox a:link,
+.sidebox a {
+    display: block;
+    margin: 5px auto;
+    min-width: 100px;
+}
+
+.parallax-container {
+    height: 400px;
+}
+
 .thing a:link {
     color: #000;
 }
@@ -52,6 +57,18 @@ a:visited {
 .section-header,
 .collapsible-header {
     font-family: 'Montserrat', sans-serif;
+}
+
+.collapsible .collapsible-body {
+    padding: 5px 30px 30px;
+}
+
+.collapsible-body * {
+    color: #000;
+}
+
+.collapsible-body a {
+    color: #03a9f4;
 }
 
 .page-section {
@@ -71,6 +88,29 @@ a:visited {
 
 .thing {
     width: 200px;
+}
+
+#thingBox {
+    margin-bottom: 20px;
+}
+
+#music {
+    height: 100px;
+}
+
+#music iframe {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+}
+
+#contacts .row {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 #contacts img {
