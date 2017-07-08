@@ -18,7 +18,7 @@ main {
     flex: 1 0 auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 601px) {
     .banner {
         height: 100vh;
         padding-top: 10vh;
@@ -27,6 +27,13 @@ main {
 
 .banner {
     padding: 30px auto 50px;
+}
+
+.valign {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 .banner .card h1 {
@@ -86,8 +93,9 @@ main {
     }
 }
 
-.inspiration {
-    height: 150px;
+#inspirations {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .thing {
@@ -111,14 +119,7 @@ main {
 }
 
 #contacts {
-    min-height: 450px;
-}
-
-#contacts .row {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    min-height: 600px;
 }
 
 #contacts img {
@@ -136,4 +137,10 @@ main {
 
 footer p {
     line-height: 60px;
+}
+
+@media (max-width: 600px) {
+    footer p {
+        line-height: 30px;
+    }
 }
