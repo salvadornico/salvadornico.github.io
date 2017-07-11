@@ -13,20 +13,7 @@ $(document).ready(function(){
             thingsList[i][0] + '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + 
             thingsList[i][1] + '" alt ="' + thingsList[i][2] + '"></div><div class="card-content valign-wrapper center-align"><h5 class="black-text">' + thingsList[i][2] + '</h5></div></div></a></div>'
     }
-    matchHeights()
 })
-
-function matchHeights() {
-  $('.inspiration').each(function() {
-    var elements = $(this).find('.height');
-    var height = 0;
-    elements.css('min-height','0px');
-    elements.each(function() {
-      height = $(this).height() > height ? $(this).height() : height;
-    });
-    elements.css('min-height',height+'px');
-  });
-};
 
 var thingsList = [
     ['https://www.tested.com', 'tested-logo.png', 'Tested.com'],

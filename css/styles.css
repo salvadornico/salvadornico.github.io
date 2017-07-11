@@ -94,8 +94,20 @@ main {
 }
 
 #inspirations {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
     flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#inspirations .col {
+    flex: 1;
+}
+
+.inspiration {
+    height: 100%;
 }
 
 .thing {
