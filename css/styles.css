@@ -18,23 +18,24 @@ main {
 	flex: 1 0 auto;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
 	.banner {
-		height: 100vh;
 		padding-top: 10vh;
+	}
+
+	.valign {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
 	}
 }
 
 .banner {
+	min-height: 100vh;
 	padding: 30px auto 50px;
 }
 
-.valign {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 100%;
-}
 
 .banner .card h1 {
 	font-family: 'Montserrat', sans-serif;
@@ -78,6 +79,10 @@ main {
 	color: #03a9f4;
 }
 
+.collapsible-body .video-container {
+	margin: 5px auto;
+}
+
 .page-section {
 	margin-bottom: 60px;
 }
@@ -103,7 +108,13 @@ main {
 }
 
 #inspirations .col {
-	flex: 1;
+	margin: 10px auto;
+}
+
+@media (min-width: 600px) {
+	#inspirations .col {
+		flex: 1;
+	}
 }
 
 .inspiration {
