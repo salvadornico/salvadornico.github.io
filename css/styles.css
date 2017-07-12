@@ -163,7 +163,7 @@ main {
 }
 
 #scrollToTopFAB i {
-	line-height: inherit;
+	line-height: 50px;
 }
 
 footer p {
