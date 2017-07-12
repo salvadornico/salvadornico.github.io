@@ -10,6 +10,9 @@
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Font Awesome -->
+      	<script src="https://use.fontawesome.com/8a3d0f859b.js"></script>
 		
 		<!-- Materialize CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
@@ -22,6 +25,9 @@
 		
 		<!-- Materialize JS  -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js" defer></script>
+
+		<!-- Smooth Scroll -->
+		<script src="js/smooth-scroll-master/dist/js/smooth-scroll.js"></script>
 
 		<!--Google Analytics-->
 		<script>
@@ -38,7 +44,7 @@
 	
 	<body class="indigo darken-1">
 			
-		<header class="container row banner">
+		<header class="container row banner" id="banner">
 
 			<div class="valign">
 
@@ -58,7 +64,7 @@
 							</p>
 						</div>
 
-					</div> <!-- /opening card -->
+					</div>
 
 				</div>
 
@@ -76,12 +82,12 @@
 							</p>
 							<h3>Let's get in touch!</h3>
 						</div>
-					</div> <!-- /intro text -->
+					</div>
 
 					<div class="row center-align">
 
 						<div class="col s12 m6">
-							<a class="waves-effect waves-dark btn-large red darken-4 hoverable" href="#contacts" target="_parent">
+							<a class="waves-effect waves-dark btn-large red darken-4 hoverable" href="#contacts" target="_parent" data-scroll id="scrollDownBtn">
 								<i class="material-icons left">chat_bubble</i>
 								<span>Contact Me</span>
 							</a>
@@ -149,8 +155,8 @@
 												<img src="https://instagram.fmnl8-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/14693650_1226332430742915_2680398392609210368_n.jpg" alt="Lego creation">
 											</a>                                 
 										
-									</div> <!-- /internal row -->
-								</div> <!-- /collapsible body row -->
+									</div>
+								</div>
 							</li>
 
 							<li>
@@ -295,6 +301,12 @@
 					&copy; 2017 Nico Salvador
 				</p>
 		</footer>
+
+		<div class="fixed-action-btn tooltipped" data-position="left" data-delay="50" data-tooltip="Back to top" id="FAB">
+			<a class="btn-floating btn-large yellow darken-3 scale-transition scale-out" id="scrollToTopFAB">
+  				<i class="fa fa-chevron-up" aria-hidden="true"></i>
+			</a>		
+		</div>
 		
 		<!-- Custom JS  -->
 		<script type="text/javascript" src="js/scripts.js" defer></script>

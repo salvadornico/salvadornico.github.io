@@ -147,6 +147,14 @@ main {
 	width: 180px;
 }
 
+#FAB {
+	bottom: 120px;
+}
+
+#scrollToTopFAB i {
+	line-height: inherit;
+}
+
 footer p {
 	line-height: 60px;
 }

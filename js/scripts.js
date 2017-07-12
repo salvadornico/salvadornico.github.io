@@ -1,13 +1,33 @@
-$(document).ready(function(){
+$(document).ready( function() {
 	var contacts = document.getElementById("contacts")
 	var contactsHeight = ($(window).height() - $('footer').height())
 	contacts.style.height = contactsHeight + "px"
 	
-	// initializing Materialize plugins
-	$('.parallax').parallax();
+	var anchor = document.querySelector("#contacts")
+	var toggle = document.querySelector("#scrollDownBtn")
+	var options = {
+		speed: 1400,
+		easing: 'easeOutQuint',
+		after: function (anchor, toggle) {
+			$("#scrollToTopFAB").addClass("scale-in")
+			setTimeout( function(){
+				$("#scrollToTopFAB").removeClass("scale-out scale-in")
+			}, 500)
+		}
+	}
+	$("#scrollDownBtn").click( function() {
+		smoothScroll.animateScroll(anchor, toggle, options)
+	})
+
+	$("#scrollToTopFAB").click( function() {
+		var anchor = document.querySelector("#banner")
+		smoothScroll.animateScroll(anchor)
+		$("#scrollToTopFAB").addClass("scale-out")
+	})
+
+	$('.parallax').parallax()
 	
 	var thingBox = document.getElementById('thingBox')
-	// generating Thing cards
 	for (i = 0; i < thingsList.length; ++i) {    
 		thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + 
 			thingsList[i][0] + '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + 
