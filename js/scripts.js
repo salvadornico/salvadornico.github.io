@@ -63,7 +63,7 @@ var thingsList = [
 	["https://www.tested.com", "tested-logo.png", "Tested.com"],
 	["http://www.garthstein.com/works/the-art-of-racing-in-the-rain", "racing_in_the_rain.jpg", "The Art of Racing in the Rain"],
 	["https://www.pri.org/programs/world-words", "wiw.jpg", "The World In Words"],
-	["http://wilderpeople.film", "wilderpeople.jpg", "Hunt For The Wilderpeople"],
+	["http://wilderpeople.film", "wilderpeople.jpg", "Hunt for the Wilderpeople"],
 	["https://www.theminimalists.com/etr", "etr.jpg", "Everything That Remains"],
 	["http://www.switchedonpop.com", "switched-on-pop.png", "Switched On Pop"],
 	["http://www.codemasters.com/game/dirt-4", "DiRT4.png", "DiRT 4"],
