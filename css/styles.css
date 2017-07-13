@@ -141,6 +141,14 @@ main {
 	max-width: 500px;
 }
 
+#video {
+	height: 550px;
+}
+
+#video video {
+	width: 100vw;
+}
+
 #contacts {
 	min-height: 600px;
 }
