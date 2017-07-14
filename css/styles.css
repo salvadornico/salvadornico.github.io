@@ -141,8 +141,16 @@ main {
 	max-width: 500px;
 }
 
-#video {
-	height: 550px;
+@media (max-width: 600px) {
+	#video {
+		height: 250px;
+	}	
+}
+
+@media (min-width: 992px) {
+	#video {
+		height: 550px;
+	}	
 }
 
 #video video {
