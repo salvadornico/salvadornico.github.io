@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio website of Nico Salvador",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvadornico/salvadornico.github.io.git"
+  },
+  "author": "Nico Salvador",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salvadornico/salvadornico.github.io/issues"
+  },
+  "homepage": "https://salvadornico.github.io",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^2.0.0"
+  }
+}
