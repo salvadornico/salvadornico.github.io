@@ -66,7 +66,7 @@ gulp.task('video', function() {
 })
 
 gulp.task('files', function() {
-	return gulp.src('app/files')
+	return gulp.src('app/files/**/*')
 		.pipe(gulp.dest('dist/files'))
 })
 
