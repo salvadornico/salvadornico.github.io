@@ -26,7 +26,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', function(callback) {
 	runSequence('clean:dist',
-		['useref', 'images', 'video'],
+		['useref', 'images', 'video', 'files'],
 		'autoprefixer',
 		callback
 	)
@@ -63,6 +63,11 @@ gulp.task('images', function() {
 gulp.task('video', function() {
 	return gulp.src('app/images/*.mp4')
 		.pipe(gulp.dest('dist/images'))
+})
+
+gulp.task('files', function() {
+	return gulp.src('app/files')
+		.pipe(gulp.dest('dist/files'))
 })
 
 gulp.task('clean:dist', function() {
