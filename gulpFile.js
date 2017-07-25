@@ -26,8 +26,8 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', function(callback) {
 	runSequence('clean:dist',
-		['useref', 'images', 'video', 'files'],
 		'autoprefixer',
+		['useref', 'images', 'video', 'files'],
 		callback
 	)
 })
