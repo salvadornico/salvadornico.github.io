@@ -23,10 +23,6 @@ var thingsList = [
 ]
 
 $(document).ready( function() {
-
-	var contacts = document.getElementById("contacts")
-	var contactsHeight = $(window).height() - $("footer").height()
-	contacts.style.height = contactsHeight + "px"
 	
 	var contactsAnchor = document.querySelector("#contacts")
 	var toggle = document.querySelector("#scrollDownBtn")

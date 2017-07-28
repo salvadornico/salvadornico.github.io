@@ -1,0 +1,27 @@
+* 
+	position: relative
+
+body
+	display: flex
+	min-height: 100vh
+	width: 100%
+	flex-direction: column
+
+main
+	flex: 1 0 auto
+	
+.valign
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	
+.halign
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	
+widthMobileOnly = '(max-width: 600px)'
+widthTabletUp = '(min-width: 600px)'
+widthTabletDown = '(max-width: 992px)'
+widthTabletOnly = widthTabletUp, widthTabletDown
+widthDesktopOnly = '(min-width: 992px)'

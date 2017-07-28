@@ -1,0 +1,159 @@
+@import "base"
+
+*
+	font-family: 'Open Sans', sans-serif
+	
+body	
+	color: #fff 		
+
+#banner
+	padding: 30px auto 50px
+	min-height: 100vh
+	@media widthTabletUp
+		padding-top: 10vh
+		& > div
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		.card
+			@media widthTabletDown
+				max-width: 60%
+				margin: 0 auto
+	.card-content
+		height: 100%
+		& > *
+			font-family: 'Montserrat', sans-serif
+			display: block
+			color: #000
+		h1
+			margin-top: 10px
+			font-size: 36px
+		h3
+			margin-top: 10px
+			font-size: 24px
+		div
+			position: absolute
+			bottom: 0
+			margin-bottom: 3%
+		a
+			display: inline-block
+			margin: auto 5px
+		i
+			color: #000
+			font-size: 1.7em
+
+.sidebox
+	padding-top: 30px
+	padding-left: 40px
+	a
+		display: block
+		margin: 5px auto
+		min-width: 100px
+
+.parallax-container
+	height: 400px
+
+.thing a:link
+	color: #000
+
+.section-header, .collapsible-header
+	font-family: 'Montserrat', sans-serif
+
+.collapsible
+	@media widthMobileOnly
+		font-size: 20px
+	.collapsible-body
+		padding: 5px 30px 30px
+		*
+			color: #000
+		a
+			color: #03a9f4
+		.video-container
+			margin: 5px auto
+
+.page-section
+	margin-bottom: 60px
+	
+#skillsList, #inspirations,
+	display: flex
+	overflow: hidden
+	flex-wrap: wrap
+	align-items: stretch
+	justify-content: center
+
+.tech-skill
+	flex: 1
+	height: 10vh
+	margin: 10px
+	@media widthTabletOnly
+		height: 7vh
+
+#inspirations .col
+	margin: 10px auto
+	@media widthTabletUp
+		flex: 1
+
+.inspiration
+	height: 100%
+	@media widthMobileOnly
+		font-size: 16px
+
+#thingBox
+	margin-bottom: 20px
+
+.thing
+	width: 200px
+
+#music
+	height: 100px
+	iframe
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		width: 80%
+		max-width: 500px
+
+#video
+	@media widthMobileOnly
+		height: 250px
+		margin-bottom: -100px
+	@media widthTabletOnly
+		height: 550px
+		margin-bottom: -250px
+	@media widthDesktopOnly
+		margin-bottom: 0
+	video
+		width: 100vw
+
+#contacts
+	height: 100vh
+	min-height: 600px
+	& > div
+		width: 100%
+	img
+		width: 80px
+		border-radius: 50%
+		@media widthMobileOnly
+			width: 60px
+
+#resumeLink
+	margin: 30px auto
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	width: 180px
+
+#FAB
+	bottom: 120px
+
+#scrollToTopFAB i
+	line-height: 50px
+
+footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	p
+		line-height: 60px	
+		@media widthMobileOnly
+			line-height: 30px
