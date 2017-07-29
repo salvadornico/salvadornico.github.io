@@ -1,26 +1,45 @@
-* {
-  position: relative;
-}
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
   width: 100%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 main {
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
-.valign {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.halign {
+.center-X {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.center-Y {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.center-XY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 * {
+  position: relative;
   font-family: 'Open Sans', sans-serif;
 }
 body {
@@ -37,7 +56,8 @@ body {
   #banner > div {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 #banner .card-content {
@@ -50,11 +70,11 @@ body {
 }
 #banner .card-content h1 {
   margin-top: 10px;
-  font-size: 36px;
+  font-size: 2em;
 }
 #banner .card-content h3 {
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 1.6em;
 }
 #banner .card-content div {
   position: absolute;
@@ -94,10 +114,8 @@ body {
 .collapsible-header {
   font-family: 'Montserrat', sans-serif;
 }
-@media (max-width: 600px) {
-  .collapsible {
-    font-size: 20px;
-  }
+.collapsible {
+  font-size: 1.2em;
 }
 .collapsible .collapsible-body {
   padding: 5px 30px 30px;
@@ -114,16 +132,7 @@ body {
 .page-section {
   margin-bottom: 60px;
 }
-#skillsList,
-#inspirations,
-display: flex {
-  overflow: hidden;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-}
 .tech-skill {
-  flex: 1;
   height: 10vh;
   margin: 10px;
 }
@@ -132,21 +141,9 @@ display: flex {
     height: 7vh;
   }
 }
-#inspirations .col {
-  margin: 10px auto;
-}
-@media (min-width: 600px) {
-  #inspirations .col {
-    flex: 1;
-  }
-}
 .inspiration {
-  height: 100%;
-}
-@media (max-width: 600px) {
-  .inspiration {
-    font-size: 16px;
-  }
+  margin: 10px auto;
+  font-size: 1.2em;
 }
 #thingBox {
   margin-bottom: 20px;
@@ -154,13 +151,13 @@ display: flex {
 .thing {
   width: 200px;
 }
+.thing span {
+  font-size: 1.5em;
+}
 #music {
   height: 100px;
 }
 #music iframe {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   width: 80%;
   max-width: 500px;
 }
@@ -204,14 +201,12 @@ display: flex {
   margin: 30px auto;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 180px;
 }
 #FAB {
   bottom: 120px;
-}
-#scrollToTopFAB i {
-  line-height: 50px;
 }
 footer {
   position: absolute;
@@ -219,10 +214,5 @@ footer {
   width: 100%;
 }
 footer p {
-  line-height: 60px;
-}
-@media (max-width: 600px) {
-  footer p {
-    line-height: 30px;
-  }
+  line-height: 2.4em;
 }

@@ -65,7 +65,7 @@ $(document).ready( function() {
 	for (i = 0; i < thingsList.length; ++i) {
 		thingBox.innerHTML += '<div class="thing col s6 m4 l3"><a href="' + 
 			thingsList[i][0] + '"><div class="card small hoverable"><div class="card-image"><img src="images/things/' + 
-			thingsList[i][1] + '" alt ="' + thingsList[i][2] + '"></div><div class="card-content valign-wrapper"><h5 class="black-text center-align">' + thingsList[i][2] + '</h5></div></div></a></div>'
+			thingsList[i][1] + '" alt ="' + thingsList[i][2] + '"></div><div class="card-content valign-wrapper"><span class="black-text">' + thingsList[i][2] + '</span></div></div></a></div>'
 	}
 
 	var skillsList = document.getElementById("skillsList")

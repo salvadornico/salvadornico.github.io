@@ -1,5 +1,8 @@
-* 
-	position: relative
+widthMobileOnly = '(max-width: 600px)'
+widthTabletUp = '(min-width: 600px)'
+widthTabletDown = '(max-width: 992px)'
+widthTabletOnly = widthTabletUp, widthTabletDown
+widthDesktopOnly = '(min-width: 992px)'
 
 body
 	display: flex
@@ -10,18 +13,23 @@ body
 main
 	flex: 1 0 auto
 	
-.valign
-	position: absolute
-	top: 50%
-	transform: translateY(-50%)
-	
-.halign
+.center-X
 	position: absolute
 	left: 50%
 	transform: translateX(-50%)
 	
-widthMobileOnly = '(max-width: 600px)'
-widthTabletUp = '(min-width: 600px)'
-widthTabletDown = '(max-width: 992px)'
-widthTabletOnly = widthTabletUp, widthTabletDown
-widthDesktopOnly = '(min-width: 992px)'
+.center-Y
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	
+.center-XY
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	
+.clearfix:after
+	content: ""
+	display: block
+	clear: both

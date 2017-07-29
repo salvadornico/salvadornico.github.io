@@ -31,6 +31,7 @@ gulp.task('browserSync', function() {
 gulp.task('styles-dev', function () {
   return gulp.src('app/css/styles.styl')
     .pipe(stylus())
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(gulp.dest('app/css'));
 })
 
