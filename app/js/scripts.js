@@ -1,14 +1,17 @@
 var techSkills = [
-	["HTML5", "html5.png"],
-	["CSS3", "css3.png"],
+	["HTML", "html5.png"],
+	["CSS", "css3.png"],
 	["Stylus", "stylus.png"],
 	["Javascript", "JS.png"],
 	["jQuery", "jquery.png"],
+	["Gulp", "gulp.png"],
 	["PHP", "php.png"],
 	["Laravel", "laravel.png"],
+	["Git", "git.png"],
+	["mySQL", "mysql.png"],
 	["Java", "java.png"],
-	["Kotlin", "kotlin.png"],
 	["Android", "android.png"],
+	["Kotlin", "kotlin.png"],
 	["Python", "python.png"],
 ]
 
@@ -73,6 +76,7 @@ $(document).ready( function() {
 	for (i = 0; i < techSkills.length; ++i) {
 		skillsList.innerHTML += '<img src="images/logos/' + techSkills[i][1] +
 			'" alt="' + techSkills[i][0] + '" class="tech-skill tooltipped" data-position="bottom" data-delay="50" data-tooltip="' + techSkills[i][0] + '">'
+		if (i == 6 && $(window).width() >= 992) { skillsList.innerHTML += "<br>" }
 	}
 	$('.tooltipped').tooltip({delay: 50})
 

@@ -80,9 +80,39 @@ body
 	@media widthTabletOnly
 		height: 7vh
 
-.inspiration
-	margin: 10px auto
-	font-size: 1.2em
+#projectBox
+	@media widthDesktopOnly
+		display: grid
+		grid-template-columns: 30% 40% 30%
+		grid-template-rows: 50% 50%
+		grid-template-areas: "first second fourth" "first third fourth"
+		grid-column-gap: 10px
+		grid-row-gap: 10px
+
+orders = first second third fourth
+colHeight = 400px
+for order, i in orders
+	#project-{i+1}
+		img
+			if i == 0 or i == 3
+				height: colHeight
+			else
+				height: (colHeight / 2 - 10)
+		display: block
+		grid-area: order
+		align-self: center
+		text-align: center
+
+#inspirations
+	@media widthTabletUp
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: auto
+		grid-column-gap: 10px	
+	.card-panel
+		font-size: 1.2em
+		span
+			text-align: center
 
 #thingBox
 	margin-bottom: 20px
