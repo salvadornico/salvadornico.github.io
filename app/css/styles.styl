@@ -82,17 +82,17 @@ body
 	@media widthDesktopOnly
 		display: grid
 		grid-template-columns: 30% 40% 30%
-		grid-template-rows: 50% 50%
-		grid-template-areas: "first second fourth" "first third fourth"
+		grid-template-rows: 2fr 1fr 1fr
+		grid-template-areas: "first first first" "second third fifth" "second fourth fifth"
 		grid-column-gap: 10px
 		grid-row-gap: 10px
 
-orders = first second third fourth
+orders = first second third fourth fifth
 colHeight = 400px
 for order, i in orders
 	#project-{i+1}
 		img
-			if i == 0 or i == 3
+			if i == 0 or i == 1 or i == 4
 				height: colHeight
 			else
 				height: (colHeight / 2 - 10)

@@ -126,8 +126,8 @@ body {
   #projectBox {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "first second fourth" "first third fourth";
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "first first first" "second third fifth" "second fourth fifth";
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
@@ -150,7 +150,7 @@ body {
   text-align: center;
 }
 #project-2 img {
-  height: 190px;
+  height: 400px;
 }
 #project-3 {
   display: block;
@@ -170,6 +170,16 @@ body {
   text-align: center;
 }
 #project-4 img {
+  height: 190px;
+}
+#project-5 {
+  display: block;
+  grid-area: fifth;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+}
+#project-5 img {
   height: 400px;
 }
 @media (min-width: 600px) {
