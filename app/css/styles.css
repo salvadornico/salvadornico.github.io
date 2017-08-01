@@ -14,25 +14,6 @@ main {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
-.center-X {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.center-Y {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.center-XY {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
 .clearfix:after {
   content: "";
   display: block;
@@ -220,6 +201,10 @@ body {
 #music iframe {
   width: 80%;
   max-width: 500px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media (max-width: 600px) {
   #video {
@@ -247,6 +232,10 @@ body {
 }
 #contacts > div {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 #contacts img {
   width: 80px;

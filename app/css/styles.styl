@@ -13,9 +13,7 @@ body
 	@media widthTabletUp
 		padding-top: 10vh
 		& > div
-			position: absolute
-			top: 50%
-			transform: translateY(-50%)
+			center Y absolute
 		.card
 			@media widthTabletDown
 				max-width: 60%
@@ -127,6 +125,7 @@ for order, i in orders
 	iframe
 		width: 80%
 		max-width: 500px
+		center X absolute
 
 #video
 	@media widthMobileOnly
@@ -145,6 +144,7 @@ for order, i in orders
 	min-height: 600px
 	& > div
 		width: 100%
+		center Y absolute
 	img
 		width: 80px
 		border-radius: 50%
@@ -153,9 +153,7 @@ for order, i in orders
 
 #resumeLink
 	margin: 30px auto
-	position: relative
-	left: 50%
-	transform: translateX(-50%)
+	center X relative
 	width: 180px
 
 #FAB
