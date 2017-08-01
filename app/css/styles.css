@@ -137,6 +137,7 @@ body {
   grid-area: first;
   -ms-flex-item-align: center;
       align-self: center;
+  justify-self: center;
   text-align: center;
 }
 #project-1 img {
@@ -147,6 +148,7 @@ body {
   grid-area: second;
   -ms-flex-item-align: center;
       align-self: center;
+  justify-self: center;
   text-align: center;
 }
 #project-2 img {
@@ -157,6 +159,7 @@ body {
   grid-area: third;
   -ms-flex-item-align: center;
       align-self: center;
+  justify-self: center;
   text-align: center;
 }
 #project-3 img {
@@ -167,6 +170,7 @@ body {
   grid-area: fourth;
   -ms-flex-item-align: center;
       align-self: center;
+  justify-self: center;
   text-align: center;
 }
 #project-4 img {
@@ -177,6 +181,7 @@ body {
   grid-area: fifth;
   -ms-flex-item-align: center;
       align-self: center;
+  justify-self: center;
   text-align: center;
 }
 #project-5 img {
