@@ -1,4 +1,4 @@
-@import "base"
+@require "base"
 
 *
 	position: relative
@@ -10,12 +10,12 @@ body
 #banner
 	padding: 30px auto 50px
 	min-height: 100vh
-	@media widthTabletUp
+	@media TabletUp
 		padding-top: 10vh
 		& > div
 			center Y absolute
 		.card
-			@media widthTabletDown
+			@media TabletDown
 				max-width: 60%
 				margin: 0 auto
 	.card-content
@@ -75,12 +75,12 @@ body
 .tech-skill
 	height: 10vh
 	margin: 10px
-	@media widthTabletOnly
+	@media TabletOnly
 		height: 7vh
 
 #projectBox
 	@supports (display: grid)
-		@media widthDesktopOnly
+		@media DesktopOnly
 			display: grid
 			grid-template-columns: 30% 40% 30%
 			grid-template-rows: 2fr 1fr 1fr
@@ -105,7 +105,7 @@ for order, i in orders
 
 #inspirations
 	@supports (display: grid)
-		@media widthTabletUp
+		@media TabletUp
 			display: grid
 			grid-template-columns: 1fr 1fr 1fr
 			grid-template-rows: auto
@@ -131,13 +131,13 @@ for order, i in orders
 		center X absolute
 
 #video
-	@media widthMobileOnly
+	@media MobileOnly
 		height: 250px
 		margin-bottom: -100px
-	@media widthTabletOnly
+	@media TabletOnly
 		height: 550px
 		margin-bottom: -250px
-	@media widthDesktopOnly
+	@media DesktopOnly
 		margin-bottom: 0
 	video
 		width: 100vw
@@ -151,7 +151,7 @@ for order, i in orders
 	img
 		width: 80px
 		border-radius: 50%
-		@media widthMobileOnly
+		@media MobileOnly
 			width: 60px
 
 #resumeLink
