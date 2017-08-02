@@ -79,13 +79,14 @@ body
 		height: 7vh
 
 #projectBox
-	@media widthDesktopOnly
-		display: grid
-		grid-template-columns: 30% 40% 30%
-		grid-template-rows: 2fr 1fr 1fr
-		grid-template-areas: "first first first" "second third fifth" "second fourth fifth"
-		grid-column-gap: 10px
-		grid-row-gap: 10px
+	@supports (display: grid)
+		@media widthDesktopOnly
+			display: grid
+			grid-template-columns: 30% 40% 30%
+			grid-template-rows: 2fr 1fr 1fr
+			grid-template-areas: "first first first" "second third fifth" "second fourth fifth"
+			grid-column-gap: 10px
+			grid-row-gap: 10px
 
 orders = first second third fourth fifth
 colHeight = 400px
@@ -103,11 +104,12 @@ for order, i in orders
 		text-align: center
 
 #inspirations
-	@media widthTabletUp
-		display: grid
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: auto
-		grid-column-gap: 10px	
+	@supports (display: grid)
+		@media widthTabletUp
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr
+			grid-template-rows: auto
+			grid-column-gap: 10px	
 	.card-panel
 		font-size: 1.2em
 		span
