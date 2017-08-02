@@ -13,9 +13,7 @@
 		max-width: 960px
 
 .row:before, .row:after
-	content: ""
-	display: block
-	clear: both
+	@extend .clearfix:after
 
 .col
 	float: left
