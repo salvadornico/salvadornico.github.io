@@ -117,20 +117,22 @@ body {
   height: 10vh;
   margin: 10px;
 }
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 992px) {
   .tech-skill {
     height: 7vh;
   }
 }
+@supports (display: grid) {
 @media (min-width: 992px) {
-  #projectBox {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-areas: "first first first" "second third fifth" "second fourth fifth";
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
+    #projectBox {
+      display: grid;
+      grid-template-columns: 30% 40% 30%;
+      grid-template-rows: 2fr 1fr 1fr;
+      grid-template-areas: "first first first" "second third fifth" "second fourth fifth";
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+    }
+}
 }
 #project-1 {
   display: block;
@@ -187,13 +189,15 @@ body {
 #project-5 img {
   height: 400px;
 }
+@supports (display: grid) {
 @media (min-width: 600px) {
-  #inspirations {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 10px;
-  }
+    #inspirations {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 10px;
+    }
+}
 }
 #inspirations .card-panel {
   font-size: 1.2em;
@@ -227,7 +231,7 @@ body {
     margin-bottom: -100px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 992px) {
   #video {
     height: 550px;
     margin-bottom: -250px;

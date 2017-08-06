@@ -1,0 +1,220 @@
+include partials/mixins.pug
+
+doctype html
+html(lang="en")
+	head
+		include partials/header.pug
+		title Nico Salvador
+		link(rel="icon" type="image/png" href="images/icon.png")
+		base(target="_blank")
+
+		+styles("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans")
+		+styles("https://fonts.googleapis.com/icon?family=Material+Icons")
+		+styles("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		+styles("css/styles.css")
+
+		+scripts("https://use.fontawesome.com/8a3d0f859b.js")
+		+scripts("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		+scripts("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+
+		// build:js js/main.min.js
+		+scripts("js/scripts.js")
+		+scripts("js/smooth-scroll-master/dist/js/smooth-scroll.js")
+		+scripts("js/google-analytics.js")
+		// endbuild
+		
+	body.indigo.darken-1
+		header#banner.container.row
+			div
+				.col.s12.l5
+					.card.large.hoverable
+						.card-image
+							img(src="images/portrait.png" alt="That's me!")
+						.card-content
+							h1 Nico Salvador
+							h3 Quezon City, Philippines
+							.center-align
+								a(href="https://github.com/salvadornico")
+									i.fa.fa-github(aria-hidden="true")
+								a(href="https://www.linkedin.com/in/salvadornico")
+									i.fa.fa-linkedin(aria-hidden="true")
+								a(href="https://www.facebook.com/salvador.nico")
+									i.fa.fa-facebook(aria-hidden="true")
+
+				.col.s12.l7.sidebox
+					.row
+						.col.s12
+							h2 Hi, I'm Nico.
+							p.
+								I'm into all sorts of things.<br>
+								Maybe we can work on something together?
+							p.
+								I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
+							h3 Let's get in touch!
+					.row.center-align
+						.col.s12.m6
+							a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-4.hoverable(href="#contacts" target="_parent" data-scroll)
+								i.material-icons.left chat_bubble
+								span Contact Me
+						.col.s12.m6
+							a.waves-effect.waves-light.btn-large.yellow.hoverable(href="Nico_Salvador-CV2017.pdf")
+								i.material-icons.left.black-text library_books
+								span.black-text Resum&#233;
+
+		main
+			.parallax-container
+				.parallax
+					img(src="images/header1.png" alt="Some sample Kotlin code I wrote")
+			
+			.section.container
+				h3.center-align.section-header Things I've Dabbled In
+				.row.page-section
+					.col.s12
+						ul.collapsible.popout(data-collapsible="expandable")
+							li
+								.collapsible-header.black-text#collapsible-1.
+									Software development
+								.collapsible-body.white
+
+									p.
+										I've always enjoyed tinkering with gadgets and poking around the deepest levels of settings in the software I use, so programming was a natural next step. I love the way it demands both the ability to solve problems creatively and then the application of those ideas in a logical and systematic fashion.
+									p.
+										I'm well-versed in HTML, CSS, Javascript, jQuery, PHP, Laravel, Git, and mySQL for web development. My preferred stack also includes Pug, Stylus, and Gulp. I also know a bit of Java for Android, and am currently learning Kotlin, Python, and webpack.
+
+									.row.center-align#skillsList
+										+techSkill("HTML", "html5.png")
+										+techSkill("CSS", "css3.png")
+										+techSkill("Pug", "pug.svg")
+										+techSkill("Stylus", "stylus.png")
+										+techSkill("Javascript", "JS.png")
+										+techSkill("jQuery", "jquery.png")
+										+techSkill("Gulp", "gulp.png")
+										+techSkill("PHP", "php.png")
+										+techSkill("Laravel", "laravel.png")
+										+techSkill("Git", "git.png")
+										+techSkill("mySQL", "mysql.png")
+										+techSkill("Java", "java.png")
+										+techSkill("Android", "android.png")
+										+techSkill("Kotlin", "kotlin.png")
+										+techSkill("Python", "python.png")
+										+techSkill("webpack", "webpack.svg")
+
+									h5 Links to some of my past projects:
+									.row#projectBox
+										a#project-1(href="http://whats-that-edit.herokuapp.com")
+											+portfolio("images/portfolio/whats-that-edit.png", "A site for sharing and indexing skate videos")
+										a#project-2(href="https://salvadornico.github.io/Tuitt/module-1/capstone1")
+											+portfolio("images/portfolio/leather-turf.png", "A Philippines Football League club reference site")
+										a#project-3(href="http://salvadornico.x10host.com/f1vis")
+											+portfolio("images/portfolio/monoposto.png", "Formula 1 data visualisation site")
+										a#project-4(href="https://salvadornico.github.io/Brain-Train/web")
+											+portfolio("images/portfolio/brain-train.png", "A simple memory game")
+										a#project-5(href="https://github.com/salvadornico/Rock-Paper-Scissors")
+											+portfolio("images/portfolio/lizard-spock.png", "A basic Rock-Paper-Scissors-Lizard-Spock Android game")
+
+							li
+								.collapsible-header.black-text#collapsible-2.
+									Making things
+								.collapsible-body.white
+									p.
+										Design thinking has always been my mindset. There's just something special about creating something new with your hands, whatever it is... 3D modelling and printing, Lego, basic woodworking, and hopefully electronics as well soon.
+									p.
+										Coding is making too :)
+									.center-align
+										a(href="https://www.instagram.com/p/BQXN2cAgAO7/")
+											img.responsive-img(src="https://instagram.fmnl4-3.fna.fbcdn.net/t51.2885-15/s320x320/e35/14677420_424099854587814_266605086967332864_n.jpg" alt="3D printing at Builtable Makerspace")
+										a(href="https://www.instagram.com/p/BMdli-lAUpg/")
+											img.responsive-img(src="https://instagram.fmnl8-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/14693650_1226332430742915_2680398392609210368_n.jpg" alt="Lego creation")
+										img.responsive-img(src="images/portfolio/park_design.jpg" alt="3D modelled skatepark design")
+
+							li
+								.collapsible-header.black-text#collapsible-3.
+									Marketing/PR/events
+								.collapsible-body.white
+									.row
+										p.
+											I graduated from the University of the Philippines with a degree in Business Administration. And while most of my experience afterwards has been in marketing, I'm perfectly comfortable discussing economics, finance, corporate strategy, or management, and have even been called up to draft a contract or two.
+										p.
+											I've helped organize an <a href="https://youtu.be/hyKqQg_m8Ds">indie-orchestra mashup concert</a>, <a href="https://www.youtube.com/watch?v=iqqKuvqXKj4">football tournaments</a>, and an <a href="http://www.interaksyon.com/interaktv/kia-puts-up-contest-for-pba-team-name-15-finalists-to-win-us-trip-to-watch-nba-game">online contest to name a professional basketball team</a>, among many other less interesting things
+									.row
+										.col.s12.m6.center-align
+											.video-container
+												iframe(src="https://www.youtube.com/embed/hyKqQg_m8Ds" frameborder="0" allowfullscreen)
+										.col.s12.m6.center-align
+											.video-container
+												iframe(src="https://www.youtube.com/embed/iqqKuvqXKj4" frameborder="0" allowfullscreen)
+
+							li
+								.collapsible-header.black-text#collapsible-4.
+									Rollerblading
+								.collapsible-body.white
+									p.
+										Been at it on and off since 2002 (see my lame 2011-era video footage below), skating parks around the Philippines, Malaysia, China, Singapore, Korea, and Australia along the way.
+									p.
+										Founded <a href="https://www.facebook.com/ElevateSkate/">Elevate Skate Co.</a> a while back, importing gear from shops all over the world. But it's closed now, as nice of a side hustle as it was.
+									p.
+										Learned a lot about filming and editing video from being involved here. Branched off into parkour for a little while too, where there's a lot of crossover, particularly on the philosophical side of things.
+									.center-align
+										.video-container
+											iframe(src="https://player.vimeo.com/video/31335546?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+				h3.center-align.section-header Things That Inspire Me
+				.row.page-section#inspirations
+					.card-panel.red.lighten-1.flow-text.valign-wrapper
+						span.white-text Stories behind great ideas
+					.card-panel.red.lighten-1.flow-text.valign-wrapper
+						span.white-text Working with people who love their craft
+					.card-panel.red.lighten-1.flow-text.valign-wrapper
+						span.white-text Elegant solutions to awkward problems
+						
+				h3.center-align.section-header Things I'm Enjoying Lately
+				#thingBox.row.page-section
+					+thing("https://www.tested.com", "tested-logo.png", "Tested.com")
+					+thing("http://www.garthstein.com/works/the-art-of-racing-in-the-rain", "racing_in_the_rain.jpg", "The Art of Racing in the Rain")
+					+thing("https://www.pri.org/programs/world-words", "wiw.jpg", "The World In Words")
+					+thing("http://wilderpeople.film", "wilderpeople.jpg", "Hunt for the Wilderpeople")
+					+thing("https://www.theminimalists.com/etr", "etr.jpg", "Everything That Remains")
+					+thing("http://www.switchedonpop.com", "switched-on-pop.png", "Switched On Pop")
+					+thing("http://www.codemasters.com/game/dirt-4", "DiRT4.png", "DiRT 4")
+					+thing("http://www.valo4life.com/", "Valo4life.jpg", "Valo 4 Life")
+
+				#music.row
+					iframe(src="https://embed.spotify.com/?uri=spotify%3Auser%3A12175595202%3Aplaylist%3A0UmSRTsfZlo6dG4XrydQ4w" frameborder="0" allowtransparency="true")
+
+			#video.parallax-container
+				.parallax
+					video(muted autoplay loop poster="images/header2.gif")
+						source(src="images/makerbot.mp4" type="video/mp4")
+
+			#contacts.section.container
+				div
+					.row
+						h3.center-align.section-header My Work
+						.center-align
+							+imgLink("https://github.com/salvadornico", "github", "GitHub")
+							+imgLink("http://codepen.io/salvadornico", "codepen", "CodePen")
+							+imgLink("https://vimeo.com/roller4life", "vimeo", "Vimeo")
+
+					.row
+						h4.center-align Get In Touch
+						.center-align
+							+imgLink("mailto:salvador.nico@gmail.com", "email", "Email")
+							+imgLink("https://www.linkedin.com/in/salvadornico", "linkedin", "LinkedIn")
+							+imgLink("https://plus.google.com/u/0/+NicoSalvador", "google", "Google+")
+							+imgLink("https://www.instagram.com/nicolrnzo", "instagram", "Instagram")
+							+imgLink("https://www.facebook.com/salvador.nico", "fb", "Facebook")
+							+imgLink("https://twitter.com/nicoLorenzooo", "twitter", "Twitter")
+							+imgLink("https://www.pinterest.com/roller4life/", "pinterest", "Pinterest")
+
+					.row
+						a#resumeLink.waves-effect.waves-light.btn-large.yellow.hoverable(href="files/Nico_Salvador-CV2017.pdf")
+							i.material-icons.left.black-text library_books
+							span.black-text Resum&#233;
+
+		footer.red.darken-4
+			p.center-align.
+				&copy; 2017 Nico Salvador
+
+		#FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
+			button#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.yellow.darken-3.scale-transition.scale-out
+				i.material-icons arrow_upward

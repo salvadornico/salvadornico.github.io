@@ -1,0 +1,21 @@
+mixin techSkill(name, img)
+	- var path = "images/logos/" + img
+	img.tech-skill.tooltipped(src=path alt=name data-position="bottom" data-delay="50" data-tooltip=name)
+
+mixin portfolio(path, alt)
+	img.responsive-img.tooltipped.hoverable(src=path alt=alt data-position="top" data-delay="50" data-tooltip=alt)
+
+mixin thing(url, img, name)
+	.thing.col.s6.m4.l3
+		a(href=url)
+			.card.small.hoverable
+				.card-image
+					- var path = "images/things/" + img
+					img(src=path alt=name)
+				.card-content.valign-wrapper
+					span.black-text #{name}
+
+mixin imgLink(url, img, name)
+	- var path = "images/icons/" + img + ".png"
+	a(href=url)
+		img.hoverable(src=path alt=name)
