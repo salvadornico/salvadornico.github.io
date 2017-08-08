@@ -78,30 +78,25 @@ body
 	@media TabletOnly
 		height: 7vh
 
-#projectBox
-	@supports (display: grid)
-		@media DesktopOnly
-			display: grid
-			grid-template-columns: 30% 40% 30%
-			grid-template-rows: 2fr 1fr 1fr
-			grid-template-areas: "first first first" "second third fifth" "second fourth fifth"
-			grid-column-gap: 10px
-			grid-row-gap: 10px
-
-orders = first second third fourth fifth
-colHeight = 400px
-for order, i in orders
-	#project-{i+1}
-		img
-			if i == 0 or i == 1 or i == 4
-				height: colHeight
-			else
-				height: (colHeight / 2 - 10)
-		display: block
-		grid-area: order
-		align-self: center
-		justify-self: center
-		text-align: center
+.carousel-item
+	*
+		color: white !important
+	div
+		center(XY, absolute)
+	carouselImage(link)
+		background-image: linear-gradient(rgba(0,0,0,0.85)), url(link)
+		background-repeat: no-repeat
+		background-size: cover
+	&[href="#one!"]
+		carouselImage('./../images/portfolio/whats-that-edit.png')
+	&[href="#two!"]
+		carouselImage('./../images/portfolio/monoposto.png')
+	&[href="#three!"]
+		carouselImage('./../images/portfolio/leather-turf.png')
+	&[href="#four!"]
+		carouselImage('./../images/portfolio/brain-train.png')
+	&[href="#five!"]
+		carouselImage('./../images/portfolio/lizard-spock.png')
 
 #inspirations
 	@supports (display: grid)

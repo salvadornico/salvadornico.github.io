@@ -53,13 +53,13 @@ html(lang="en")
 							h3 Let's get in touch!
 					.row.center-align
 						.col.s12.m6
-							a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-4.hoverable(href="#contacts" target="_parent" data-scroll)
+							a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll)
 								i.material-icons.left chat_bubble
 								span Contact Me
 						.col.s12.m6
-							a.waves-effect.waves-light.btn-large.yellow.hoverable(href="Nico_Salvador-CV2017.pdf")
-								i.material-icons.left.black-text library_books
-								span.black-text Resum&#233;
+							a.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="Nico_Salvador-CV2017.pdf")
+								i.material-icons.left library_books
+								span Resum&#233;
 
 		main
 			.parallax-container
@@ -99,18 +99,33 @@ html(lang="en")
 										+techSkill("Python", "python.png")
 										+techSkill("webpack", "webpack.svg")
 
-									h5 Links to some of my past projects:
-									.row#projectBox
-										a#project-1(href="http://whats-that-edit.herokuapp.com")
-											+portfolio("images/portfolio/whats-that-edit.png", "A site for sharing and indexing skate videos")
-										a#project-2(href="https://salvadornico.github.io/Tuitt/module-1/capstone1")
-											+portfolio("images/portfolio/leather-turf.png", "A Philippines Football League club reference site")
-										a#project-3(href="http://salvadornico.x10host.com/f1vis")
-											+portfolio("images/portfolio/monoposto.png", "Formula 1 data visualisation site")
-										a#project-4(href="https://salvadornico.github.io/Brain-Train/web")
-											+portfolio("images/portfolio/brain-train.png", "A simple memory game")
-										a#project-5(href="https://github.com/salvadornico/Rock-Paper-Scissors")
-											+portfolio("images/portfolio/lizard-spock.png", "A basic Rock-Paper-Scissors-Lizard-Spock Android game")
+									h5 Some of my past projects:
+									.row.carousel.carousel-slider.center(data-indicators="true")
+										.carousel-item(href="#one!")
+											div
+												h2 What's That Edit?
+												p A site for sharing and indexing skate videos
+												a.btn.red.darken-1(href="http://whats-that-edit.herokuapp.com") Launch site
+										.carousel-item(href="#two!")
+											div
+												h2 Monoposto
+												p Formula 1 data visualisation site
+												a.btn.red.darken-1(href="http://salvadornico.x10host.com/f1vis") Launch site
+										.carousel-item(href="#three!")
+											div
+												h2 Leather &amp; Turf
+												p A Philippines Football League club reference site
+												a.btn.red.darken-1(href="https://salvadornico.github.io/Tuitt/module-1/capstone1") Launch site
+										.carousel-item(href="#four!")
+											div
+												h2 Brain Train
+												p.white-text A simple memory game
+												a.btn.red.darken-1(href="https://salvadornico.github.io/Brain-Train/web") Launch site
+										.carousel-item(href="#five!")
+											div
+												h2 Rock Paper Scissors
+												p.white-text A basic Rock-Paper-Scissors-Lizard-Spock Android game
+												a.btn.red.darken-1(href="https://github.com/salvadornico/Rock-Paper-Scissors") View source
 
 							li
 								.collapsible-header.black-text#collapsible-2.
@@ -207,14 +222,14 @@ html(lang="en")
 							+imgLink("https://www.pinterest.com/roller4life/", "pinterest", "Pinterest")
 
 					.row
-						a#resumeLink.waves-effect.waves-light.btn-large.yellow.hoverable(href="files/Nico_Salvador-CV2017.pdf")
-							i.material-icons.left.black-text library_books
-							span.black-text Resum&#233;
+						a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="files/Nico_Salvador-CV2017.pdf")
+							i.material-icons.left library_books
+							span Resum&#233;
 
 		footer.red.darken-4
 			p.center-align.
 				&copy; 2017 Nico Salvador
 
 		#FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
-			button#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.yellow.darken-3.scale-transition.scale-out
+			button#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out
 				i.material-icons arrow_upward

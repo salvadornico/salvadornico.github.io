@@ -23,6 +23,10 @@ $(document).ready( function() {
 	var scrollFireOptions = [
 		{selector: "#collapsible-1", offset: 250, callback: function() {
 			$(".collapsible").collapsible("open", 0)
+			$(".carousel.carousel-slider").carousel({fullWidth: true})
+			setInterval(function(){
+				$(".carousel").carousel("next")
+			}, 3000)
 		}},
 		{selector: "#collapsible-2", offset: 250, callback: function() {
 			$(".collapsible").collapsible("open", 1)

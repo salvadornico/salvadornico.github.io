@@ -52,12 +52,17 @@ gulp.task('build', function(callback) {
 		'clean:dist',
 		['styles-dist','views-dist'],
 		['useref', 'images', 'video', 'files'],
+		'clean:src',
 		callback
 	)
 })
 
 gulp.task('clean:dist', function() {
 	return del.sync('dist')
+})
+
+gulp.task('clean:src', function() {
+	return del.sync(['src/*.html', 'src/css/*.css'])
 })
 
 gulp.task('styles-dist', function() {

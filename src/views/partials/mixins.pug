@@ -2,9 +2,6 @@ mixin techSkill(name, img)
 	- var path = "images/logos/" + img
 	img.tech-skill.tooltipped(src=path alt=name data-position="bottom" data-delay="50" data-tooltip=name)
 
-mixin portfolio(path, alt)
-	img.responsive-img.tooltipped.hoverable(src=path alt=alt data-position="top" data-delay="50" data-tooltip=alt)
-
 mixin thing(url, img, name)
 	.thing.col.s6.m4.l3
 		a(href=url)
