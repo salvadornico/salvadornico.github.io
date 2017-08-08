@@ -10,17 +10,17 @@ html(lang="en")
 
 		+styles("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans")
 		+styles("https://fonts.googleapis.com/icon?family=Material+Icons")
-		+styles("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
+		+styles("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css")
 		+styles("css/styles.css")
 
 		+scripts("https://use.fontawesome.com/8a3d0f859b.js")
 		+scripts("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		+scripts("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+		+scripts("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js")
 
 		// build:js js/main.min.js
-		+scripts("js/scripts.js")
-		+scripts("js/smooth-scroll-master/dist/js/smooth-scroll.js")
 		+scripts("js/google-analytics.js")
+		+scripts("js/smooth-scroll.js")
+		+scripts("js/scripts.js")
 		// endbuild
 		
 	body.indigo.darken-1
@@ -73,13 +73,13 @@ html(lang="en")
 						ul.collapsible.popout(data-collapsible="expandable")
 							li
 								.collapsible-header.black-text#collapsible-1.
-									Software development
+									Web development
 								.collapsible-body.white
 
 									p.
 										I've always enjoyed tinkering with gadgets and poking around the deepest levels of settings in the software I use, so programming was a natural next step. I love the way it demands both the ability to solve problems creatively and then the application of those ideas in a logical and systematic fashion.
 									p.
-										I'm well-versed in HTML, CSS, Javascript, jQuery, PHP, Laravel, Git, and mySQL for web development. My preferred stack also includes Pug, Stylus, and Gulp. I also know a bit of Java for Android, and am currently learning Kotlin, Python, and webpack.
+										I'm well-versed in HTML, CSS, Javascript, jQuery, PHP, Laravel, Git, and mySQL for the web. My preferred stack also includes Pug, Stylus, and Gulp. I also know a bit of Java for Android, and am currently learning Kotlin, Python, and webpack.
 
 									.row.center-align#skillsList
 										+techSkill("HTML", "html5.png")
