@@ -49,19 +49,19 @@ gulp.task('styles-dev', function() {
 
 gulp.task('build', function(callback) {
 	runSequence(
-		'clean:dist',
+		'clean-dist',
 		['styles-dist','views-dist'],
 		['useref', 'images', 'video', 'files'],
-		'clean:src',
+		'clean-src',
 		callback
 	)
 })
 
-gulp.task('clean:dist', function() {
+gulp.task('clean-dist', function() {
 	return del.sync('dist')
 })
 
-gulp.task('clean:src', function() {
+gulp.task('clean-src', function() {
 	return del.sync(['src/*.html', 'src/css/*.css'])
 })
 
