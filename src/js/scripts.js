@@ -24,9 +24,7 @@ $(document).ready( function() {
 		{selector: "#collapsible-1", offset: 250, callback: function() {
 			$(".collapsible").collapsible("open", 0)
 			$(".carousel.carousel-slider").carousel({fullWidth: true})
-			setInterval(function(){
-				$(".carousel").carousel("next")
-			}, 3000)
+			startCarousel()
 		}},
 		{selector: "#collapsible-2", offset: 250, callback: function() {
 			$(".collapsible").collapsible("open", 1)
@@ -40,8 +38,22 @@ $(document).ready( function() {
 		}},
 	]
 	Materialize.scrollFire(scrollFireOptions)
+
+	$(".carousel").mouseenter(function() {
+		clearInterval(scrollAction)
+	})
+
+	$(".carousel").mouseleave(function() {
+		startCarousel()
+	})
 	
 })
+
+function startCarousel() {
+	scrollAction = setInterval(function(){
+		$(".carousel").carousel("next")
+	}, 3000)
+}
 
 function popOutFAB() {
 	$("#scrollToTopFAB").addClass("scale-in pulse")
