@@ -81,7 +81,7 @@ gulp.task('views-dist', function() {
 })
 
 gulp.task('useref', function() {
-	return gulp.src('src/*.html')
+	return gulp.src('dist/*.html')
 		.pipe(useref())
 		.pipe(gulpIf('*.js', uglify()))
 		.pipe(gulp.dest('dist'))
