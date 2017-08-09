@@ -32,6 +32,7 @@
     "gulp-useref": "^3.1.2",
     "pug": "^2.0.0-rc.3",
     "run-sequence": "^2.0.0",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
+    "stylus": "^0.54.5"
   }
 }
