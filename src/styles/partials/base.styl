@@ -5,28 +5,28 @@ TabletOnly = '(min-width: 600px) and (max-width: 992px)'
 DesktopOnly = '(min-width: 992px)'
 
 body
-	display: flex
-	min-height: 100vh
-	width: 100%
-	flex-direction: column
+	display flex
+	min-height 100vh
+	width 100%
+	flex-direction column
 
 main
-	flex: 1 0 auto
+	flex 1 0 auto
 	
 center(axis, position)
-	position: position
+	position position
 	if axis == 'X'
-		left: 50%
-		transform: translateX(-50%)
+		left 50%
+		transform translateX(-50%)
 	else if axis == 'Y'
-		top: 50%
-		transform: translateY(-50%)
+		top 50%
+		transform translateY(-50%)
 	else if axis == 'XY'
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
 	
 .clearfix:after
-	content: ""
-	display: block
-	clear: both
+	content ""
+	display block
+	clear both

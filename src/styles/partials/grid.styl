@@ -1,30 +1,30 @@
 @require "base"
 
 .container
-	width: 100%
-	margin: 0 auto
+	width 100%
+	margin 0 auto
 	*
-		box-sizing: border-box
+		box-sizing border-box
 	@media MobileOnly
-		max-width: 540px
+		max-width 540px
 	@media TabletUp
-		max-width: 800px
+		max-width 800px
 	@media DesktopOnly
-		max-width: 960px
+		max-width 960px
 
 .row:before, .row:after
 	@extend .clearfix:after
 
 .col
-	float: left
+	float left
 
 for i in (1..12)
 	@media MobileOnly
 		.s{i}
-			width: percentage(i / 12)
+			width percentage(i / 12)
 	@media TabletUp
 		.m{i}
-			width: percentage(i / 12)
+			width percentage(i / 12)
 	@media DesktopOnly
 		.l{i}
-			width: percentage(i / 12)
+			width percentage(i / 12)

@@ -17,8 +17,8 @@ var htmlmin = require('gulp-htmlmin')
 gulp.task('watch', ['browserSync', 'styles-dev', 'views-dev'], function() {
 	gulp.watch('src/views/**/*.pug', ['views-dev'])
 	gulp.watch('src/*.html', browserSync.reload)
-	gulp.watch('src/css/**/*.styl', ['styles-dev'])
-	gulp.watch('src/css/*.css', browserSync.reload)
+	gulp.watch('src/styles/**/*.styl', ['styles-dev'])
+	gulp.watch('src/styles/*.css', browserSync.reload)
 	gulp.watch('src/js/*.js', browserSync.reload)
 })
 
@@ -41,7 +41,7 @@ gulp.task('views-dev', function() {
 })
 
 gulp.task('styles-dev', function() {
-  return gulp.src('src/css/styles.styl')
+  return gulp.src('src/styles/styles.styl')
     .pipe(stylus())
     .pipe(postcss([ autoprefixer() ]))
     .pipe(gulp.dest('src/css'))
@@ -62,12 +62,12 @@ gulp.task('clean-dist', function() {
 })
 
 gulp.task('styles-dist', function() {
-	return gulp.src('src/css/*.styl')
+	return gulp.src('src/styles/*.styl')
 	.pipe(stylus({
 		compress: true
 	}))
 	.pipe(postcss([ autoprefixer() ]))
-	.pipe(gulp.dest('dist/css'))
+	.pipe(gulp.dest('dist/styles'))
 })
 
 gulp.task('views-dist', function() {
@@ -104,5 +104,5 @@ gulp.task('files', function() {
 })
 
 gulp.task('clean-src', function() {
-	return del.sync(['src/*.html', 'src/css/*.css'])
+	return del.sync(['src/*.html', 'src/styles/*.css'])
 })
