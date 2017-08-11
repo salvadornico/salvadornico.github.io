@@ -1,14 +1,25 @@
 $(document).ready( function() {
 
 	var contactsAnchor = document.querySelector("#contacts")
-	var toggle = document.querySelector("#scrollDownBtn")
-	var smoothScrollOptions = {
+	var contactsToggle = document.querySelector("#scrollDownBtn")
+	var contactsSmoothScrollOptions = {
 		speed: 1400,
 		easing: "easeOutQuint",
-		after: function (contactsAnchor, toggle) { popOutFAB() }
+		after: function (contactsAnchor, contactsToggle) { popOutFAB() }
 	}
 	$("#scrollDownBtn").click( function() {
-		smoothScroll.animateScroll(contactsAnchor, toggle, smoothScrollOptions)
+		smoothScroll.animateScroll(contactsAnchor, contactsToggle, contactsSmoothScrollOptions)
+	})
+
+	var seeMoreAnchor = document.querySelector("#seeMore")
+	var seeMoreToggle = document.querySelector("#things")
+	var seeMoreSmoothScrollOptions = {
+		speed: 1000,
+		offset: -400,
+		easing: "easeOutQuint"
+	}
+	$("#seeMore").click( function() {
+		smoothScroll.animateScroll(seeMoreAnchor, seeMoreToggle, seeMoreSmoothScrollOptions)
 	})
 
 	$("#scrollToTopFAB").click( function() {
