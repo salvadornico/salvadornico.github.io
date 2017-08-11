@@ -12,12 +12,13 @@ var del = require('del')
 var runSequence = require('run-sequence')
 var stylus = require('gulp-stylus')
 var prettify = require('gulp-prettify')
+var htmlmin = require('gulp-htmlmin')
 
 gulp.task('watch', ['browserSync', 'styles-dev', 'views-dev'], function() {
 	gulp.watch('src/views/**/*.pug', ['views-dev'])
 	gulp.watch('src/*.html', browserSync.reload)
-	gulp.watch('src/css/**/*.styl', ['styles-dev'])
-	gulp.watch('src/css/*.css', browserSync.reload)
+	gulp.watch('src/styles/**/*.styl', ['styles-dev'])
+	gulp.watch('src/styles/*.css', browserSync.reload)
 	gulp.watch('src/js/*.js', browserSync.reload)
 })
 
@@ -31,28 +32,27 @@ gulp.task('browserSync', function() {
 
 gulp.task('views-dev', function() {
 	return gulp.src('src/views/*.pug')
-	.pipe(pug())
-	.pipe(prettify({
-		indent_inner_html: true,
-		indent_size: 4
-	}))
-	.pipe(gulp.dest('src'))
+		.pipe(pug())
+		.pipe(prettify({
+			indent_inner_html: true,
+			indent_size: 4
+		}))
+		.pipe(gulp.dest('src'))
 })
 
 gulp.task('styles-dev', function() {
-  return gulp.src('src/css/styles.styl')
-    .pipe(stylus())
-    .pipe(postcss([ autoprefixer() ]))
-    .pipe(gulp.dest('src/css'))
+	return gulp.src('src/styles/styles.styl')
+		.pipe(stylus())
+		.pipe(postcss([ autoprefixer() ]))
+		.pipe(gulp.dest('src/styles'))
 })
 
 
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean-dist',
-		['styles-dist','views-dist'],
-		['useref', 'images', 'video', 'files'],
-		'clean-src',
+		['styles-dist','views-dist', 'images', 'video', 'files'],
+		['clean-src', 'views-minify'],
 		callback
 	)
 })
@@ -61,46 +61,50 @@ gulp.task('clean-dist', function() {
 	return del.sync('dist')
 })
 
-gulp.task('clean-src', function() {
-	return del.sync(['src/*.html', 'src/css/*.css'])
-})
-
 gulp.task('styles-dist', function() {
-	return gulp.src('src/css/*.styl')
-    	.pipe(stylus({
-      		compress: true
-    	}))
-		.pipe(postcss([ autoprefixer() ]))
-		.pipe(gulp.dest('dist/css'))
+	return gulp.src('src/styles/*.styl')
+	.pipe(stylus({
+		compress: true
+	}))
+	.pipe(postcss([ autoprefixer() ]))
+	.pipe(gulp.dest('dist/styles'))
 })
 
 gulp.task('views-dist', function() {
 	return gulp.src('src/views/*.pug')
 	.pipe(pug())
+	.pipe(prettify())
+	.pipe(useref())
+	.pipe(gulpIf('*.js', uglify()))
 	.pipe(gulp.dest('dist'))
-})
-
-gulp.task('useref', function() {
-	return gulp.src('src/*.html')
-		.pipe(useref())
-		.pipe(gulpIf('*.js', uglify()))
-		.pipe(gulp.dest('dist'))
 })
 
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
-		.pipe(cache(imagemin({
-			interlaced: true
-		})))
-		.pipe(gulp.dest('dist/images'))
+	.pipe(cache(imagemin({
+		interlaced: true
+	})))
+	.pipe(gulp.dest('dist/images'))
 })
 
 gulp.task('video', function() {
 	return gulp.src('src/images/*.mp4')
-		.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images'))
 })
 
 gulp.task('files', function() {
 	return gulp.src('src/files/**/*')
-		.pipe(gulp.dest('dist/files'))
+	.pipe(gulp.dest('dist/files'))
+})
+
+gulp.task('clean-src', function() {
+	return del.sync(['src/*.html', 'src/styles/*.css'])
+})
+
+gulp.task('views-minify', function() {
+	return gulp.src('dist/*.html')
+	.pipe(htmlmin({
+		collapseWhitespace: true
+	}))
+	.pipe(gulp.dest('dist'))
 })
