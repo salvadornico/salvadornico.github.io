@@ -12,12 +12,7 @@ block head
 	+styles("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 	+styles("styles/styles.css")
 	include partials/materialize
-
-	// build:js(src) js/main.min.js
-	+scripts("js/google-analytics.js")
-	+scripts("js/smooth-scroll.js")
-	+scripts("js/scripts.js")
-	// endbuild
+	+scripts("js/all.js")
 
 block header
 	include partials/header
