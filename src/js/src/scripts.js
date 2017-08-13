@@ -1,5 +1,5 @@
 $(document).ready( function() {
-
+	
 	var contactsAnchor = document.querySelector("#contacts")
 	var contactsToggle = document.querySelector("#scrollDownBtn")
 	var contactsSmoothScrollOptions = {

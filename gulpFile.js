@@ -12,13 +12,15 @@ var del = require('del')
 var runSequence = require('run-sequence')
 var stylus = require('gulp-stylus')
 var prettify = require('gulp-prettify')
-var htmlmin = require('gulp-htmlmin')
+var babel = require('gulp-babel')
+var concat = require('gulp-concat')
 
-gulp.task('watch', ['browserSync', 'styles-dev', 'views-dev'], function() {
+gulp.task('watch', ['browserSync', 'styles-dev', 'views-dev', 'scripts-dev'], function() {
 	gulp.watch('src/views/**/*.pug', ['views-dev'])
 	gulp.watch('src/*.html', browserSync.reload)
 	gulp.watch('src/styles/**/*.styl', ['styles-dev'])
 	gulp.watch('src/styles/*.css', browserSync.reload)
+	gulp.watch('src/js/src/*.js', ['scripts-dev'])
 	gulp.watch('src/js/*.js', browserSync.reload)
 })
 
@@ -47,12 +49,19 @@ gulp.task('styles-dev', function() {
 		.pipe(gulp.dest('src/styles'))
 })
 
+gulp.task('scripts-dev', function() {
+	return gulp.src('src/js/src/*.js')
+		.pipe(babel())
+		.pipe(concat('all.js'))
+		.pipe(gulp.dest('src/js'))
+})
+
 
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean-dist',
-		['styles-dist','views-dist', 'images', 'video', 'files'],
-		['clean-src', 'views-minify'],
+		['styles-dist','views-dist', 'scripts-dist', 'images', 'video', 'files'],
+		['clean-src'],
 		callback
 	)
 })
@@ -73,11 +82,17 @@ gulp.task('styles-dist', function() {
 gulp.task('views-dist', function() {
 	return gulp.src('src/views/*.pug')
 	.pipe(pug())
-	.pipe(prettify())
-	.pipe(useref())
-	.pipe(gulpIf('*.js', uglify()))
 	.pipe(gulp.dest('dist'))
 })
+
+gulp.task('scripts-dist', function() {
+	return gulp.src('src/js/*.js')
+		.pipe(babel())
+		.pipe(concat('all.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('dist/js'))
+})
+
 
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
@@ -99,12 +114,4 @@ gulp.task('files', function() {
 
 gulp.task('clean-src', function() {
 	return del.sync(['src/*.html', 'src/styles/*.css'])
-})
-
-gulp.task('views-minify', function() {
-	return gulp.src('dist/*.html')
-	.pipe(htmlmin({
-		collapseWhitespace: true
-	}))
-	.pipe(gulp.dest('dist'))
 })
