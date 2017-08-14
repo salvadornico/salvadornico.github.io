@@ -1,16 +1,4 @@
 $(document).ready( function() {
-<<<<<<< HEAD:src/js/src/scripts.js
-	
-	var contactsAnchor = document.querySelector("#contacts")
-	var contactsToggle = document.querySelector("#scrollDownBtn")
-	var contactsSmoothScrollOptions = {
-		speed: 1400,
-		easing: "easeOutQuint",
-		after: function (contactsAnchor, contactsToggle) { popOutFAB() }
-	}
-=======
-
->>>>>>> es6:src/js/src/scripts.js
 	$("#scrollDownBtn").click( function() {
 		popOutFAB()
 	})

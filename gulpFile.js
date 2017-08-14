@@ -85,21 +85,13 @@ gulp.task('views-dist', function() {
 })
 
 gulp.task('scripts-dist', function() {
-<<<<<<< HEAD
-	return gulp.src('src/js/*.js')
-=======
 	return gulp.src('src/js/src/*.js')
->>>>>>> es6
 		.pipe(babel())
 		.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
 })
 
-<<<<<<< HEAD
-
-=======
->>>>>>> es6
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*.+(png|jpg|jpeg|gif|svg)')
 	.pipe(cache(imagemin({
@@ -116,11 +108,4 @@ gulp.task('video', function() {
 gulp.task('files', function() {
 	return gulp.src('src/files/**/*')
 	.pipe(gulp.dest('dist/files'))
-<<<<<<< HEAD
-})
-
-gulp.task('clean-src', function() {
-	return del.sync(['src/*.html', 'src/styles/*.css'])
-=======
->>>>>>> es6
 })
