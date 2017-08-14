@@ -1,4 +1,5 @@
 $(document).ready( function() {
+<<<<<<< HEAD:src/js/src/scripts.js
 	
 	var contactsAnchor = document.querySelector("#contacts")
 	var contactsToggle = document.querySelector("#scrollDownBtn")
@@ -7,24 +8,14 @@ $(document).ready( function() {
 		easing: "easeOutQuint",
 		after: function (contactsAnchor, contactsToggle) { popOutFAB() }
 	}
+=======
+
+>>>>>>> es6:src/js/src/scripts.js
 	$("#scrollDownBtn").click( function() {
-		smoothScroll.animateScroll(contactsAnchor, contactsToggle, contactsSmoothScrollOptions)
+		popOutFAB()
 	})
-
-	var seeMoreAnchor = document.querySelector("#seeMore")
-	var seeMoreToggle = document.querySelector("#things")
-	var seeMoreSmoothScrollOptions = {
-		speed: 1000,
-		offset: -400,
-		easing: "easeOutQuint"
-	}
-	$("#seeMore").click( function() {
-		smoothScroll.animateScroll(seeMoreAnchor, seeMoreToggle, seeMoreSmoothScrollOptions)
-	})
-
+	
 	$("#scrollToTopFAB").click( function() {
-		var bannerAnchor = document.querySelector("#banner")
-		smoothScroll.animateScroll(bannerAnchor)
 		$("#scrollToTopFAB").addClass("scale-out")
 		$("#scrollToTopFAB").removeClass("pulse")
 	})
@@ -51,7 +42,7 @@ $(document).ready( function() {
 	Materialize.scrollFire(scrollFireOptions)
 
 	$(".carousel").mouseenter(function() {
-		clearInterval(scrollAction)
+		clearInterval(window.scrollAction)
 	})
 
 	$(".carousel").mouseleave(function() {
@@ -61,7 +52,7 @@ $(document).ready( function() {
 })
 
 function startCarousel() {
-	scrollAction = setInterval(function(){
+	window.scrollAction = setInterval(function(){
 		$(".carousel").carousel("next")
 	}, 3000)
 }

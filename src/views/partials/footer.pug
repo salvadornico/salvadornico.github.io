@@ -3,5 +3,8 @@ footer.red.darken-4
 		&copy; 2017 Nico Salvador
 
 #FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
-	button#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out
+	a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(href="#banner" target="_parent" data-scroll)
 		i.material-icons arrow_upward
+
+script.
+	var scroll = new SmoothScroll('a[href*="#"]')
