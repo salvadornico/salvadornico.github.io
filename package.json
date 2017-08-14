@@ -38,5 +38,8 @@
     "run-sequence": "^2.0.0",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "stylus": "^0.54.5"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }

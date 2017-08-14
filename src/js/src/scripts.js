@@ -1,30 +1,10 @@
 $(document).ready( function() {
 
-	var contactsAnchor = document.querySelector("#contacts")
-	var contactsToggle = document.querySelector("#scrollDownBtn")
-	var contactsSmoothScrollOptions = {
-		speed: 1400,
-		easing: "easeOutQuint",
-		after: function (contactsAnchor, contactsToggle) { popOutFAB() }
-	}
 	$("#scrollDownBtn").click( function() {
-		smoothScroll.animateScroll(contactsAnchor, contactsToggle, contactsSmoothScrollOptions)
+		popOutFAB()
 	})
-
-	var seeMoreAnchor = document.querySelector("#seeMore")
-	var seeMoreToggle = document.querySelector("#things")
-	var seeMoreSmoothScrollOptions = {
-		speed: 1000,
-		offset: -400,
-		easing: "easeOutQuint"
-	}
-	$("#seeMore").click( function() {
-		smoothScroll.animateScroll(seeMoreAnchor, seeMoreToggle, seeMoreSmoothScrollOptions)
-	})
-
+	
 	$("#scrollToTopFAB").click( function() {
-		var bannerAnchor = document.querySelector("#banner")
-		smoothScroll.animateScroll(bannerAnchor)
 		$("#scrollToTopFAB").addClass("scale-out")
 		$("#scrollToTopFAB").removeClass("pulse")
 	})
@@ -51,7 +31,7 @@ $(document).ready( function() {
 	Materialize.scrollFire(scrollFireOptions)
 
 	$(".carousel").mouseenter(function() {
-		clearInterval(scrollAction)
+		clearInterval(window.scrollAction)
 	})
 
 	$(".carousel").mouseleave(function() {
@@ -61,7 +41,7 @@ $(document).ready( function() {
 })
 
 function startCarousel() {
-	scrollAction = setInterval(function(){
+	window.scrollAction = setInterval(function(){
 		$(".carousel").carousel("next")
 	}, 3000)
 }

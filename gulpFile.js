@@ -59,15 +59,14 @@ gulp.task('scripts-dev', function() {
 
 gulp.task('build', function(callback) {
 	runSequence(
-		'clean-dist',
+		['cleanup'],
 		['styles-dist','views-dist', 'scripts-dist', 'images', 'video', 'files'],
-		['clean-src'],
 		callback
 	)
 })
 
-gulp.task('clean-dist', function() {
-	return del.sync('dist')
+gulp.task('cleanup', function() {
+	return del.sync(['dist', 'src/*.html', 'src/styles/*.css', 'src/js/*.js'])
 })
 
 gulp.task('styles-dist', function() {
@@ -86,7 +85,7 @@ gulp.task('views-dist', function() {
 })
 
 gulp.task('scripts-dist', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src('src/js/src/*.js')
 		.pipe(babel())
 		.pipe(concat('all.js'))
 		.pipe(uglify())
@@ -109,8 +108,4 @@ gulp.task('video', function() {
 gulp.task('files', function() {
 	return gulp.src('src/files/**/*')
 	.pipe(gulp.dest('dist/files'))
-})
-
-gulp.task('clean-src', function() {
-	return del.sync(['src/*.html', 'src/styles/*.css', 'src/js/*.js'])
 })
