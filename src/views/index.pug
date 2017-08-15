@@ -1,7 +1,7 @@
 extends partials/layout
 
 block mixins
-	include partials/mixins
+	include partials/_mixins
 
 block head
 	title Nico Salvador
@@ -11,14 +11,14 @@ block head
 	+styles("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans")
 	+styles("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 	+styles("styles/styles.css")
-	include partials/materialize
+	include partials/_materialize
 	+scripts("js/all.js")
 
 block header
-	include partials/header
+	include partials/_header
 
 block main
-	include partials/main
+	include partials/_main
 
 block footer
-	include partials/footer
+	include partials/_footer
