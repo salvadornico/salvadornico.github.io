@@ -6,17 +6,18 @@
 	@media MobileOnly
 		margin-top -10px
 
+highPoint = -2px
+lowPoint = 6px
 @keyframes hvr-icon-hang
 	0%
-		transform translateY(6px)
+		transform translateY(lowPoint)
 	50%
-		transform translateY(-2px)
+		transform translateY(highPoint)
 	100%
-		transform translateY(6px)
-
+		transform translateY(lowPoint)
 @keyframes hvr-icon-hang-sink
 	100%
-		transform translateY(6px)
+		transform translateY(lowPoint)
 
 .hvr-icon-hang
 	display inline-block
