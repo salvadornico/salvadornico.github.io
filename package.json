@@ -4,7 +4,8 @@
   "description": "Portfolio website of Nico Salvador",
   "main": "scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,10 @@
   "bugs": {
     "url": "https://github.com/salvadornico/salvadornico.github.io/issues"
   },
-  "homepage": "https://salvadornico.github.io",
+  "homepage": "http://salvadornico.com",
+  "dependencies": {
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
@@ -35,7 +39,6 @@
     "gulp-uglify": "^3.0.0",
     "pug": "^2.0.0-rc.3",
     "run-sequence": "^2.0.0",
-    "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "stylus": "^0.54.5"
   },
   "babel": {
