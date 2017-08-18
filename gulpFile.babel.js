@@ -15,60 +15,62 @@ import del from 'del'
 import imagemin from 'gulp-imagemin'
 import cache from 'gulp-cache'
 
-const viewPaths = {
-	srcIn: 'src/views',
-	srcOut: 'src',
-	dist: 'dist',
-}
-const stylePaths = {
-	src: 'src/styles',
-	dist: 'dist/styles',
-}
-const scriptPaths = {
-	srcIn: 'src/js/src',
-	srcOut: 'src/js',
-	dist: 'dist/js',
+const paths = {
+	views: {
+		srcIn: 'src/views',
+		srcOut: 'src',
+		dist: 'dist',
+	},
+	styles: {
+		src: 'src/styles',
+		dist: 'dist/styles',
+	},
+	scripts: {
+		srcIn: 'src/js/src',
+		srcOut: 'src/js',
+		dist: 'dist/js',
+	}
 }
 
 gulp.task('watch', ['browserSync', 'styles-dev', 'views-dev', 'scripts-dev'], () => {
-	gulp.watch(`${viewPaths.srcIn}/**/*.pug`, ['views-dev'])
-	gulp.watch(`${viewPaths.srcOut}/*.html`, browserSync.reload)
-	gulp.watch(`${stylePaths.src}/**/*.styl`, ['styles-dev'])
-	gulp.watch(`${stylePaths.src}/*.css`, browserSync.reload)
-	gulp.watch(`${scriptPaths.srcIn}/*.js`, ['scripts-dev'])
-	gulp.watch(`${scriptPaths.srcOut}/*.js`, browserSync.reload)
+	gulp.watch(`${paths.views.srcIn}/**/*.pug`, ['views-dev'])
+	gulp.watch(`${paths.views.srcOut}/*.html`, browserSync.reload)
+	gulp.watch(`${paths.styles.src}/**/*.styl`, ['styles-dev'])
+	gulp.watch(`${paths.styles.src}/*.css`, browserSync.reload)
+	gulp.watch(`${paths.scripts.srcIn}/*.js`, ['scripts-dev'])
+	gulp.watch(`${paths.scripts.srcOut}/*.js`, browserSync.reload)
 })
 
 gulp.task('browserSync', () => {
 	browserSync.init({
 		server: {
-			baseDir: viewPaths.srcOut
+			baseDir: paths.views.srcOut
 		}
 	})
 })
 
 gulp.task('views-dev', () => {
-	return gulp.src(`${viewPaths.srcIn}/*.pug`)
+	return gulp.src(`${paths.views.srcIn}/*.pug`)
 		.pipe(pug())
 		.pipe(prettify({
 			indent_inner_html: true,
 			indent_size: 4
 		}))
-		.pipe(gulp.dest(viewPaths.srcOut))
+		.pipe(gulp.dest(paths.views.srcOut))
 })
 
 gulp.task('styles-dev', () => {
-	return gulp.src(`${stylePaths.src}/styles.styl`)
+	return gulp.src(`${paths.styles.src}/styles.styl`)
 		.pipe(stylus())
 		.pipe(postcss([ autoprefixer() ]))
-		.pipe(gulp.dest(stylePaths.src))
+		.pipe(gulp.dest(paths.styles.src))
 })
 
 gulp.task('scripts-dev', () => {
-	return gulp.src(`${scriptPaths.srcIn}/*.js`)
+	return gulp.src(`${paths.scripts.srcIn}/*.js`)
 		.pipe(babel())
 		.pipe(concat('all.js'))
-		.pipe(gulp.dest(scriptPaths.srcOut))
+		.pipe(gulp.dest(paths.scripts.srcOut))
 })
 
 
@@ -82,34 +84,34 @@ gulp.task('build', (callback) => {
 
 gulp.task('cleanup', () => {
 	return del.sync([
-		viewPaths.dist,
-		`${viewPaths.srcOut}/*.html`,
-		`${stylePaths.src}/*.css`,
-		`${scriptPaths.srcOut}/*.js`
+		paths.views.dist,
+		`${paths.views.srcOut}/*.html`,
+		`${paths.styles.src}/*.css`,
+		`${paths.scripts.srcOut}/*.js`
 	])
 })
 
 gulp.task('styles-dist', () => {
-	return gulp.src(`${stylePaths.src}/*.styl`)
+	return gulp.src(`${paths.styles.src}/*.styl`)
 	.pipe(stylus({
 		compress: true
 	}))
 	.pipe(postcss([ autoprefixer() ]))
-	.pipe(gulp.dest(stylePaths.dist))
+	.pipe(gulp.dest(paths.styles.dist))
 })
 
 gulp.task('views-dist', () => {
-	return gulp.src(`${viewPaths.srcIn}/*.pug`)
+	return gulp.src(`${paths.views.srcIn}/*.pug`)
 	.pipe(pug())
-	.pipe(gulp.dest(viewPaths.dist))
+	.pipe(gulp.dest(paths.views.dist))
 })
 
 gulp.task('scripts-dist', () => {
-	return gulp.src(`${scriptPaths.srcIn}/*.js`)
+	return gulp.src(`${paths.scripts.srcIn}/*.js`)
 		.pipe(babel())
 		.pipe(concat('all.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest(scriptPaths.dist))
+		.pipe(gulp.dest(paths.scripts.dist))
 })
 
 gulp.task('images', () => {
