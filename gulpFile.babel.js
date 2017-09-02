@@ -60,7 +60,7 @@ gulp.task("views-dev", () => {
 })
 
 gulp.task("styles-dev", () => {
-	return gulp.src(`${paths.styles.src}/styles.styl`)
+	return gulp.src(`${paths.styles.src}/*.styl`)
 		.pipe(stylus())
 		.pipe(postcss([ autoprefixer() ]))
 		.pipe(gulp.dest(paths.styles.src))
