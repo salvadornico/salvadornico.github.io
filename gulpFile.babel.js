@@ -11,7 +11,7 @@ import babel from "gulp-babel"
 import concat from "gulp-concat"
 import uglify from "gulp-uglify"
 import runSequence from "run-sequence"
-import del from "del"
+import trash from "trash"
 import imagemin from "gulp-imagemin"
 import cache from "gulp-cache"
 
@@ -83,12 +83,14 @@ gulp.task("build", (callback) => {
 })
 
 gulp.task("cleanup", () => {
-	return del.sync([
+	return trash([
 		paths.views.dist,
 		`${paths.views.srcOut}/*.html`,
 		`${paths.styles.src}/*.css`,
 		`${paths.scripts.srcOut}/*.js`
-	])
+	]).then(() => {
+		console.log("done")
+	})
 })
 
 gulp.task("styles-dist", () => {

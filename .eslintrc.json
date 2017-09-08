@@ -25,6 +25,7 @@
             "error",
             "never"
         ],
-        "no-undef": "off"
+		"no-undef": "off",
+		"no-console": "off"
     }
 }
