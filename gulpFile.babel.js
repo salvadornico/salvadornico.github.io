@@ -36,7 +36,6 @@ gulp.task("watch", ["browserSync", "styles-dev", "views-dev", "scripts-dev"], ()
 	gulp.watch(`${paths.views.srcIn}/**/*.pug`, ["views-dev"])
 	gulp.watch(`${paths.views.srcOut}/*.html`, browserSync.reload)
 	gulp.watch(`${paths.styles.src}/**/*.styl`, ["styles-dev"])
-	gulp.watch(`${paths.styles.src}/*.css`, browserSync.reload)
 	gulp.watch(`${paths.scripts.srcIn}/*.js`, ["scripts-dev"])
 	gulp.watch(`${paths.scripts.srcOut}/*.js`, browserSync.reload)
 })
@@ -64,6 +63,7 @@ gulp.task("styles-dev", () => {
 		.pipe(stylus())
 		.pipe(postcss([ autoprefixer() ]))
 		.pipe(gulp.dest(paths.styles.src))
+		.pipe(browserSync.stream())
 })
 
 gulp.task("scripts-dev", () => {
@@ -88,9 +88,7 @@ gulp.task("cleanup", () => {
 		`${paths.views.srcOut}/*.html`,
 		`${paths.styles.src}/*.css`,
 		`${paths.scripts.srcOut}/*.js`
-	]).then(() => {
-		console.log("done")
-	})
+	])
 })
 
 gulp.task("styles-dist", () => {
