@@ -1,49 +1,51 @@
 {
-  "name": "portfolio",
-  "version": "2.0.0",
-  "description": "Portfolio website of Nico Salvador",
-  "main": "scripts.js",
-  "scripts": {
-    "dev": "gulp watch",
-    "build": "gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/salvadornico/salvadornico.github.io.git"
-  },
-  "author": "Nico Salvador",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/salvadornico/salvadornico.github.io/issues"
-  },
-  "homepage": "http://salvadornico.com",
-  "dependencies": {
-    "smooth-scroll": "github:cferdinandi/smooth-scroll"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.2",
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-cache": "^0.4.6",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-prettify": "^0.5.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-stylus": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "pug": "^2.0.0-rc.3",
-    "run-sequence": "^2.0.0",
-    "stylus": "^0.54.5",
-    "trash": "^4.0.1"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  }
+	"name": "portfolio",
+	"version": "2.0.0",
+	"description": "Portfolio website of Nico Salvador",
+	"main": "scripts.js",
+	"scripts": {
+		"dev": "gulp watch",
+		"build": "gulp build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/salvadornico/salvadornico.github.io.git"
+	},
+	"author": "Nico Salvador",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/salvadornico/salvadornico.github.io/issues"
+	},
+	"homepage": "http://salvadornico.com",
+	"dependencies": {
+		"smooth-scroll": "github:cferdinandi/smooth-scroll"
+	},
+	"devDependencies": {
+		"autoprefixer": "^7.1.4",
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"browser-sync": "^2.18.13",
+		"eslint": "^4.7.1",
+		"eslint-config-prettier": "^2.5.0",
+		"eslint-plugin-prettier": "^2.3.1",
+		"prettier": "^1.7.0",
+		"gulp": "^3.9.1",
+		"gulp-babel": "^7.0.0",
+		"gulp-cache": "^0.4.6",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-imagemin": "^3.3.0",
+		"gulp-postcss": "^7.0.0",
+		"gulp-prettify": "^0.5.0",
+		"gulp-pug": "^3.3.0",
+		"gulp-stylus": "^2.6.0",
+		"gulp-uglify": "^3.0.0",
+		"pug": "^2.0.0-rc.4",
+		"run-sequence": "^2.2.0",
+		"stylus": "^0.54.5",
+		"trash": "^4.1.0"
+	},
+	"babel": {
+		"presets": ["es2015"]
+	}
 }
