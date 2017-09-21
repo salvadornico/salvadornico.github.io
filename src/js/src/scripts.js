@@ -1,10 +1,10 @@
 $(document).ready(() => {
-	var scroll = new SmoothScroll("a[href*=\"#\"]")
-	
+	var scroll = new SmoothScroll('a[href*="#"]') //eslint-disable-line no-unused-vars
+
 	$("#scrollDownBtn").click(() => {
 		popOutFAB()
 	})
-	
+
 	$("#scrollToTopFAB").click(() => {
 		$("#scrollToTopFAB").addClass("scale-out")
 		$("#scrollToTopFAB").removeClass("pulse")
@@ -13,23 +13,39 @@ $(document).ready(() => {
 	$(".parallax").parallax()
 
 	var scrollFireOptions = [
-		{selector: "#collapsible-1", offset: 250, callback: () => {
-			$(".collapsible").collapsible("open", 0)
-			$(".carousel.carousel-slider").carousel({
-				fullWidth: true
-			})
-			startCarousel()
-		}},
-		{selector: "#collapsible-2", offset: 250, callback: () => {
-			$(".collapsible").collapsible("open", 1)
-			popOutFAB()
-		}},
-		{selector: "#collapsible-3", offset: 250, callback: () => {
-			$(".collapsible").collapsible("open", 2)
-		}},
-		{selector: "#collapsible-4", offset: 250, callback: () => {
-			$(".collapsible").collapsible("open", 3)
-		}},
+		{
+			selector: "#collapsible-1",
+			offset: 250,
+			callback: () => {
+				$(".collapsible").collapsible("open", 0)
+				$(".carousel.carousel-slider").carousel({
+					fullWidth: true,
+				})
+				startCarousel()
+			},
+		},
+		{
+			selector: "#collapsible-2",
+			offset: 250,
+			callback: () => {
+				$(".collapsible").collapsible("open", 1)
+				popOutFAB()
+			},
+		},
+		{
+			selector: "#collapsible-3",
+			offset: 250,
+			callback: () => {
+				$(".collapsible").collapsible("open", 2)
+			},
+		},
+		{
+			selector: "#collapsible-4",
+			offset: 250,
+			callback: () => {
+				$(".collapsible").collapsible("open", 3)
+			},
+		},
 	]
 	Materialize.scrollFire(scrollFireOptions)
 
@@ -40,7 +56,6 @@ $(document).ready(() => {
 	$(".carousel").mouseleave(() => {
 		startCarousel()
 	})
-	
 })
 
 function startCarousel() {
