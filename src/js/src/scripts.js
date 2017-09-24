@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	var scroll = new SmoothScroll('a[href*="#"]') //eslint-disable-line no-unused-vars
+	var scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
 
 	$("#scrollDownBtn").click(() => {
 		popOutFAB()
