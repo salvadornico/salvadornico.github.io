@@ -1,5 +1,5 @@
 $(document).ready(() => {
-	var scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
+	const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
 
 	$("#scrollDownBtn").click(() => {
 		popOutFAB()
@@ -12,7 +12,7 @@ $(document).ready(() => {
 
 	$(".parallax").parallax()
 
-	var scrollFireOptions = [
+	const scrollFireOptions = [
 		{
 			selector: "#collapsible-1",
 			offset: 250,

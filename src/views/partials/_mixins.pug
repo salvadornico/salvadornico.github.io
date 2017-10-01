@@ -1,6 +1,17 @@
 mixin techSkill(name, img)
 	img.tech-skill.tooltipped(src=`images/logos/${img}` alt=name data-position="bottom" data-delay="50" data-tooltip=name)
 
+mixin carouselItem(order, title, caption, url, action = "View")
+	.carousel-item(href=`#${order}!`)
+		div
+			h2= title
+			p= caption
+			a.btn.red.darken-1(href=url)= action
+
+mixin inspCard(caption)
+	.card-panel.red.lighten-1.flow-text.valign-wrapper
+				span.white-text= caption
+
 mixin thing(url, img, name)
 	.thing.col.s6.m4.l3
 		a(href=url)
@@ -8,7 +19,7 @@ mixin thing(url, img, name)
 				.card-image
 					img(src=`images/things/${img}` alt=name)
 				.card-content.valign-wrapper
-					span.black-text #{name}
+					span.black-text=name
 
 mixin imgLink(url, img, name)
 	a(href=url)
