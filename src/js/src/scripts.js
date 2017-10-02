@@ -1,75 +1,75 @@
 $(document).ready(() => {
-	const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
+	const scroll = new SmoothScroll(`a[href*='#']`) //eslint-disable-line no-unused-vars
 
-	$("#scrollDownBtn").click(() => {
+	$(`#scrollDownBtn`).click(() => {
 		popOutFAB()
 	})
 
-	$("#scrollToTopFAB").click(() => {
-		$("#scrollToTopFAB").addClass("scale-out")
-		$("#scrollToTopFAB").removeClass("pulse")
+	$(`#scrollToTopFAB`).click(() => {
+		$(`#scrollToTopFAB`).addClass(`scale-out`)
+		$(`#scrollToTopFAB`).removeClass(`pulse`)
 	})
 
-	$(".parallax").parallax()
+	$(`.parallax`).parallax()
 
 	const scrollFireOptions = [
 		{
-			selector: "#collapsible-1",
+			selector: `#collapsible-1`,
 			offset: 250,
 			callback: () => {
-				$(".collapsible").collapsible("open", 0)
-				$(".carousel.carousel-slider").carousel({
+				$(`.collapsible`).collapsible(`open`, 0)
+				$(`.carousel.carousel-slider`).carousel({
 					fullWidth: true,
 				})
 				startCarousel()
 			},
 		},
 		{
-			selector: "#collapsible-2",
+			selector: `#collapsible-2`,
 			offset: 250,
 			callback: () => {
-				$(".collapsible").collapsible("open", 1)
+				$(`.collapsible`).collapsible(`open`, 1)
 				popOutFAB()
 			},
 		},
 		{
-			selector: "#collapsible-3",
+			selector: `#collapsible-3`,
 			offset: 250,
 			callback: () => {
-				$(".collapsible").collapsible("open", 2)
+				$(`.collapsible`).collapsible(`open`, 2)
 			},
 		},
 		{
-			selector: "#collapsible-4",
+			selector: `#collapsible-4`,
 			offset: 250,
 			callback: () => {
-				$(".collapsible").collapsible("open", 3)
+				$(`.collapsible`).collapsible(`open`, 3)
 			},
 		},
 	]
 	Materialize.scrollFire(scrollFireOptions)
 
-	$(".carousel").mouseenter(() => {
+	$(`.carousel`).mouseenter(() => {
 		clearInterval(window.scrollAction)
 	})
 
-	$(".carousel").mouseleave(() => {
+	$(`.carousel`).mouseleave(() => {
 		startCarousel()
 	})
 })
 
 function startCarousel() {
 	window.scrollAction = setInterval(() => {
-		$(".carousel").carousel("next")
+		$(`.carousel`).carousel(`next`)
 	}, 3000)
 }
 
 function popOutFAB() {
-	$("#scrollToTopFAB").addClass("scale-in pulse")
+	$(`#scrollToTopFAB`).addClass(`scale-in pulse`)
 	setTimeout(() => {
-		$("#scrollToTopFAB").removeClass("scale-out scale-in")
+		$(`#scrollToTopFAB`).removeClass(`scale-out scale-in`)
 	}, 500)
 	setTimeout(() => {
-		$("#scrollToTopFAB").removeClass("pulse")
+		$(`#scrollToTopFAB`).removeClass(`pulse`)
 	}, 10000)
 }

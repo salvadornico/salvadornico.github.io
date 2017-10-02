@@ -17,34 +17,34 @@ import cache from "gulp-cache"
 
 const paths = {
 	views: {
-		srcIn: "src/views",
-		srcOut: "src",
-		dist: "dist",
+		srcIn: `src/views`,
+		srcOut: `src`,
+		dist: `dist`,
 	},
 	styles: {
-		src: "src/styles",
-		dist: "dist/styles",
+		src: `src/styles`,
+		dist: `dist/styles`,
 	},
 	scripts: {
-		srcIn: "src/js/src",
-		srcOut: "src/js",
-		dist: "dist/js",
+		srcIn: `src/js/src`,
+		srcOut: `src/js`,
+		dist: `dist/js`,
 	},
 }
 
 gulp.task(
-	"watch",
-	["browserSync", "styles-dev", "views-dev", "scripts-dev"],
+	`watch`,
+	[`browserSync`, `styles-dev`, `views-dev`, `scripts-dev`],
 	() => {
-		gulp.watch(`${paths.views.srcIn}/**/*.pug`, ["views-dev"])
+		gulp.watch(`${paths.views.srcIn}/**/*.pug`, [`views-dev`])
 		gulp.watch(`${paths.views.srcOut}/*.html`, browserSync.reload)
-		gulp.watch(`${paths.styles.src}/**/*.styl`, ["styles-dev"])
-		gulp.watch(`${paths.scripts.srcIn}/*.js`, ["scripts-dev"])
+		gulp.watch(`${paths.styles.src}/**/*.styl`, [`styles-dev`])
+		gulp.watch(`${paths.scripts.srcIn}/*.js`, [`scripts-dev`])
 		gulp.watch(`${paths.scripts.srcOut}/*.js`, browserSync.reload)
 	}
 )
 
-gulp.task("browserSync", () => {
+gulp.task(`browserSync`, () => {
 	browserSync.init({
 		server: {
 			baseDir: paths.views.srcOut,
@@ -52,7 +52,7 @@ gulp.task("browserSync", () => {
 	})
 })
 
-gulp.task("views-dev", () => {
+gulp.task(`views-dev`, () => {
 	return gulp
 		.src(`${paths.views.srcIn}/*.pug`)
 		.pipe(pug())
@@ -65,7 +65,7 @@ gulp.task("views-dev", () => {
 		.pipe(gulp.dest(paths.views.srcOut))
 })
 
-gulp.task("styles-dev", () => {
+gulp.task(`styles-dev`, () => {
 	return gulp
 		.src(`${paths.styles.src}/*.styl`)
 		.pipe(stylus())
@@ -74,23 +74,23 @@ gulp.task("styles-dev", () => {
 		.pipe(browserSync.stream())
 })
 
-gulp.task("scripts-dev", () => {
+gulp.task(`scripts-dev`, () => {
 	return gulp
 		.src(`${paths.scripts.srcIn}/*.js`)
 		.pipe(babel())
-		.pipe(concat("all.js"))
+		.pipe(concat(`all.js`))
 		.pipe(gulp.dest(paths.scripts.srcOut))
 })
 
-gulp.task("build", callback => {
+gulp.task(`build`, callback => {
 	runSequence(
-		["cleanup"],
-		["styles-dist", "views-dist", "scripts-dist", "images", "video", "files"],
+		[`cleanup`],
+		[`styles-dist`, `views-dist`, `scripts-dist`, `images`, `video`, `files`],
 		callback
 	)
 })
 
-gulp.task("cleanup", () => {
+gulp.task(`cleanup`, () => {
 	return trash([
 		paths.views.dist,
 		`${paths.views.srcOut}/*.html`,
@@ -99,7 +99,7 @@ gulp.task("cleanup", () => {
 	])
 })
 
-gulp.task("styles-dist", () => {
+gulp.task(`styles-dist`, () => {
 	return gulp
 		.src(`${paths.styles.src}/*.styl`)
 		.pipe(
@@ -111,25 +111,25 @@ gulp.task("styles-dist", () => {
 		.pipe(gulp.dest(paths.styles.dist))
 })
 
-gulp.task("views-dist", () => {
+gulp.task(`views-dist`, () => {
 	return gulp
 		.src(`${paths.views.srcIn}/*.pug`)
 		.pipe(pug())
 		.pipe(gulp.dest(paths.views.dist))
 })
 
-gulp.task("scripts-dist", () => {
+gulp.task(`scripts-dist`, () => {
 	return gulp
 		.src(`${paths.scripts.srcIn}/*.js`)
 		.pipe(babel())
-		.pipe(concat("all.js"))
+		.pipe(concat(`all.js`))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.scripts.dist))
 })
 
-gulp.task("images", () => {
+gulp.task(`images`, () => {
 	return gulp
-		.src("src/images/**/*.+(png|jpg|jpeg|gif|svg)")
+		.src(`src/images/**/*.+(png|jpg|jpeg|gif|svg)`)
 		.pipe(
 			cache(
 				imagemin({
@@ -137,13 +137,13 @@ gulp.task("images", () => {
 				})
 			)
 		)
-		.pipe(gulp.dest("dist/images"))
+		.pipe(gulp.dest(`dist/images`))
 })
 
-gulp.task("video", () => {
-	return gulp.src("src/images/*.mp4").pipe(gulp.dest("dist/images"))
+gulp.task(`video`, () => {
+	return gulp.src(`src/images/*.mp4`).pipe(gulp.dest(`dist/images`))
 })
 
-gulp.task("files", () => {
-	return gulp.src("src/files/**/*").pipe(gulp.dest("dist/files"))
+gulp.task(`files`, () => {
+	return gulp.src(`src/files/**/*`).pipe(gulp.dest(`dist/files`))
 })
