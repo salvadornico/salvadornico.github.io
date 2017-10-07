@@ -12,8 +12,6 @@ import concat from "gulp-concat"
 import uglify from "gulp-uglify"
 import runSequence from "run-sequence"
 import trash from "trash"
-import imagemin from "gulp-imagemin"
-import cache from "gulp-cache"
 
 const paths = {
 	views: {
@@ -85,7 +83,7 @@ gulp.task(`scripts-dev`, () => {
 gulp.task(`build`, callback => {
 	runSequence(
 		[`cleanup`],
-		[`styles-dist`, `views-dist`, `scripts-dist`, `images`, `video`, `files`],
+		[`styles-dist`, `views-dist`, `scripts-dist`],
 		callback
 	)
 })
@@ -125,25 +123,4 @@ gulp.task(`scripts-dist`, () => {
 		.pipe(concat(`all.js`))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.scripts.dist))
-})
-
-gulp.task(`images`, () => {
-	return gulp
-		.src(`src/images/**/*.+(png|jpg|jpeg|gif|svg)`)
-		.pipe(
-			cache(
-				imagemin({
-					interlaced: true,
-				})
-			)
-		)
-		.pipe(gulp.dest(`dist/images`))
-})
-
-gulp.task(`video`, () => {
-	return gulp.src(`src/images/*.mp4`).pipe(gulp.dest(`dist/images`))
-})
-
-gulp.task(`files`, () => {
-	return gulp.src(`src/files/**/*`).pipe(gulp.dest(`dist/files`))
 })

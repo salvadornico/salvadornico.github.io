@@ -2,8 +2,9 @@ extends partials/layout
 include partials/_mixins
 
 block head
+	- var cloudinaryLink = "http://res.cloudinary.com/salvadornico/image/upload/v1507347645/Portfolio"
 	title Nico Salvador
-	link(rel="icon" type="image/png" href="images/icon.png")
+	link(rel="icon" type="image/png" href=`${cloudinaryLink}/icon.png`)
 	base(target="_blank")
 
 	+styles("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans")

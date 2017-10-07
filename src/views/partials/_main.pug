@@ -1,8 +1,8 @@
 main
 	.parallax-container
 		.parallax
-			img(src="images/header1.png" alt="Some sample Kotlin code I wrote")
-	
+			img(src=`${cloudinaryLink}/header1.png` alt="Some sample Kotlin code I wrote")
+
 	#things.section.container
 		h3.center-align.section-header Things I've Dabbled In
 		.row.page-section
@@ -76,7 +76,7 @@ main
 									img.responsive-img(src="https://instagram.fmnl4-3.fna.fbcdn.net/t51.2885-15/s320x320/e35/14677420_424099854587814_266605086967332864_n.jpg" alt="3D printing at Builtable Makerspace")
 								a(href="https://www.instagram.com/p/BMdli-lAUpg/")
 									img.responsive-img(src="https://instagram.fmnl8-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/14693650_1226332430742915_2680398392609210368_n.jpg" alt="Lego creation")
-								img.responsive-img(src="images/portfolio/park_design.jpg" alt="3D modelled skatepark design")
+								img.responsive-img(src=`${cloudinaryLink}/portfolio/park_design.jpg` alt="3D modelled skatepark design")
 
 					li
 						.collapsible-header.black-text#collapsible-3.
@@ -112,7 +112,7 @@ main
 			+inspCard("Stories behind great ideas")
 			+inspCard("Working with people who love their craft")
 			+inspCard("Elegant solutions to awkward problems")
-				
+
 		h3.center-align.section-header Things I'm Enjoying Lately
 		#thingBox.row.page-section
 			+thing("https://www.tested.com", "tested-logo.png", "Tested.com")
@@ -129,8 +129,8 @@ main
 
 	#video.parallax-container
 		.parallax
-			video(muted autoplay loop poster="images/header2.gif")
-				source(src="images/makerbot.mp4" type="video/mp4")
+			video(muted autoplay loop poster=`${cloudinaryLink}/header2gif.gif`)
+				source(src="../static/images/makerbot.mp4" type="video/mp4")
 
 	#contacts.section.container
 		div
@@ -153,6 +153,6 @@ main
 					+imgLink("https://www.pinterest.com/roller4life/", "pinterest", "Pinterest")
 
 			.row
-				a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="./files/Nico_Salvador-CV2017.pdf")
+				a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico_Salvador-CV2017.pdf")
 					i.material-icons.left library_books
 					span Resum&#233;

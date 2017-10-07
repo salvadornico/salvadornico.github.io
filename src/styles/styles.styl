@@ -1,12 +1,13 @@
 @require "partials/_base"
 
 bodyColor = #3949ab
+cloudinaryLink = "http://res.cloudinary.com/salvadornico/image/upload/v1507347645/Portfolio"
 
 *
 	position relative
 	font-family 'Open Sans', sans-serif
-	
-body	
+
+body
 	background-color bodyColor
 	color white
 
@@ -104,26 +105,27 @@ body
 	div
 		center XY absolute
 	carouselImage(link)
-		background-image linear-gradient(rgba(0,0,0,0.85)), url(link)
+		fullLink = cloudinaryLink + "/portfolio/" + link
+		background-image linear-gradient(rgba(0,0,0,0.85)), url(fullLink)
 		background-repeat no-repeat
 		background-size cover
 	&[href="#one!"]
-		carouselImage('./../images/portfolio/whats-that-edit.png')
+		carouselImage('whats-that-edit.png')
 	&[href="#two!"]
-		carouselImage('./../images/portfolio/monoposto.png')
+		carouselImage('monoposto.png')
 	&[href="#three!"]
-		carouselImage('./../images/portfolio/leather-turf.png')
+		carouselImage('leather-turf.png')
 	&[href="#four!"]
-		carouselImage('./../images/portfolio/brain-train.png')
+		carouselImage('brain-train.png')
 	&[href="#five!"]
-		carouselImage('./../images/portfolio/lizard-spock.png')
+		carouselImage('lizard-spock.png')
 
 #inspirations
 	@media TabletUp
 		display grid
 		grid-template-columns 1fr 1fr 1fr
 		grid-template-rows auto
-		grid-column-gap 10px	
+		grid-column-gap 10px
 	.card-panel
 		font-size 1.2em
 		span
