@@ -2,7 +2,7 @@
 #app-footer
 	footer.red.darken-4
 		p.center-align.
-			&copy; 2017 Nico Salvador
+			© 2017 Nico Salvador
 
 	#FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
 		a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(href="#banner" target="_parent" data-scroll)

@@ -1,7 +1,8 @@
 <template lang="pug">
 	#app
 		app-banner
-		router-view
+		main
+			router-view
 		app-footer
 </template>
 
@@ -28,4 +29,7 @@ export default {
 body
 	background-color bodyColor
 	color white
+
+main
+	margin-bottom 100px
 </style>
