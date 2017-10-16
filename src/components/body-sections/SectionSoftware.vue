@@ -1,9 +1,9 @@
 <template lang="pug">
 .row
-	.col.s12.m7
+	.col.s12
 		.card.horizontal
 			.card-image
-				img(src="https://lorempixel.com/100/190/nature/6")
+				img(src="https://lorempixel.com/200/400")
 			.card-stacked
 				.card-content
 					span.card-title Software development
@@ -25,5 +25,9 @@ export default {
 
 .card
 	color black
+	width 100%
+
+	&-image
+		width 20%
 </style>
 

@@ -3,7 +3,8 @@
 		app-banner
 		main
 			parallax(image="header1.png" alt="Some Kotlin sample code")
-			router-view
+			.container
+				router-view
 		app-footer
 </template>
 

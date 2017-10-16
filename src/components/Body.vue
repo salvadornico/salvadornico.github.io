@@ -17,3 +17,9 @@ export default {
 }
 </script>
 
+<style lang="stylus" scoped>
+h2
+	text-align center
+</style>
+
+
