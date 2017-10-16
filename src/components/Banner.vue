@@ -1,24 +1,16 @@
 <template lang="pug">
-include ../assets/_lib
-
 header#app-banner.container
 	.row
 		.col.s12.l5
 			.card.large.hoverable
 				.card-image
-					img(src=`${cloudinaryLink}/portrait.png` alt="That's me!")
+					img(v-bind:src="portraitUrl" alt="That's me!")
 				.card-content
 					h1 Nico Salvador
 					h3 Quezon City, Philippines
 					.center-align
-						a(href="mailto:salvador.nico@gmail.com")
-							i.fa.fa-envelope(aria-hidden="true")
-						a(href="https://github.com/salvadornico")
-							i.fa.fa-github(aria-hidden="true")
-						a(href="https://www.linkedin.com/in/salvadornico")
-							i.fa.fa-linkedin(aria-hidden="true")
-						a(href="https://www.facebook.com/salvador.nico")
-							i.fa.fa-facebook-official(aria-hidden="true")
+						a(v-for="link in links" v-bind:href="link.url")
+							i.fa(v-bind:class="faIcon(link.icon)" aria-hidden="true")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -40,7 +32,39 @@ header#app-banner.container
 
 <script>
 export default {
-	name: "app-banner"
+	name: "app-banner",
+	data() {
+		return {
+			links: [
+				{
+					url: "mailto:salvador.nico@gmail.com",
+					icon: "envelope"
+				},
+				{
+					url: "https://github.com/salvadornico",
+					icon: "github"
+				},
+				{
+					url: "https://www.linkedin.com/in/salvadornico",
+					icon: "linkedin"
+				},
+				{
+					url: "https://www.facebook.com/salvador.nico",
+					icon: "facebook-official"
+				},
+			],
+		}
+	},
+	methods: {
+		faIcon: function(name) {
+			return `fa-${name}`
+		}
+	},
+	computed: {
+		portraitUrl: function() {
+			return `${this.$cloudinaryLink}/portrait.png`
+		},
+	}
 }
 </script>
 

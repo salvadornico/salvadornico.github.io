@@ -2,18 +2,21 @@
 	#app
 		app-banner
 		main
+			parallax(image="header1.png" alt="Some Kotlin sample code")
 			router-view
 		app-footer
 </template>
 
 <script>
 import Banner from "./components/Banner"
+import Parallax from "./components/Parallax"
 import Footer from "./components/Footer"
 
 export default {
 	name: "app",
 	components: {
 		"app-banner": Banner,
+		"parallax": Parallax,
 		"app-footer": Footer
 	}
 }

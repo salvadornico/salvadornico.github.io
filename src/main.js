@@ -6,6 +6,8 @@ import router from "./router"
 
 Vue.config.productionTip = false
 
+Vue.prototype.$cloudinaryLink = "https://res.cloudinary.com/salvadornico/image/upload/v1507347645/Portfolio"
+
 /* eslint-disable no-new */
 new Vue({
 	el: "#app",
