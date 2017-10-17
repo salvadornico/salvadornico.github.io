@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Banner from "./components/Banner"
-import Parallax from "./components/Parallax"
-import Footer from "./components/Footer"
+import Banner from "@/components/Banner"
+import Parallax from "@/components/shared/Parallax"
+import Footer from "@/components/Footer"
 
 export default {
 	name: "app",

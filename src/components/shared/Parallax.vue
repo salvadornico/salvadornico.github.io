@@ -14,11 +14,9 @@ export default {
 	props: {
 		image: {
 			type: String,
-			default: "header1.png"
 		},
 		alt: {
 			type: String,
-			default: "Default"
 		}
 	},
 	computed: {
@@ -28,3 +26,9 @@ export default {
 	}
 }
 </script>
+
+<style lang="stylus" scoped>
+.parallax-container
+	height 400px
+</style>
+

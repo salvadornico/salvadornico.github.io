@@ -10,7 +10,7 @@ header#app-banner.container
 					h3 Quezon City, Philippines
 					.center-align
 						a(v-for="link in links" v-bind:href="link.url")
-							i.fa(v-bind:class="faIcon(link.icon)" aria-hidden="true")
+							fa-icon(v-bind:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -24,15 +24,22 @@ header#app-banner.container
 			.row.center-align
 				.col.s12.m6.offset-m3.pull-l3
 					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll)
-						i.material-icons.left chat_bubble
+						material-icon.left(icon="chat_bubble")
 						span Contact Me
 			.row
 				a#seeMore.hvr-icon-hang.white-text(href="#things" target="_parent" data-scroll)
 </template>
 
 <script>
+import FAIcon from "./shared/FAIcon"
+import MaterialIcon from "./shared/MaterialIcon"
+
 export default {
 	name: "app-banner",
+	components: {
+		"fa-icon": FAIcon,
+		"material-icon": MaterialIcon,
+	},
 	data() {
 		return {
 			links: [
@@ -53,11 +60,6 @@ export default {
 					icon: "facebook-official"
 				},
 			],
-		}
-	},
-	methods: {
-		faIcon: function(name) {
-			return `fa-${name}`
 		}
 	},
 	computed: {

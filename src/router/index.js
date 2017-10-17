@@ -1,7 +1,8 @@
 import Vue from "vue"
 import Router from "vue-router"
 import Body from "@/components/Body"
-import Portfolio from "@/components/body-sections/Portfolio"
+import Portfolio from "@/components/body-sections/portfolio/Portfolio"
+import Skills from "@/components/body-sections/skills/Skills"
 
 Vue.use(Router)
 
@@ -13,6 +14,10 @@ export default new Router({
 	{
 		path: "/portfolio",
 		component: Portfolio
+	},
+	{
+		path: "/skills",
+		component: Skills
 	}
 	]
 })
