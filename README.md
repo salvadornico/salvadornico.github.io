@@ -5,16 +5,15 @@
 ## Build Setup
 
 ``` bash
-# serve with hot reload at localhost:8080
-npm run dev
+# serve with hot reload at localhost:8080, then launches BrowserSync at localhost:3000
+yarn run dev
+
+# start Flask API at localhost:5000
+yarn run serve
 
 # build for production with minification
-npm run build
+yarn run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
-
-# To start Flask back-end:
-export FLASK_DEBUG=1 && export FLASK_APP=app.py
-flask run
+yarn run build --report
 ```
