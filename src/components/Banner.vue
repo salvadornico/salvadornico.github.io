@@ -33,6 +33,7 @@ header#app-banner.container
 <script>
 import FAIcon from "./shared/FAIcon"
 import MaterialIcon from "./shared/MaterialIcon"
+import _ from "lodash"
 
 export default {
 	name: "app-banner",
