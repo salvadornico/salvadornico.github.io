@@ -19,6 +19,7 @@ export default {
 @require "../assets/_base"
 
 footer
+	color white
 	position absolute
 	bottom 0
 	width 100%

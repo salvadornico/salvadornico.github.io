@@ -116,9 +116,12 @@ export default {
 			color black
 			font-size 1.7rem
 
-.sidebox a
-	display block
-	min-width 100px
+.sidebox
+	color white
+
+	a
+		display block
+		min-width 100px
 
 #seeMore
 	font-size 1.25rem

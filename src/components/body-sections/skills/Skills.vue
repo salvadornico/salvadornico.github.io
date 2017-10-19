@@ -4,10 +4,12 @@
 	br
 	.card
 		.card-content
+			span.card-title Tech skills
+			p This site is built with VueJS using Pug and Stylus, with a Flask API back-end serving from a MongoDB database.
 			#skillsList
 				.category(v-for="(category, index) in skills")
 					h5 {{ capitalize(index) }}
-					a(v-for="skill in category" v-bind:href="skill.url")
+					a(v-for="skill in category" v-bind:href="skill.url" )
 						figure.tech-skill
 							img(v-bind:src="imgLink(skill.icon)" v-bind:alt="skill.name")
 							figcaption {{ skill.name }}
@@ -36,7 +38,6 @@ export default {
 			.then(response => response.json())
 			.then(data => {
 				let grouped = _.groupBy(data.result, item => item.category)
-				console.log(grouped)
 				this.skills = grouped
 			})
 	},

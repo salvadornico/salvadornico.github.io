@@ -13,6 +13,9 @@
 import Banner from "@/components/Banner"
 import Parallax from "@/components/shared/Parallax"
 import Footer from "@/components/Footer"
+import SmoothScroll from "smooth-scroll"
+
+const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
 
 export default {
 	name: "app",
@@ -33,7 +36,6 @@ export default {
 
 body
 	background-color bodyColor
-	color white
 
 main
 	margin-bottom 100px
