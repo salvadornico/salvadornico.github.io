@@ -9,7 +9,7 @@
 yarn run dev
 
 # start Flask API at localhost:5000
-yarn run serve
+export FLASK_DEBUG=1 && export FLASK_APP=app.py && flask run
 
 # build for production with minification
 yarn run build

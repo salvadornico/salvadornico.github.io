@@ -5,8 +5,8 @@
 	"author": "Nico <salvador.nico@gmail.com>",
 	"private": true,
 	"scripts": {
-		"serve": "export FLASK_DEBUG=1 && export FLASK_APP=app.py && flask run",
 		"dev": "node build/dev-server.js",
+		"serve": "export FLASK_DEBUG=1 && export FLASK_APP=app.py && flask run",
 		"start": "npm run dev",
 		"build": "node build/build.js",
 		"lint": "eslint --ext .js,.vue src"
