@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from flask_pymongo import PyMongo
 
-app = Flask(__name__, static_folder="dist/static", template_folder="dist")
+app = Flask(__name__, static_folder="dist/static", template_folder="./")
 CORS(app)
 
 app.config["MONGO_DBNAME"] = "salvadornico"

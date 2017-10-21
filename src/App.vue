@@ -6,12 +6,14 @@
 			.container
 				transition(name="component-fade" mode="out-in")
 					router-view
+				body-contacts
 		app-footer
 </template>
 
 <script>
 import Banner from "@/components/Banner"
 import Parallax from "@/components/shared/Parallax"
+import Contacts from "@/components/body-sections/contacts/Contacts"
 import Footer from "@/components/Footer"
 import SmoothScroll from "smooth-scroll"
 
@@ -22,6 +24,7 @@ export default {
 	components: {
 		"app-banner": Banner,
 		"parallax": Parallax,
+		"body-contacts": Contacts,
 		"app-footer": Footer
 	}
 }
@@ -36,9 +39,6 @@ export default {
 
 body
 	background-color bodyColor
-
-main
-	margin-bottom 100px
 
 .component-fade-enter-active, .component-fade-leave-active
 	transition opacity 0.3s ease
