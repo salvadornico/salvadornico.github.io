@@ -19,7 +19,7 @@ module.exports = {
 		"generator-star-spacing": 0,
 		"indent": ["error", "tab"],
 		"quotes": ["error", "double"],
-		"linebreak-style": ["error", "unix"],
+		"linebreak-style": ["warn", "unix"],
 		"no-undef": "off"
 	}
 }
