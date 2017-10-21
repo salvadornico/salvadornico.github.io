@@ -6,7 +6,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "node build/dev-server.js",
-		"serve": "set FLASK_DEBUG=1 && set FLASK_APP='app.py' && flask run",
+		"serve": "set FLASK_DEBUG=1 && flask run",
 		"start": "npm-run-all --parallel dev serve",
 		"build": "node build/build.js",
 		"lint": "eslint --ext .js,.vue src"
