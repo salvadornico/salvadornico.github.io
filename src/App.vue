@@ -6,7 +6,8 @@
 			.container
 				transition(name="component-fade" mode="out-in")
 					router-view
-				body-contacts
+			app-parallax(image="header2gif.gif" alt="3D printing")
+			body-contacts
 		app-footer
 		app-fab
 </template>
