@@ -12,15 +12,9 @@
 export default {
 	name: "app-thing",
 	props: {
-		image: {
-			type: String
-		},
-		name: {
-			type: String
-		},
-		link: {
-			type: String
-		}
+		image: { type: String },
+		name: { type: String },
+		link: { type: String }
 	},
 	computed: {
 		imgLink: function() {

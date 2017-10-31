@@ -12,12 +12,8 @@ $(document).ready(function() {
 export default {
 	name: "app-parallax",
 	props: {
-		image: {
-			type: String
-		},
-		alt: {
-			type: String
-		}
+		image: { type: String },
+		alt: { type: String }
 	},
 	computed: {
 		imgLink: function() {

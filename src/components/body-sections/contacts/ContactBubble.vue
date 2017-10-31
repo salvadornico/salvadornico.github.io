@@ -7,20 +7,14 @@ a(v-bind:href="url")
 export default {
 	name: "contact-bubble",
 	props: {
-		name: {
-			type: String,
-		},
-		icon: {
-			type: String,
-		},
-		url: {
-			type: String,
-		}
+		name: { type: String },
+		icon: { type: String },
+		url: { type: String }
 	},
 	methods: {
 		imgLink: function(image) {
 			return `${this.$cloudinaryLink}/icons/${image}.png`
-		},
+		}
 	}
 }
 </script>
