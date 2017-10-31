@@ -53,7 +53,7 @@ h3
 		display grid
 		grid-template-columns 1fr 1fr 1fr
 		grid-template-rows auto
-		grid-column-gap 10px
+		grid-column-gap 1rem
 
 	.card-panel
 		font-size 1.2rem
@@ -63,13 +63,13 @@ h3
 			text-align center
 
 #thingBox
-	margin-bottom 20px
+	margin-bottom 2.5rem
 
 #music
-	height 100px
+	height 8rem
 
 	iframe
 		width 80%
-		max-width 500px
+		max-width 30rem
 		center X absolute
 </style>

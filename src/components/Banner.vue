@@ -115,7 +115,7 @@ export default {
 
 		a
 			display inline-block
-			margin auto 5px 5px
+			margin auto 0.4rem 0.4rem
 
 		i
 			color black
@@ -126,15 +126,15 @@ export default {
 
 	a
 		display block
-		min-width 100px
+		min-width 10rem
 
 #seeMore
 	font-size 1.25rem
 	text-align center
-	width 10px
+	width 1rem
 	center X absolute
 
 	@media MobileOnly
-		margin-top -10px
+		margin-top -1rem
 </style>
 

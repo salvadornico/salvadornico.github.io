@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus" scoped>
 .thing
-	width 200px
+	width 10rem
 
 	a:link
 		color black

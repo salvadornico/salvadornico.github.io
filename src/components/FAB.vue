@@ -38,6 +38,6 @@ export default {
 
 <style lang="stylus" scoped>
 #FAB
-	bottom 120px
+	bottom 6rem
 </style>
 

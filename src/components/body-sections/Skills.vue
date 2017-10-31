@@ -55,17 +55,17 @@ export default {
 
 #skillsList
 	color black
-	margin 20px
+	margin 1rem
 
 .tech-skill
 	display inline-block
 
-	margin 10px
+	margin 1rem
 		@media TabletDown
-			margin 5px
+			margin 0.3rem
 
 	img
-		height 70px
+		height 4rem
 
 		@media TabletDown
 			height @height * 0.7

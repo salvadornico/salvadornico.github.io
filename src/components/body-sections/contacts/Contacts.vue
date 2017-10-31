@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import ContactBubble from "./ContactBubble";
+import ContactBubble from "./ContactBubble"
 
 export default {
 	name: "body-contacts",
 	components: {
-		"contact-bubble": ContactBubble,
+		"contact-bubble": ContactBubble
 	}
 }
 </script>
@@ -41,7 +41,7 @@ export default {
 
 #contacts
 	height 100vh
-	min-height 600px
+	min-height 40rem
 	color white
 
 	& > div
@@ -49,9 +49,9 @@ export default {
 		center Y absolute
 
 #resumeLink
-	margin 30px auto
+	margin 2rem auto
 	center X relative
-	width 180px
+	width 12rem
 </style>
 
 

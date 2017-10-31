@@ -20,11 +20,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@require "../../../assets/_base"
+
 img
-	width 80px
+	width 6rem
 	border-radius 50%
 
 	@media MobileOnly
-		width 60px
+		width 5rem
 </style>
 

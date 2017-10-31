@@ -17,5 +17,5 @@ export default {
 
 <style lang="stylus" scoped>
 .back-button
-	margin-top 30px
+	margin-top 2rem
 </style>

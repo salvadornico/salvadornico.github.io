@@ -25,6 +25,6 @@ export default {
 
 <style lang="stylus" scoped>
 .parallax-container
-	height 400px
+	height 30rem
 </style>
 
