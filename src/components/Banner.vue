@@ -23,7 +23,7 @@ header#app-banner.container
 					h3 Let's get in touch!
 			.row.center-align
 				.col.s12.m6.offset-m3.pull-l3
-					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll)
+					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll v-on:click="openFab()")
 						material-icon.left(icon="chat_bubble")
 						span Contact Me
 			.row
@@ -39,7 +39,7 @@ export default {
 	name: "app-banner",
 	components: {
 		"fa-icon": FAIcon,
-		"material-icon": MaterialIcon,
+		"material-icon": MaterialIcon
 	},
 	data() {
 		return {
@@ -59,14 +59,19 @@ export default {
 				{
 					url: "https://www.facebook.com/salvador.nico",
 					icon: "facebook-official"
-				},
-			],
+				}
+			]
 		}
 	},
 	computed: {
 		portraitUrl: function() {
 			return `${this.$cloudinaryLink}/portrait.png`
-		},
+		}
+	},
+	methods: {
+		openFab: function() {
+			this.$eventBus.$emit("openFab")
+		}
 	}
 }
 </script>

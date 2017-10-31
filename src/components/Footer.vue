@@ -3,10 +3,6 @@
 	footer.red.darken-4
 		p.center-align.
 			© 2017 Nico Salvador
-
-	#FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
-		a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(href="#banner" target="_parent" data-scroll)
-			i.material-icons arrow_upward
 </template>
 
 <script>
@@ -26,8 +22,5 @@ footer
 
 	p
 		line-height 2.4rem
-
-#FAB
-	bottom 120px
 </style>
 

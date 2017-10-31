@@ -2,12 +2,13 @@
 	#app
 		app-banner
 		main
-			parallax(image="header1.png" alt="Some Kotlin sample code")
+			app-parallax(image="header1.png" alt="Some Kotlin sample code")
 			.container
 				transition(name="component-fade" mode="out-in")
 					router-view
 				body-contacts
 		app-footer
+		app-fab
 </template>
 
 <script>
@@ -15,6 +16,7 @@ import Banner from "@/components/Banner"
 import Parallax from "@/components/shared/Parallax"
 import Contacts from "@/components/body-sections/contacts/Contacts"
 import Footer from "@/components/Footer"
+import FAB from "@/components/FAB"
 import SmoothScroll from "smooth-scroll"
 
 const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
@@ -23,9 +25,10 @@ export default {
 	name: "app",
 	components: {
 		"app-banner": Banner,
-		"parallax": Parallax,
+		"app-parallax": Parallax,
 		"body-contacts": Contacts,
-		"app-footer": Footer
+		"app-footer": Footer,
+		"app-fab": FAB
 	}
 }
 </script>

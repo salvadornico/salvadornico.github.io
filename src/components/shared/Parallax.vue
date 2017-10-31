@@ -6,17 +6,17 @@
 
 <script>
 $(document).ready(function() {
-	$(".parallax").parallax();
-});
+	$(".parallax").parallax()
+})
 
 export default {
-	name: "parallax",
+	name: "app-parallax",
 	props: {
 		image: {
-			type: String,
+			type: String
 		},
 		alt: {
-			type: String,
+			type: String
 		}
 	},
 	computed: {
