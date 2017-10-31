@@ -4,7 +4,7 @@
 	br
 	.card
 		.card-content
-			span.card-title Tech skills
+			span.card-title My Tech Stack
 			p This site is built with VueJS using Pug and Stylus, with a Flask API back-end serving from a MongoDB database.
 			#skillsList
 				.category(v-for="(category, index) in skills")
@@ -20,17 +20,17 @@ import BackButton from "@/components/shared/BackButton"
 import _ from "lodash"
 
 $(document).ready(function() {
-	$(".tooltipped").tooltip({ delay: 50 });
-});
+	$(".tooltipped").tooltip({ delay: 50 })
+})
 
 export default {
 	name: "skills",
 	components: {
-		"back-button": BackButton,
+		"back-button": BackButton
 	},
 	data() {
 		return {
-			skills: [],
+			skills: []
 		}
 	},
 	created: function() {
@@ -45,13 +45,13 @@ export default {
 		imgLink: function(image) {
 			return `${this.$cloudinaryLink}/logos/${image}`
 		},
-		capitalize: string => _.capitalize(string),
+		capitalize: string => _.capitalize(string)
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-@require "../../../assets/_base"
+@require "../../assets/_base"
 
 #skillsList
 	color black

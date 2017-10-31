@@ -51,6 +51,19 @@ def get_one_skills(id):
     return jsonify({"result": output})
 
 
+@app.route("/things", methods=["GET"])
+def get_all_things():
+    things = mongo.db.things
+    output = []
+    for thing in things.find():
+        output.append({
+            "name": thing["name"],
+            "image": thing["image"],
+            "link": thing["link"]
+        })
+    return jsonify({"result": output})
+
+
 app.secret_key = "secret123"
 app.jinja_env.auto_reload = True
 app.config["TEMPLATES_AUTO_RELOAD"] = True
