@@ -6,7 +6,7 @@ app = Flask(__name__, static_folder="dist/static", template_folder="./")
 CORS(app)
 
 app.config["MONGO_DBNAME"] = "salvadornico"
-app.config["MONGO_URI"] = "mongodb://localhost:27017/salvadornico"
+app.config["MONGO_URI"] = "mongodb://nico:admin@ds243055.mlab.com:43055/salvadornico"
 
 mongo = PyMongo(app)
 
@@ -14,11 +14,6 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     return render_template("index.html")
-
-
-@app.route("/json-test")
-def api():
-    return jsonify(title="API Test successful!", greeting="Salut!")
 
 
 @app.route("/skills", methods=["GET"])
