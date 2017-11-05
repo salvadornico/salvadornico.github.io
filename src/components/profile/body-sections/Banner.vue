@@ -27,7 +27,7 @@ header#app-banner.container
 						material-icon.left(icon="chat_bubble")
 						span Contact Me
 			.row
-				a#seeMore.hvr-icon-hang.white-text(href="#things" target="_parent" data-scroll)
+				a#seeMore.hvr-icon-hang.white-text(href="#app-body" target="_parent" data-scroll)
 </template>
 
 <script>
@@ -136,5 +136,44 @@ export default {
 
 	@media MobileOnly
 		margin-top -1rem
+
+highPoint = -2px
+lowPoint = 6px
+
+@keyframes hvr-icon-hang
+	0%
+		transform translateY(lowPoint)
+
+	50%
+		transform translateY(highPoint)
+
+	100%
+		transform translateY(lowPoint)
+
+@keyframes hvr-icon-hang-sink
+	100%
+		transform translateY(lowPoint)
+
+.hvr-icon-hang
+	display inline-block
+	vertical-align middle
+	transform perspective(1px) translateZ(0)
+	box-shadow 0 0 1px transparent
+	position relative
+	transition-duration 0.3s
+
+	&:before
+		content "\f078"
+		text-align center
+		position absolute
+		font-family FontAwesome
+		transform translateZ(0)
+		animation-name hvr-icon-hang-sink, hvr-icon-hang
+		animation-duration 0.3s, 1.5s
+		animation-delay 0s, 0.3s
+		animation-timing-function ease-out, ease-in-out
+		animation-iteration-count 1, infinite
+		animation-fill-mode forwards
+		animation-direction normal, alternate
 </style>
 

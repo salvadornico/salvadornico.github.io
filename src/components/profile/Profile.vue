@@ -6,7 +6,7 @@
 		.container
 			transition(name="component-fade" mode="out-in")
 				router-view
-		app-parallax(image="header2gif.gif" alt="3D printing")
+		app-parallax(type="video" video="/static/images/makerbot.mp4" image="header2gif.gif" alt="3D printing")
 		body-contacts
 	app-fab
 </template>
