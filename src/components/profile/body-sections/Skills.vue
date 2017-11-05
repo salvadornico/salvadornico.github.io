@@ -5,7 +5,7 @@
 	.card
 		.card-content
 			span.card-title My Tech Stack
-			p This site is built with VueJS using Pug and Stylus, with a Flask API back-end serving from a MongoDB database.
+			p This site is built with VueJS using Pug and Stylus, with a Flask back-end API serving from a MongoDB database.
 			#skillsList
 				.category(v-for="(category, index) in skills")
 					h5 {{ capitalize(index) }}
@@ -18,10 +18,6 @@
 <script>
 import BackButton from "@/components/shared/BackButton"
 import _ from "lodash"
-
-$(document).ready(function() {
-	$(".tooltipped").tooltip({ delay: 50 })
-})
 
 export default {
 	name: "skills",

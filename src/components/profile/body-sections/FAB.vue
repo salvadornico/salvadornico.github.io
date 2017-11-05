@@ -19,7 +19,7 @@ export default {
 		this.$eventBus.$off("openFab")
 	},
 	methods: {
-		popOutFAB: function() {
+		popOutFAB: () => {
 			$("#scrollToTopFAB").addClass("scale-in pulse")
 			setTimeout(() => {
 				$("#scrollToTopFAB").removeClass("scale-out scale-in")
@@ -28,7 +28,7 @@ export default {
 				$("#scrollToTopFAB").removeClass("pulse")
 			}, 10000)
 		},
-		hideFAB: function() {
+		hideFAB: () => {
 			$("#scrollToTopFAB").addClass("scale-out")
 			$("#scrollToTopFAB").removeClass("pulse")
 		}
