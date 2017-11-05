@@ -1,6 +1,6 @@
 <template lang="pug">
 .back-button
-	router-link.btn.waves-effect.waves-light.red.darken-1(to="/")
+	button.btn.waves-effect.waves-light.red.darken-1(v-on:click="goBack()")
 		material-icon(icon="arrow_back")
 </template>
 
@@ -11,6 +11,11 @@ export default {
 	name: "back-button",
 	components: {
 		"material-icon": MaterialIcon
+	},
+	methods: {
+		goBack: function() {
+			this.$router.go(-1)
+		}
 	}
 }
 </script>

@@ -13,6 +13,8 @@
 						figure.tech-skill
 							img(v-bind:src="imgLink(skill.icon)" v-bind:alt="skill.name")
 							figcaption {{ skill.name }}
+	back-button
+	br
 </template>
 
 <script>
