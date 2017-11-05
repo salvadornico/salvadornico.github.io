@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MaterialIcon from "./shared/MaterialIcon"
+import MaterialIcon from "@/components/shared/MaterialIcon"
 
 export default {
 	name: "fab",

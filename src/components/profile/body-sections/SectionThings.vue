@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require "../../assets/_base"
+@require "../../../assets/_base"
 
 h3
 	color white

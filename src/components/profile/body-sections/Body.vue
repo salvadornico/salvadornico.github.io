@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import SectionSoftware from "./body-sections/SectionSoftware"
-import SectionThings from "./body-sections/SectionThings"
+import SectionSoftware from "./SectionSoftware"
+import SectionThings from "./SectionThings"
 
 export default {
 	name: "app-body",

@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require "../assets/_base"
+@require "../../assets/_base"
 
 footer
 	color white

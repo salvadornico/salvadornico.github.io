@@ -31,8 +31,8 @@ header#app-banner.container
 </template>
 
 <script>
-import FAIcon from "./shared/FAIcon"
-import MaterialIcon from "./shared/MaterialIcon"
+import FAIcon from "@/components/shared/FAIcon"
+import MaterialIcon from "@/components/shared/MaterialIcon"
 import _ from "lodash"
 
 export default {
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require "../assets/_base"
+@require "../../../assets/_base"
 
 #app-banner
 	min-height 100vh

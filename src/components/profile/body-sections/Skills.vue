@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require "../../assets/_base"
+@require "../../../assets/_base"
 
 #skillsList
 	color black

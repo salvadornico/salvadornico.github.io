@@ -1,23 +1,12 @@
 <template lang="pug">
-	#app
-		app-banner
-		main
-			app-parallax(image="header1.png" alt="Some Kotlin sample code")
-			.container
-				transition(name="component-fade" mode="out-in")
-					router-view
-			app-parallax(image="header2gif.gif" alt="3D printing")
-			body-contacts
-		app-footer
-		app-fab
+#app
+	transition(name="component-fade" mode="out-in")
+		router-view
+	app-footer
 </template>
 
 <script>
-import Banner from "@/components/Banner"
-import Parallax from "@/components/shared/Parallax"
-import Contacts from "@/components/body-sections/contacts/Contacts"
-import Footer from "@/components/Footer"
-import FAB from "@/components/FAB"
+import Footer from "@/components/shared/Footer"
 import SmoothScroll from "smooth-scroll"
 
 const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
@@ -25,11 +14,7 @@ const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-
 export default {
 	name: "app",
 	components: {
-		"app-banner": Banner,
-		"app-parallax": Parallax,
-		"body-contacts": Contacts,
-		"app-footer": Footer,
-		"app-fab": FAB
+		"app-footer": Footer
 	}
 }
 </script>
