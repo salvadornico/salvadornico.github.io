@@ -20,7 +20,7 @@ def index():
 def get_all_skills():
     skills = mongo.db.skills
     output = []
-    for skill in skills.find().sort("category", 1):
+    for skill in skills.find().sort("name", 1):
         output.append({
             "category": skill["category"],
             "name": skill["name"],
@@ -50,7 +50,7 @@ def get_one_skills(id):
 def get_all_things():
     things = mongo.db.things
     output = []
-    for thing in things.find():
+    for thing in things.find().sort("name", 1):
         output.append({
             "name": thing["name"],
             "image": thing["image"],
