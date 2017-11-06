@@ -39,7 +39,7 @@ export default {
 			width 20%
 
 	.margins
-		margin auto 3rem
+		margin auto 2rem
 
 	p
 		margin 0.7rem auto
