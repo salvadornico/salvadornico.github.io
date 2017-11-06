@@ -18,7 +18,7 @@
 import Thing from "./things/Thing"
 
 export default {
-	name: "body-section-things",
+	name: "body-other-things",
 	components: {
 		"app-thing": Thing
 	},
