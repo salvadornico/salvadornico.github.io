@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import imageService from "@/helpers/imageService.js"
+
 export default {
 	name: "app-thing",
 	props: {
@@ -18,7 +20,7 @@ export default {
 	},
 	computed: {
 		imgLink: function() {
-			return `${this.$cloudinaryLink}/things/${this.image}`
+			imageService.get(this.image, "things")
 		}
 	}
 }

@@ -5,9 +5,6 @@ import App from "./App"
 import router from "./router"
 
 Vue.config.productionTip = false
-
-Vue.prototype.$cloudinaryLink =
-	"https://res.cloudinary.com/salvadornico/image/upload/v1507347645/Portfolio"
 Vue.prototype.$eventBus = new Vue()
 
 /* eslint-disable no-new */

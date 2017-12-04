@@ -12,6 +12,7 @@ section-card(title="Software Development")
 
 <script>
 import SectionCard from "@/components/shared/SectionCard"
+import imageService from "@/helpers/imageService.js"
 
 export default {
 	name: "body-section-software",
@@ -19,9 +20,7 @@ export default {
 		"section-card": SectionCard
 	},
 	computed: {
-		imgLink: function() {
-			return `${this.$cloudinaryLink}/vue-code.png`
-		}
+		imgLink: () => imageService.get("vue-code.png")
 	}
 }
 </script>

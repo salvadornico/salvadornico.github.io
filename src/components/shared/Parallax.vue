@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import imageService from "@/helpers/imageService.js"
+
 $(document).ready(() => {
 	$(".parallax").parallax()
 })
@@ -21,7 +23,7 @@ export default {
 	},
 	computed: {
 		imgLink: function() {
-			return `${this.$cloudinaryLink}/${this.image}`
+			return imageService.get(this.image)
 		}
 	}
 }

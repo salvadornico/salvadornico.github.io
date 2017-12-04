@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import imageService from "@/helpers/imageService.js"
+
 export default {
 	name: "section-card",
 	props: {
@@ -20,9 +22,7 @@ export default {
 		image: { type: String }
 	},
 	methods: {
-		imgLink: function(image) {
-			return `${this.$cloudinaryLink}/${image}`
-		}
+		imgLink: image => imageService.get(image)
 	}
 }
 </script>

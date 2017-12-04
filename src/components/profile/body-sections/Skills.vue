@@ -20,6 +20,7 @@
 <script>
 import BackButton from "@/components/shared/BackButton"
 import api from "@/helpers/apiService.js"
+import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
 
 export default {
@@ -36,9 +37,7 @@ export default {
 		this.skills = await api.getSkills()
 	},
 	methods: {
-		imgLink: function(image) {
-			return `${this.$cloudinaryLink}/logos/${image}`
-		},
+		imgLink: image => imageService.get(image, "logos"),
 		capitalize: string => _.capitalize(string)
 	}
 }

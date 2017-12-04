@@ -4,6 +4,8 @@ a(v-bind:href="url")
 </template>
 
 <script>
+import imageService from "@/helpers/imageService.js"
+
 export default {
 	name: "contact-bubble",
 	props: {
@@ -12,9 +14,7 @@ export default {
 		url: { type: String }
 	},
 	methods: {
-		imgLink: function(image) {
-			return `${this.$cloudinaryLink}/icons/${image}.png`
-		}
+		imgLink: image => imageService.get(`${image}.png`, "icons")
 	}
 }
 </script>

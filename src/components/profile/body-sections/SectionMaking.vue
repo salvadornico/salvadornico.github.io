@@ -14,6 +14,7 @@ section-card(title="Making Things")
 
 <script>
 import SectionCard from "@/components/shared/SectionCard"
+import imageService from "@/helpers/imageService.js"
 
 export default {
 	name: "body-section-making",
@@ -21,9 +22,7 @@ export default {
 		"section-card": SectionCard
 	},
 	computed: {
-		imgLink: function() {
-			return `${this.$cloudinaryLink}/portfolio/park_design.jpg`
-		}
+		imgLink: () => imageService.get("portfolio/park_design.jpg")
 	}
 }
 </script>

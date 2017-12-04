@@ -33,7 +33,7 @@ header#app-banner.container
 <script>
 import FAIcon from "@/components/shared/FAIcon"
 import MaterialIcon from "@/components/shared/MaterialIcon"
-import _ from "lodash"
+import imageService from "@/helpers/imageService.js"
 
 export default {
 	name: "app-banner",
@@ -64,9 +64,7 @@ export default {
 		}
 	},
 	computed: {
-		portraitUrl: function() {
-			return `${this.$cloudinaryLink}/portrait.png`
-		}
+		portraitUrl: () => imageService.get("portrait.png")
 	},
 	methods: {
 		openFab: function() {
