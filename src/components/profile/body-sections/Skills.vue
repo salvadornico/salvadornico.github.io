@@ -6,6 +6,7 @@
 		.card-content
 			span.card-title My Tech Stack
 			p This site is built with VueJS using Pug and Stylus, with a Flask back-end API serving from a MongoDB database.
+			loading-spinner(v-if="skills.length < 1")
 			#skillsList
 				.category(v-for="(category, index) in skills")
 					h5 {{ capitalize(index) }}
@@ -19,6 +20,7 @@
 
 <script>
 import BackButton from "@/components/shared/BackButton"
+import LoadingSpinner from "@/components/shared/LoadingSpinner"
 import api from "@/helpers/apiService.js"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
@@ -26,7 +28,8 @@ import _ from "lodash"
 export default {
 	name: "skills",
 	components: {
-		"back-button": BackButton
+		"back-button": BackButton,
+		"loading-spinner": LoadingSpinner
 	},
 	data() {
 		return {

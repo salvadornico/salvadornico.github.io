@@ -2,22 +2,29 @@ import _ from "lodash"
 
 const apiLink = "http://127.0.0.1:5000"
 
+function flashErrorToast(error) {
+	console.warn(error)
+	Materialize.toast("Unable to reach server, try again", 3000)
+}
+
 export default {
 	getSkills() {
-		const data = fetch(`${apiLink}/skills`)
+		return fetch(`${apiLink}/skills`)
 			.then(response => response.json())
 			.then(data => {
 				return _.groupBy(data.result, item => item.category)
 			})
-		return data
+			.catch(error => {
+				flashErrorToast(error)
+			})
 	},
 
 	getThings() {
-		const data = fetch(`${apiLink}/things`)
+		return fetch(`${apiLink}/things`)
 			.then(response => response.json())
-			.then(data => {
-				return data.result
+			.then(data => data.result)
+			.catch(error => {
+				flashErrorToast(error)
 			})
-		return data
 	}
 }
