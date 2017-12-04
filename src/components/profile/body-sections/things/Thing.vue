@@ -20,7 +20,7 @@ export default {
 	},
 	computed: {
 		imgLink: function() {
-			imageService.get(this.image, "things")
+			return imageService.get(this.image, "things")
 		}
 	}
 }
