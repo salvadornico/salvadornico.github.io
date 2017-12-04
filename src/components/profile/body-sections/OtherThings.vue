@@ -16,6 +16,7 @@
 
 <script>
 import Thing from "./things/Thing"
+import api from "@/helpers/apiService.js"
 
 export default {
 	name: "body-other-things",
@@ -32,12 +33,8 @@ export default {
 			things: []
 		}
 	},
-	created: function() {
-		fetch(`${this.$apiLink}/things`)
-			.then(response => response.json())
-			.then(data => {
-				this.things = data.result
-			})
+	created: async function() {
+		this.things = await api.getThings()
 	}
 }
 </script>

@@ -19,6 +19,7 @@
 
 <script>
 import BackButton from "@/components/shared/BackButton"
+import api from "@/helpers/apiService.js"
 import _ from "lodash"
 
 export default {
@@ -31,13 +32,8 @@ export default {
 			skills: []
 		}
 	},
-	created: function() {
-		fetch(`${this.$apiLink}/skills`)
-			.then(response => response.json())
-			.then(data => {
-				let grouped = _.groupBy(data.result, item => item.category)
-				this.skills = grouped
-			})
+	created: async function() {
+		this.skills = await api.getSkills()
 	},
 	methods: {
 		imgLink: function(image) {
