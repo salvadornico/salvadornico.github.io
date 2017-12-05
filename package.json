@@ -6,8 +6,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "node build/dev-server.js",
-		"serve": "set FLASK_DEBUG=1 && flask run",
-		"start": "npm-run-all --parallel dev serve",
+		"start": "yarn run dev",
 		"build": "node build/build.js",
 		"lint": "eslint --ext .js,.vue src"
 	},
@@ -74,9 +73,5 @@
 		"node": ">= 4.0.0",
 		"npm": ">= 3.0.0"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions",
-		"not ie <= 8"
-	]
+	"browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }

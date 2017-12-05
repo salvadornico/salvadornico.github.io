@@ -6,7 +6,6 @@
 				span.white-text {{ inspiration.text }}
 
 	h3.center-align.section-header Things I'm Enjoying Lately
-	loading-spinner(v-if="things.length < 1")
 	#thingBox.row.page-section
 		div(v-for="thing in things")
 			app-thing(v-bind:name="thing.name" v-bind:image="thing.image" v-bind:link="thing.link")
@@ -17,27 +16,22 @@
 
 <script>
 import Thing from "./things/Thing"
-import LoadingSpinner from "@/components/shared/LoadingSpinner"
-import api from "@/helpers/apiService.js"
+import dataService from "@/helpers/dataService.js"
 
 export default {
 	name: "body-other-things",
 	components: {
-		"app-thing": Thing,
-		"loading-spinner": LoadingSpinner
+		"app-thing": Thing
 	},
 	data() {
 		return {
-			inspirations: [
-				{ text: "Stories behind great ideas" },
-				{ text: "Working with people who love their craft" },
-				{ text: "Elegant solutions to awkward problems" }
-			],
+			inspirations: [],
 			things: []
 		}
 	},
-	created: async function() {
-		this.things = await api.getThings()
+	created: function() {
+		this.inspirations = dataService.getInspirations()
+		this.things = dataService.getThings()
 	}
 }
 </script>
