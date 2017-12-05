@@ -1,15 +1,12 @@
-# portfolio_v3
+# Nico's portfolio v3
 
-> Nico's portfolio v3
+salvadornico.com
 
 ## Build Setup
 
-``` bash
-# start MongoDB at localhost:27017
-net start mongodb
-
-# start dev servers (front & back end)
-yarn run start
+```bash
+# start dev server
+yarn run dev
 
 # build for production with minification
 yarn run build
