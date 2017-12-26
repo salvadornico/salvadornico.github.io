@@ -38,7 +38,7 @@ export default {
 				{
 					title: "Monoposto",
 					description: "Formula 1 data visualisation site",
-					url: "http://whats-that-edit.herokuapp.com",
+					url: "http://salvadornico.x10host.com/f1vis/",
 					image: "monoposto.png"
 				},
 				{
