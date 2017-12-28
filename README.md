@@ -8,9 +8,6 @@ salvadornico.com
 # start dev server
 yarn run dev
 
-# build for production with minification
+# build for production with minification and deploy to Firebase
 yarn run build
-
-# build for production and view the bundle analyzer report
-yarn run build --report
 ```
