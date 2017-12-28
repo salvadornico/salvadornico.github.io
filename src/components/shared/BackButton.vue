@@ -12,9 +12,12 @@ export default {
 	components: {
 		"material-icon": MaterialIcon
 	},
+	props: {
+		path: { type: String, default: "/" }
+	},
 	methods: {
 		goBack: function() {
-			this.$router.go(-1)
+			this.$router.push({ path: this.path })
 		}
 	}
 }
