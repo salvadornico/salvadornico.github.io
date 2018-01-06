@@ -37,8 +37,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require "../../../../assets/_base"
-
 #contacts
 	height 100vh
 	min-height 40rem

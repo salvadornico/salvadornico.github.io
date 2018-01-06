@@ -29,8 +29,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@require "../../assets/_base"
-
 .component-fade-enter-active, .component-fade-leave-active
 	transition opacity 0.3s ease
 

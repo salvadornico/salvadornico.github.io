@@ -75,8 +75,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@require "../../../assets/_base"
-
 #app-banner
 	min-height 100vh
 

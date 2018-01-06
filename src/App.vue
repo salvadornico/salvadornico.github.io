@@ -20,8 +20,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@require "assets/_base"
-
 *
 	position relative
 	font-family "Open Sans", sans-serif

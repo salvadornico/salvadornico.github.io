@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require "../../assets/_base"
-
 .card
 	color black
 	width 100%

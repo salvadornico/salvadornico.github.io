@@ -43,8 +43,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require "../../../assets/_base"
-
 #skillsList
 	color black
 	margin 1rem
