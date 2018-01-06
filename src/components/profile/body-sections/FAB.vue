@@ -1,6 +1,6 @@
 <template lang="pug">
 #FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
-	a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(href="#app-banner" target="_parent" data-scroll v-on:click="hideFAB()")
+	a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(ref="fabBtn" href="#app-banner" target="_parent" data-scroll v-on:click="hideFAB()")
 		material-icon(icon="arrow_upward")
 </template>
 
@@ -12,25 +12,32 @@ export default {
 	components: {
 		"material-icon": MaterialIcon
 	},
+	data() {
+		return {
+			fabBtn: { type: HTMLAnchorElement }
+		}
+	},
 	created: function() {
 		this.$eventBus.$on("openFab", this.popOutFAB)
+	},
+	mounted: function() {
+		this.fabBtn = this.$refs.fabBtn
 	},
 	beforeDestroy: function() {
 		this.$eventBus.$off("openFab")
 	},
 	methods: {
-		popOutFAB: () => {
-			$("#scrollToTopFAB").addClass("scale-in pulse")
-			setTimeout(() => {
-				$("#scrollToTopFAB").removeClass("scale-out scale-in")
-			}, 500)
-			setTimeout(() => {
-				$("#scrollToTopFAB").removeClass("pulse")
+		popOutFAB: function() {
+			const fab = this.fabBtn
+			fab.classList.replace("scale-out", "scale-in")
+			fab.classList.add("pulse")
+			setTimeout(function() {
+				fab.classList.remove("pulse")
 			}, 10000)
 		},
-		hideFAB: () => {
-			$("#scrollToTopFAB").addClass("scale-out")
-			$("#scrollToTopFAB").removeClass("pulse")
+		hideFAB: function() {
+			this.fabBtn.classList.remove("pulse")
+			this.fabBtn.classList.replace("scale-in", "scale-out")
 		}
 	}
 }
