@@ -1,6 +1,6 @@
 <template lang="pug">
 .parallax-container(v-bind:class="{ video:video }")
-		.parallax
+		.parallax(ref="parallax")
 			img(v-if="type == 'image'" v-bind:src="imgLink" v-bind:alt="alt")
 			video(v-if="type == 'video'" muted autoplay loop v-bind:poster="imgLink")
 				source(v-bind:src="video" type="video/mp4")
@@ -8,10 +8,6 @@
 
 <script>
 import imageService from "@/helpers/imageService.js"
-
-$(document).ready(() => {
-	$(".parallax").parallax()
-})
 
 export default {
 	name: "app-parallax",
@@ -25,6 +21,10 @@ export default {
 		imgLink: function() {
 			return imageService.get(this.image)
 		}
+	},
+	mounted: function() {
+		const elem = this.$refs.parallax
+		const instance = M.Parallax.init(elem, {})
 	}
 }
 </script>
