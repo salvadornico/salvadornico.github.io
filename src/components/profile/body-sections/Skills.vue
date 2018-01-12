@@ -18,7 +18,6 @@
 
 <script>
 import BackButton from "@/components/shared/BackButton"
-import dataService from "@/helpers/dataService.js"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
 
@@ -27,13 +26,10 @@ export default {
 	components: {
 		"back-button": BackButton
 	},
-	data() {
-		return {
-			skills: []
+	computed: {
+		skills() {
+			return this.$store.getters.skills
 		}
-	},
-	created: function() {
-		this.skills = dataService.getSkills()
 	},
 	methods: {
 		imgLink: image => imageService.get(image, "logos"),

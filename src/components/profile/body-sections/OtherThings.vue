@@ -16,22 +16,20 @@
 
 <script>
 import Thing from "./things/Thing"
-import dataService from "@/helpers/dataService.js"
+import mapState from "vuex"
 
 export default {
 	name: "body-other-things",
 	components: {
 		"app-thing": Thing
 	},
-	data() {
-		return {
-			inspirations: [],
-			things: []
+	computed: {
+		inspirations() {
+			return this.$store.getters.inspirations
+		},
+		things() {
+			return this.$store.getters.things
 		}
-	},
-	created: function() {
-		this.inspirations = dataService.getInspirations()
-		this.things = dataService.getThings()
 	}
 }
 </script>
