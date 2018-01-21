@@ -18,23 +18,16 @@
 
 <script>
 import BackButton from "@/components/shared/BackButton"
-import dataService from "@/helpers/dataService.js"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
+import { mapGetters } from 'vuex';
 
 export default {
 	name: "skills",
 	components: {
 		"back-button": BackButton
 	},
-	data() {
-		return {
-			skills: []
-		}
-	},
-	created: function() {
-		this.skills = dataService.getSkills()
-	},
+	computed: {...mapGetters(["skills"])},
 	methods: {
 		imgLink: image => imageService.get(image, "logos"),
 		capitalize: string => _.capitalize(string)

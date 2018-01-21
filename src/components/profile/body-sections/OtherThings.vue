@@ -16,23 +16,14 @@
 
 <script>
 import Thing from "./things/Thing"
-import dataService from "@/helpers/dataService.js"
+import { mapGetters } from "vuex"
 
 export default {
 	name: "body-other-things",
 	components: {
 		"app-thing": Thing
 	},
-	data() {
-		return {
-			inspirations: [],
-			things: []
-		}
-	},
-	created: function() {
-		this.inspirations = dataService.getInspirations()
-		this.things = dataService.getThings()
-	}
+	computed: {...mapGetters(["inspirations", "things"])}
 }
 </script>
 
