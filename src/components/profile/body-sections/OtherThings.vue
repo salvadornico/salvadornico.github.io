@@ -16,21 +16,14 @@
 
 <script>
 import Thing from "./things/Thing"
-import mapState from "vuex"
+import { mapGetters } from "vuex"
 
 export default {
 	name: "body-other-things",
 	components: {
 		"app-thing": Thing
 	},
-	computed: {
-		inspirations() {
-			return this.$store.getters.inspirations
-		},
-		things() {
-			return this.$store.getters.things
-		}
-	}
+	computed: {...mapGetters(["inspirations", "things"])}
 }
 </script>
 

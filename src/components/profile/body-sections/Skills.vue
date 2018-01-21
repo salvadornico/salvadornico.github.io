@@ -20,17 +20,14 @@
 import BackButton from "@/components/shared/BackButton"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
+import { mapGetters } from 'vuex';
 
 export default {
 	name: "skills",
 	components: {
 		"back-button": BackButton
 	},
-	computed: {
-		skills() {
-			return this.$store.getters.skills
-		}
-	},
+	computed: {...mapGetters(["skills"])},
 	methods: {
 		imgLink: image => imageService.get(image, "logos"),
 		capitalize: string => _.capitalize(string)

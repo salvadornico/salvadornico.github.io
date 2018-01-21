@@ -19,17 +19,14 @@
 <script>
 import BackButton from "@/components/shared/BackButton"
 import imageService from "@/helpers/imageService.js"
+import { mapGetters } from 'vuex';
 
 export default {
 	name: "body-portfolio",
 	components: {
 		"back-button": BackButton
 	},
-	computed: {
-		projects() {
-			return this.$store.getters.projects
-		}
-	},
+	computed: {...mapGetters(["projects"])},
 	methods: {
 		imgLink: image => imageService.get(image, "portfolio")
 	}

@@ -12,19 +12,5 @@ export default new Vuex.Store({
 		skills: state => state.skills,
 		inspirations: state => state.inspirations,
 		things: state => state.things
-	},
-	mutations: {
-		// reducePrice: (state, payload) => {
-		// 	state.products.forEach(product => {
-		// 		product.price -= payload
-		// 	})
-		// }
-	},
-	actions: {
-		// reducePrice: (context, payload) => {
-		// 	setTimeout(() => {
-		// 		context.commit("reducePrice", payload)
-		// 	}, 2000)
-		// }
 	}
 })
