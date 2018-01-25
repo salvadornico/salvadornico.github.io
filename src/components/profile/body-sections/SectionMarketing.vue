@@ -1,5 +1,5 @@
 <template lang="pug">
-section-card(title="Marketing/PR/events")
+SectionCard(title="Marketing/PR/events")
 	.row
 		p.
 			I graduated from the University of the Philippines with a degree in Business Administration. And while most of my experience afterwards has been in marketing, I'm perfectly comfortable discussing economics, finance, corporate strategy, or management, and have even been called up to draft a contract or two.
@@ -18,9 +18,8 @@ section-card(title="Marketing/PR/events")
 import SectionCard from "@/components/shared/SectionCard"
 
 export default {
-	name: "body-section-marketing",
 	components: {
-		"section-card": SectionCard
+		SectionCard
 	}
 }
 </script>

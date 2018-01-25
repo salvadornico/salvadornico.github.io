@@ -1,5 +1,5 @@
 <template lang="pug">
-section-card(title="Software Development")
+SectionCard(title="Software Development")
 	.row
 		.col.s12.m8
 			p I've always enjoyed tinkering with technology and poking around the deepest levels of software settings, so programming was a natural next step. I love the way it demands both the ability to solve problems creatively and then the application of those ideas in a logical and systematic fashion.
@@ -15,9 +15,8 @@ import SectionCard from "@/components/shared/SectionCard"
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "body-section-software",
 	components: {
-		"section-card": SectionCard
+		SectionCard
 	},
 	computed: {
 		imgLink: () => imageService.get("vue-code.png")

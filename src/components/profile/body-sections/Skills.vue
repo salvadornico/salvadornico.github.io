@@ -1,6 +1,6 @@
 <template lang="pug">
 #skills
-	back-button
+	BackButton
 	br
 	.card
 		.card-content
@@ -12,7 +12,7 @@
 						figure.tech-skill
 							img(v-bind:src="imgLink(skill.icon)" v-bind:alt="skill.name")
 							figcaption {{ skill.name }}
-	back-button
+	BackButton
 	br
 </template>
 
@@ -20,12 +20,11 @@
 import BackButton from "@/components/shared/BackButton"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 
 export default {
-	name: "skills",
 	components: {
-		"back-button": BackButton
+		BackButton
 	},
 	computed: {...mapGetters(["skills"])},
 	methods: {
