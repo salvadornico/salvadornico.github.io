@@ -10,7 +10,6 @@
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "app-parallax",
 	props: {
 		type: { type: String, default: "image" },
 		image: { type: String },

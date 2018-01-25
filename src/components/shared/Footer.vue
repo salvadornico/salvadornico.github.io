@@ -1,13 +1,12 @@
 <template lang="pug">
-#app-footer
-	footer.red.darken-4
-		p.center-align.
-			© 2017 Nico Salvador
+footer.red.darken-4
+	p.center-align.
+		© 2017 Nico Salvador
 </template>
 
 <script>
 export default {
-	name: "app-footer"
+	name: "Footer"
 }
 </script>
 
