@@ -2,7 +2,7 @@
 #app
 	transition(name="component-fade" mode="out-in")
 		router-view
-	app-footer
+	Footer
 </template>
 
 <script>
@@ -12,9 +12,8 @@ import SmoothScroll from "smooth-scroll"
 const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
 
 export default {
-	name: "app",
 	components: {
-		"app-footer": Footer
+		Footer
 	}
 }
 </script>

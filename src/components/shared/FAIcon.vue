@@ -4,7 +4,6 @@ i.fa(v-bind:class="iconClass" aria-hidden="true")
 
 <script>
 export default {
-	name: "fa-icon",
 	props: {
 		icon: { type: String }
 	},

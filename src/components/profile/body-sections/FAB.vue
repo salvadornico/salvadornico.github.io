@@ -1,16 +1,15 @@
 <template lang="pug">
-#FAB.fixed-action-btn.tooltipped(data-position="left" data-delay="50" data-tooltip="Back to top")
-	a#scrollToTopFAB.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(ref="fabBtn" href="#app-banner" target="_parent" data-scroll v-on:click="hideFAB()")
-		material-icon(icon="arrow_upward")
+.fixed-action-btn.tooltipped(ref="tooltipped" data-position="left" data-delay="50" data-tooltip="Back to top")
+	a.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(ref="fabBtn" href="#app-banner" target="_parent" data-scroll v-on:click="hideFAB()")
+		MaterialIcon(icon="arrow_upward")
 </template>
 
 <script>
 import MaterialIcon from "@/components/shared/MaterialIcon"
 
 export default {
-	name: "fab",
 	components: {
-		"material-icon": MaterialIcon
+		MaterialIcon
 	},
 	data() {
 		return {
@@ -22,6 +21,8 @@ export default {
 	},
 	mounted: function() {
 		this.fabBtn = this.$refs.fabBtn
+		const elem = this.$refs.tooltipped
+		const instance = M.Tooltip.init(elem, {})
 	},
 	beforeDestroy: function() {
 		this.$eventBus.$off("openFab")
@@ -31,7 +32,7 @@ export default {
 			const fab = this.fabBtn
 			fab.classList.replace("scale-out", "scale-in")
 			fab.classList.add("pulse")
-			setTimeout(function() {
+			setTimeout(() => {
 				fab.classList.remove("pulse")
 			}, 10000)
 		},
@@ -44,7 +45,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#FAB
+.fixed-action-btn
 	bottom 6rem
 </style>
 

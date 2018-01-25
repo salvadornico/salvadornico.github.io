@@ -8,7 +8,7 @@
 	h3.center-align.section-header Things I'm Enjoying Lately
 	#thingBox.row.page-section
 		div(v-for="thing in things")
-			app-thing(v-bind:name="thing.name" v-bind:image="thing.image" v-bind:link="thing.link")
+			Thing(v-bind:name="thing.name" v-bind:image="thing.image" v-bind:link="thing.link")
 
 	#music.row
 		iframe(src="https://embed.spotify.com/?uri=spotify%3Auser%3A12175595202%3Aplaylist%3A0UmSRTsfZlo6dG4XrydQ4w" frameborder="0" allowtransparency="true")
@@ -19,9 +19,8 @@ import Thing from "./things/Thing"
 import { mapGetters } from "vuex"
 
 export default {
-	name: "body-other-things",
 	components: {
-		"app-thing": Thing
+		Thing
 	},
 	computed: {...mapGetters(["inspirations", "things"])}
 }

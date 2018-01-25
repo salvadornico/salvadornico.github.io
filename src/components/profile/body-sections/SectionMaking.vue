@@ -1,5 +1,5 @@
 <template lang="pug">
-section-card(title="Making Things")
+SectionCard(title="Making Things")
 	p.
 		Design thinking has always been my mindset. There's just something special about creating something new with your hands, whatever it is... 3D modelling and printing, Lego, basic woodworking, and hopefully electronics as well soon.
 	p.
@@ -17,9 +17,8 @@ import SectionCard from "@/components/shared/SectionCard"
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "body-section-making",
 	components: {
-		"section-card": SectionCard
+		SectionCard
 	},
 	computed: {
 		imgLink: () => imageService.get("portfolio/park_design.jpg")

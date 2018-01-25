@@ -7,7 +7,6 @@ a(v-bind:href="url")
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "contact-bubble",
 	props: {
 		name: { type: String },
 		icon: { type: String },

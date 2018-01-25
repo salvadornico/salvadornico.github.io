@@ -1,16 +1,15 @@
 <template lang="pug">
 .back-button
 	button.btn.waves-effect.waves-light.red.darken-1(v-on:click="goBack()")
-		material-icon(icon="arrow_back")
+		MaterialIcon(icon="arrow_back")
 </template>
 
 <script>
 import MaterialIcon from "./MaterialIcon"
 
 export default {
-	name: "back-button",
 	components: {
-		"material-icon": MaterialIcon
+		MaterialIcon
 	},
 	props: {
 		path: { type: String, default: "/" }
