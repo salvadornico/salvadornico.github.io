@@ -1,14 +1,14 @@
 <template lang="pug">
 #profile
-	app-banner
+	Banner
 	main
-		app-parallax(image="header1.png" alt="Some Kotlin sample code")
+		Parallax(image="header1.png" alt="Some Kotlin sample code")
 		.container
 			transition(name="component-fade" mode="out-in")
 				router-view
-		app-parallax(type="video" video="/static/images/makerbot.mp4" image="header2gif.gif" alt="3D printing")
-		body-contacts
-	app-fab
+		Parallax(type="video" video="/static/images/makerbot.mp4" image="header2gif.gif" alt="3D printing")
+		Contacts
+	FAB
 </template>
 
 <script>
@@ -20,10 +20,10 @@ import FAB from "@/components/profile/body-sections/FAB"
 export default {
 	name: "app",
 	components: {
-		"app-banner": Banner,
-		"app-parallax": Parallax,
-		"body-contacts": Contacts,
-		"app-fab": FAB
+		Banner,
+		Parallax,
+		Contacts,
+		FAB
 	}
 }
 </script>
