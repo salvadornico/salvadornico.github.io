@@ -16,7 +16,6 @@
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "section-card",
 	props: {
 		title: { type: String },
 		image: { type: String }
