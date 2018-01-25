@@ -1,6 +1,6 @@
 <template lang="pug">
 #portfolio
-	back-button
+	BackButton
 	br
 	.card
 		.card-content
@@ -12,7 +12,7 @@
 					a(v-bind:href="project.url")
 						h4 {{ project.title }}
 					p {{ project.description }}
-	back-button
+	BackButton
 	br
 </template>
 
@@ -22,9 +22,8 @@ import imageService from "@/helpers/imageService.js"
 import { mapGetters } from 'vuex';
 
 export default {
-	name: "body-portfolio",
 	components: {
-		"back-button": BackButton
+		BackButton
 	},
 	computed: {...mapGetters(["projects"])},
 	methods: {
@@ -32,7 +31,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="stylus" scoped>
-</style>
-

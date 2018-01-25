@@ -12,7 +12,6 @@
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "app-thing",
 	props: {
 		image: { type: String },
 		name: { type: String },
