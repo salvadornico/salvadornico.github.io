@@ -19,7 +19,7 @@ export default {
 		SectionCard
 	},
 	computed: {
-		imgLink: () => imageService.get("vue-code.png")
+		imgLink: () => imageService.get("vue-snippet.png")
 	}
 }
 </script>

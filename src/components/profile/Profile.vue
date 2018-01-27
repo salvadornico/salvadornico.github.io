@@ -2,7 +2,7 @@
 #profile
 	Banner
 	main
-		Parallax(image="header1.png" alt="Some Kotlin sample code")
+		Parallax(image="kotlin-snippet.png" alt="Some Kotlin sample code")
 		.container
 			transition(name="component-fade" mode="out-in")
 				router-view
