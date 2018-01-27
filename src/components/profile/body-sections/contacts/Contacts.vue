@@ -20,7 +20,7 @@
 				ContactBubble(url="https://www.pinterest.com/roller4life/", icon="pinterest", name="Pinterest")
 
 		.row
-			a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico_Salvador-CV2017.pdf")
+			a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico_Salvador-CV2018.pdf")
 				i.material-icons.left library_books
 				span Resum&#233;
 </template>

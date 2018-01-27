@@ -32,6 +32,67 @@ export default {
 		}
 	],
 	skills: {
+		languages: [
+			{
+				icon: "js.svg",
+				name: "Javascript",
+				url: "https://www.javascript.com"
+			},
+			{
+				icon: "kotlin.svg",
+				name: "Kotlin",
+				url: "https://kotlinlang.org"
+			},
+			{
+				icon: "php.svg",
+				name: "PHP",
+				url: "http://php.net"
+			},
+			{
+				icon: "python.png",
+				name: "Python",
+				url: "https://www.python.org"
+			},
+			{
+				icon: "typescript.png",
+				name: "Typescript",
+				url: "https://www.typescriptlang.org"
+			},
+			{
+				icon: "java.png",
+				name: "Java",
+				url: "http://oracle.com/java/"
+			}
+		],
+		markup: [
+			{
+				icon: "html.svg",
+				name: "HTML",
+				url: "https://www.w3.org/html/"
+			},
+			{
+				icon: "pug.svg",
+				name: "Pug",
+				url: "https://pugjs.org"
+			},
+			{
+				icon: "twig-logo.png",
+				name: "Twig",
+				url: "https://twig.symfony.com"
+			}
+		],
+		styling: [
+			{
+				icon: "css.svg",
+				name: "CSS",
+				url: "https://www.w3.org/Style/CSS/"
+			},
+			{
+				icon: "stylus.png",
+				name: "Stylus",
+				url: "http://stylus-lang.com"
+			}
+		],
 		frameworks: [
 			{
 				icon: "android.png",
@@ -64,67 +125,6 @@ export default {
 				url: "https://vuejs.org"
 			}
 		],
-		styles: [
-			{
-				icon: "css.svg",
-				name: "CSS",
-				url: "https://www.w3.org/Style/CSS/"
-			},
-			{
-				icon: "stylus.png",
-				name: "Stylus",
-				url: "http://stylus-lang.com"
-			}
-		],
-		markup: [
-			{
-				icon: "html.svg",
-				name: "HTML",
-				url: "https://www.w3.org/html/"
-			},
-			{
-				icon: "pug.svg",
-				name: "Pug",
-				url: "https://pugjs.org"
-			},
-			{
-				icon: "twig-logo.png",
-				name: "Twig",
-				url: "https://twig.symfony.com"
-			}
-		],
-		languages: [
-			{
-				icon: "java.png",
-				name: "Java",
-				url: "http://oracle.com/java/"
-			},
-			{
-				icon: "js.svg",
-				name: "Javascript",
-				url: "https://www.javascript.com"
-			},
-			{
-				icon: "kotlin.svg",
-				name: "Kotlin",
-				url: "https://kotlinlang.org"
-			},
-			{
-				icon: "php.svg",
-				name: "PHP",
-				url: "http://php.net"
-			},
-			{
-				icon: "python.png",
-				name: "Python",
-				url: "https://www.python.org"
-			},
-			{
-				icon: "typescript.png",
-				name: "Typescript",
-				url: "https://www.typescriptlang.org"
-			}
-		],
 		databases: [
 			{
 				icon: "mongodb.png",
@@ -135,6 +135,11 @@ export default {
 				icon: "mysql.png",
 				name: "MySQL",
 				url: "https://www.mysql.com"
+			},
+			{
+				icon: "firebase.png",
+				name: "Firebase",
+				url: "https://firebase.google.com"
 			}
 		]
 	},
