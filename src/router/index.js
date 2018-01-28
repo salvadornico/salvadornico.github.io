@@ -8,6 +8,7 @@ import Skills from "@/components/profile/body-sections/Skills"
 Vue.use(Router)
 
 export default new Router({
+	mode: "history",
 	routes: [
 		{
 			path: "/",
