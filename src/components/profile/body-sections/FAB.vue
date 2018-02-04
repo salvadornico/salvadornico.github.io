@@ -22,6 +22,7 @@ export default {
 	mounted: function() {
 		this.fabBtn = this.$refs.fabBtn
 		const elem = this.$refs.tooltipped
+		/* eslint-disable no-unused-vars */
 		const instance = M.Tooltip.init(elem, {})
 	},
 	beforeDestroy: function() {
