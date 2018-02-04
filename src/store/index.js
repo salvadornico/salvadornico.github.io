@@ -11,6 +11,6 @@ export default new Vuex.Store({
 		projects: state => state.projects,
 		skills: state => state.skills,
 		inspirations: state => state.inspirations,
-		things: state => state.things
-	}
+		things: state => state.things,
+	},
 })

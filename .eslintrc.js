@@ -16,8 +16,7 @@ module.exports = {
 		"plugin:vue/recommended",
 		"plugin:prettier/recommended",
 	],
-	// required to lint *.vue files
-	plugins: ["html"],
+	plugins: ["vue"],
 	rules: {
 		"no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
 		"arrow-parens": 0,

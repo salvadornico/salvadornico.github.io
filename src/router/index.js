@@ -16,17 +16,17 @@ export default new Router({
 			children: [
 				{
 					path: "/",
-					component: Body
+					component: Body,
 				},
 				{
 					path: "/portfolio",
-					component: Portfolio
+					component: Portfolio,
 				},
 				{
 					path: "/skills",
-					component: Skills
-				}
-			]
-		}
-	]
+					component: Skills,
+				},
+			],
+		},
+	],
 })
