@@ -20,9 +20,9 @@ import { mapGetters } from "vuex"
 
 export default {
 	components: {
-		Thing
+		Thing,
 	},
-	computed: {...mapGetters(["inspirations", "things"])}
+	computed: { ...mapGetters(["inspirations", "things"]) },
 }
 </script>
 

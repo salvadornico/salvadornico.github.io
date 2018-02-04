@@ -13,10 +13,11 @@ module.exports = {
 	},
 	extends: [
 		"eslint:recommended",
+		"prettier",
+		"prettier/standard",
 		"plugin:vue/recommended",
-		"plugin:prettier/recommended",
 	],
-	plugins: ["vue"],
+	plugins: ["vue", "prettier"],
 	rules: {
 		"no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
 		"arrow-parens": 0,
@@ -25,5 +26,6 @@ module.exports = {
 		quotes: ["error", "double"],
 		"linebreak-style": ["warn", "unix"],
 		"no-undef": "off",
+		"prettier/prettier": "warn",
 	},
 }

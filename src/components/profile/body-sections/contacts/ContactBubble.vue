@@ -10,11 +10,11 @@ export default {
 	props: {
 		name: { type: String },
 		icon: { type: String },
-		url: { type: String }
+		url: { type: String },
 	},
 	methods: {
-		imgLink: image => imageService.get(`${image}.png`, "icons")
-	}
+		imgLink: image => imageService.get(`${image}.png`, "icons"),
+	},
 }
 </script>
 
@@ -26,4 +26,3 @@ img
 	@media MobileOnly
 		width 5rem
 </style>
-

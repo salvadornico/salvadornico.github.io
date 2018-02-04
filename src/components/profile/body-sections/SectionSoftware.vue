@@ -16,10 +16,10 @@ import imageService from "@/helpers/imageService.js"
 
 export default {
 	components: {
-		SectionCard
+		SectionCard,
 	},
 	computed: {
-		imgLink: () => imageService.get("vue-snippet.png")
-	}
+		imgLink: () => imageService.get("vue-snippet.png"),
+	},
 }
 </script>

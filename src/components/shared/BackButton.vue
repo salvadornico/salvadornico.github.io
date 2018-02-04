@@ -9,16 +9,16 @@ import MaterialIcon from "./MaterialIcon"
 
 export default {
 	components: {
-		MaterialIcon
+		MaterialIcon,
 	},
 	props: {
-		path: { type: String, default: "/" }
+		path: { type: String, default: "/" },
 	},
 	methods: {
 		goBack: function() {
 			this.$router.push({ path: this.path })
-		}
-	}
+		},
+	},
 }
 </script>
 

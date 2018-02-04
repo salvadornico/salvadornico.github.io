@@ -18,11 +18,11 @@ import imageService from "@/helpers/imageService.js"
 export default {
 	props: {
 		title: { type: String },
-		image: { type: String }
+		image: { type: String },
 	},
 	methods: {
-		imgLink: image => imageService.get(image)
-	}
+		imgLink: image => imageService.get(image),
+	},
 }
 </script>
 
@@ -41,4 +41,3 @@ export default {
 	p
 		margin 0.7rem auto
 </style>
-

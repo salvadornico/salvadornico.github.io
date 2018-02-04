@@ -6,7 +6,7 @@ footer.red.darken-4
 
 <script>
 export default {
-	name: "Footer"
+	name: "Footer",
 }
 </script>
 
@@ -20,4 +20,3 @@ footer
 	p
 		line-height 2.4rem
 </style>
-

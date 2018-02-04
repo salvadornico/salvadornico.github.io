@@ -14,17 +14,18 @@ export default {
 		type: { type: String, default: "image" },
 		image: { type: String },
 		video: { type: String, default: "" },
-		alt: { type: String }
+		alt: { type: String },
 	},
 	computed: {
 		imgLink: function() {
 			return imageService.get(this.image)
-		}
+		},
 	},
 	mounted: function() {
 		const elem = this.$refs.parallax
+		/* eslint-disable no-unused-vars */
 		const instance = M.Parallax.init(elem, {})
-	}
+	},
 }
 </script>
 
@@ -47,4 +48,3 @@ export default {
 		video
 			width 100vw
 </style>
-

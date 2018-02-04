@@ -30,8 +30,8 @@ import ContactBubble from "./ContactBubble"
 
 export default {
 	components: {
-		ContactBubble
-	}
+		ContactBubble,
+	},
 }
 </script>
 
@@ -50,5 +50,3 @@ export default {
 	center X relative
 	width 12rem
 </style>
-
-
