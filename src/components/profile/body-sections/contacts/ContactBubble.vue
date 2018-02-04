@@ -1,5 +1,5 @@
 <template lang="pug">
-a(v-bind:href="url")
+a(v-bind:href="url").contact-bubble
 	img.hoverable(v-bind:src="imgLink(icon)" v-bind:alt="name")
 </template>
 
