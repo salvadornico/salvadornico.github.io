@@ -1,7 +1,7 @@
 <template lang="pug">
 .row
 	.col.s12
-		.card.horizontal
+		.card.horizontal.section-card
 			.card-image(v-if="image")
 				img(v-bind:src="imgLink(image)")
 			.card-stacked
