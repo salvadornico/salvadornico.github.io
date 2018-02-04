@@ -2,7 +2,7 @@
 #things
 	h3.center-align.section-header Things That Inspire Me
 	#inspirations.row.page-section
-		.card-panel.red.lighten-1.flow-text.valign-wrapper(v-for="inspiration in inspirations")
+		.inspiration.card-panel.red.lighten-1.flow-text.valign-wrapper(v-for="inspiration in inspirations")
 				span.white-text {{ inspiration.text }}
 
 	h3.center-align.section-header Things I'm Enjoying Lately

@@ -22,6 +22,20 @@ describe("Home page", () => {
 			.and("be.visible")
 	})
 
+	it("Inspirations", () => {
+		cy
+			.get(".inspiration")
+			.should("have.length", 3)
+			.and("be.visible")
+	})
+
+	it("Things", () => {
+		cy
+			.get(".thing")
+			.should("have.length", 8)
+			.and("be.visible")
+	})
+
 	it("Contact Bubbles", () => {
 		cy
 			.get(".contact-bubble")
