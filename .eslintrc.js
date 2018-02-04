@@ -10,6 +10,7 @@ module.exports = {
 	},
 	env: {
 		browser: true,
+		"cypress/globals": true,
 	},
 	extends: [
 		"eslint:recommended",
@@ -17,7 +18,7 @@ module.exports = {
 		"prettier/standard",
 		"plugin:vue/recommended",
 	],
-	plugins: ["vue", "prettier"],
+	plugins: ["vue", "prettier", "cypress"],
 	rules: {
 		"no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
 		"arrow-parens": "off",
