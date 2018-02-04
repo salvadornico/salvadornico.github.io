@@ -18,10 +18,10 @@ import imageService from "@/helpers/imageService.js"
 
 export default {
 	components: {
-		SectionCard
+		SectionCard,
 	},
 	computed: {
-		imgLink: () => imageService.get("portfolio/park_design.jpg")
-	}
+		imgLink: () => imageService.get("portfolio/park_design.jpg"),
+	},
 }
 </script>

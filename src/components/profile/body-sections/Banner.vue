@@ -36,41 +36,41 @@ import MaterialIcon from "@/components/shared/MaterialIcon"
 import imageService from "@/helpers/imageService.js"
 
 export default {
-	name: "app-banner",
+	name: "AppBanner",
 	components: {
 		FAIcon,
-		MaterialIcon
+		MaterialIcon,
 	},
 	data() {
 		return {
 			links: [
 				{
 					url: "mailto:salvador.nico@gmail.com",
-					icon: "envelope"
+					icon: "envelope",
 				},
 				{
 					url: "https://github.com/salvadornico",
-					icon: "github"
+					icon: "github",
 				},
 				{
 					url: "https://www.linkedin.com/in/salvadornico",
-					icon: "linkedin"
+					icon: "linkedin",
 				},
 				{
 					url: "https://www.facebook.com/salvador.nico",
-					icon: "facebook-official"
-				}
-			]
+					icon: "facebook-official",
+				},
+			],
 		}
 	},
 	computed: {
-		portraitUrl: () => imageService.get("portrait.png")
+		portraitUrl: () => imageService.get("portrait.png"),
 	},
 	methods: {
 		openFab: function() {
 			this.$eventBus.$emit("openFab")
-		}
-	}
+		},
+	},
 }
 </script>
 
@@ -172,4 +172,3 @@ lowPoint = 6px
 		animation-fill-mode forwards
 		animation-direction normal, alternate
 </style>
-

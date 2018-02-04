@@ -13,8 +13,8 @@ const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-
 
 export default {
 	components: {
-		Footer
-	}
+		Footer,
+	},
 }
 </script>
 

@@ -20,17 +20,17 @@
 import BackButton from "@/components/shared/BackButton"
 import imageService from "@/helpers/imageService.js"
 import _ from "lodash"
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex"
 
 export default {
 	components: {
-		BackButton
+		BackButton,
 	},
-	computed: {...mapGetters(["skills"])},
+	computed: { ...mapGetters(["skills"]) },
 	methods: {
 		imgLink: image => imageService.get(image, "logos"),
-		capitalize: string => _.capitalize(string)
-	}
+		capitalize: string => _.capitalize(string),
+	},
 }
 </script>
 
@@ -55,4 +55,3 @@ export default {
 	figcaption
 		text-align center
 </style>
-

@@ -6,5 +6,5 @@ export default {
 		return path
 			? `${cloudinaryLink}/${path}/${file}`
 			: `${cloudinaryLink}/${file}`
-	}
+	},
 }

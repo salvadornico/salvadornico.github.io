@@ -5,13 +5,12 @@ i.fa(v-bind:class="iconClass" aria-hidden="true")
 <script>
 export default {
 	props: {
-		icon: { type: String }
+		icon: { type: String },
 	},
 	computed: {
 		iconClass: function() {
 			return `fa-${this.icon}`
-		}
-	}
+		},
+	},
 }
 </script>
-

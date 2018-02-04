@@ -5,7 +5,7 @@ i.material-icons {{ icon }}
 <script>
 export default {
 	props: {
-		icon: { type: String }
-	}
+		icon: { type: String },
+	},
 }
 </script>

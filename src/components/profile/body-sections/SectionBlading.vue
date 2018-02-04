@@ -16,8 +16,7 @@ import SectionCard from "@/components/shared/SectionCard"
 
 export default {
 	components: {
-		SectionCard
-	}
+		SectionCard,
+	},
 }
 </script>
-

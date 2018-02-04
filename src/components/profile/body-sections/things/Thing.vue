@@ -15,13 +15,13 @@ export default {
 	props: {
 		image: { type: String },
 		name: { type: String },
-		link: { type: String }
+		link: { type: String },
 	},
 	computed: {
 		imgLink: function() {
 			return imageService.get(this.image, "things")
-		}
-	}
+		},
+	},
 }
 </script>
 

@@ -9,11 +9,11 @@ import MaterialIcon from "@/components/shared/MaterialIcon"
 
 export default {
 	components: {
-		MaterialIcon
+		MaterialIcon,
 	},
 	data() {
 		return {
-			fabBtn: { type: HTMLAnchorElement }
+			fabBtn: { type: HTMLAnchorElement },
 		}
 	},
 	created: function() {
@@ -22,6 +22,7 @@ export default {
 	mounted: function() {
 		this.fabBtn = this.$refs.fabBtn
 		const elem = this.$refs.tooltipped
+		/* eslint-disable no-unused-vars */
 		const instance = M.Tooltip.init(elem, {})
 	},
 	beforeDestroy: function() {
@@ -39,8 +40,8 @@ export default {
 		hideFAB: function() {
 			this.fabBtn.classList.remove("pulse")
 			this.fabBtn.classList.replace("scale-in", "scale-out")
-		}
-	}
+		},
+	},
 }
 </script>
 
@@ -48,4 +49,3 @@ export default {
 .fixed-action-btn
 	bottom 6rem
 </style>
-

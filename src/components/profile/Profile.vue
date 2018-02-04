@@ -18,13 +18,13 @@ import Contacts from "@/components/profile/body-sections/contacts/Contacts"
 import FAB from "@/components/profile/body-sections/FAB"
 
 export default {
-	name: "app",
+	name: "App",
 	components: {
 		Banner,
 		Parallax,
 		Contacts,
-		FAB
-	}
+		FAB,
+	},
 }
 </script>
 
