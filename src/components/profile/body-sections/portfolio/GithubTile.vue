@@ -1,13 +1,22 @@
 <template lang="pug">
 .github-tile.card.grey
 	h5 Latest Github Activity
+	ul
+		li.repo(v-for="repo in repos") {{ repo.name }}
 </template>
 
 <script>
-import { mapGetters } from "vuex"
+import { mapGetters, mapActions } from "vuex"
 
 export default {
-	computed: { ...mapGetters(["projects"]) },
+	computed: { ...mapGetters(["repos"]) },
+	async mounted() {
+		this.fetchRepos()
+		console.log(await this.repos)
+	},
+	methods: {
+		...mapActions(["fetchRepos"]),
+	},
 }
 </script>
 

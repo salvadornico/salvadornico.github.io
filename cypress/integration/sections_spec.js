@@ -11,6 +11,12 @@ describe("Sections", () => {
 		cy.contains("Nico Salvador")
 	})
 
+	it("Github tile", () => {
+		cy.get("[href='/portfolio']").click()
+		cy.get(".github-tile").should("have.length", 1)
+		cy.get(".repo").should("have.length.gte", 5)
+	})
+
 	it("Stack", () => {
 		cy.get("[href='/skills']").click()
 		cy.url().should("contain", "/skills")
