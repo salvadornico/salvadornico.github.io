@@ -9,7 +9,7 @@
 import Footer from "@/components/shared/Footer"
 import SmoothScroll from "smooth-scroll"
 
-const scroll = new SmoothScroll("a[href*='#']") //eslint-disable-line no-unused-vars
+new SmoothScroll("a[href*='#']")
 
 export default {
 	components: {

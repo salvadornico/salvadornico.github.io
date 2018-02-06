@@ -56,4 +56,6 @@ export default {
 			grid-gap 1rem
 			.portfolio-item-description
 				display block
+	.github-tile
+		grid-column span 2
 </style>

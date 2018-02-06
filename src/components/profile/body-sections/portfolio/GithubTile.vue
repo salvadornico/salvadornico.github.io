@@ -10,9 +10,8 @@ import { mapGetters, mapActions } from "vuex"
 
 export default {
 	computed: { ...mapGetters(["repos"]) },
-	async mounted() {
+	created() {
 		this.fetchRepos()
-		console.log(await this.repos)
 	},
 	methods: {
 		...mapActions(["fetchRepos"]),
