@@ -13,9 +13,7 @@ export default {
 	created() {
 		this.fetchRepos()
 	},
-	methods: {
-		...mapActions(["fetchRepos"]),
-	},
+	methods: { ...mapActions(["fetchRepos"]) },
 }
 </script>
 
