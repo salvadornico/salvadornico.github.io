@@ -6,9 +6,9 @@
 		.card-content
 			span.card-title Portfolio
 			.portfolio
-				GithubTile.portfolio-item
+				GithubTile
 				template(v-for="(project, index) in projects")
-					PortfolioItem.portfolio-item(v-bind:project="project")
+					PortfolioItem(v-bind:project="project")
 	BackButton
 	br
 </template>
@@ -42,8 +42,4 @@ export default {
 	grid-template-columns repeat(auto-fit, minmax(10rem, 1fr))
 	grid-gap 1rem
 	grid-autoflow dense
-
-	.portfolio-item
-		&:hover
-			grid-column span 3
 </style>

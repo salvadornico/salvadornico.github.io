@@ -21,4 +21,6 @@ export default {
 .github-tile
 	padding 1rem
 	grid-column span 2
+	&:hover
+		grid-column span 3
 </style>
