@@ -20,4 +20,5 @@ export default {
 <style lang="stylus" scoped>
 .github-tile
 	padding 1rem
+	grid-column span 2
 </style>

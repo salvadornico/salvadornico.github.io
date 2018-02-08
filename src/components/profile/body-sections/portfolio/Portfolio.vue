@@ -7,12 +7,8 @@
 			span.card-title Portfolio
 			.portfolio
 				GithubTile.portfolio-item
-				.portfolio-item.portfolio-link(v-for="project in projects")
-					img.responsive-img(v-bind:src="imgLink(project.image)")
-					.portfolio-item-description
-						a(v-bind:href="project.url")
-							h4 {{ project.title }}
-						p {{ project.description }}
+				template(v-for="(project, index) in projects")
+					PortfolioItem.portfolio-item(v-bind:project="project")
 	BackButton
 	br
 </template>
@@ -20,6 +16,7 @@
 <script>
 import BackButton from "@/components/shared/BackButton"
 import GithubTile from "@/components/profile/body-sections/portfolio/GithubTile"
+import PortfolioItem from "@/components/profile/body-sections/portfolio/PortfolioItem"
 import imageService from "@/helpers/imageService.js"
 import { mapGetters } from "vuex"
 
@@ -27,10 +24,11 @@ export default {
 	components: {
 		BackButton,
 		GithubTile,
+		PortfolioItem,
 	},
 	computed: { ...mapGetters(["projects"]) },
 	methods: {
-		imgLink: image => imageService.get(image, "portfolio"),
+		imgLink: image => imageService.get(image, "portfolio", true),
 	},
 }
 </script>
@@ -44,18 +42,8 @@ export default {
 	grid-template-columns repeat(auto-fit, minmax(10rem, 1fr))
 	grid-gap 1rem
 	grid-autoflow dense
+
 	.portfolio-item
 		&:hover
 			grid-column span 3
-	.portfolio-link
-		.portfolio-item-description
-			display none
-		&:hover
-			display grid
-			grid-template-columns 1fr 1fr
-			grid-gap 1rem
-			.portfolio-item-description
-				display block
-	.github-tile
-		grid-column span 2
 </style>
