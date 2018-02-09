@@ -13,7 +13,7 @@ describe("Sections", () => {
 
 	it("Github tile", () => {
 		cy.get("[href='/portfolio']").click()
-		cy.get(".github-tile").should("have.length", 1)
+		cy.get(".github-tile").should("be.visible")
 		cy.get(".repo").should("have.length.gte", 5)
 	})
 

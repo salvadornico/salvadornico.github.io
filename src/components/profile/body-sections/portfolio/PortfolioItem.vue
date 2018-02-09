@@ -18,7 +18,7 @@ export default {
 	},
 	computed: {
 		imgLink() {
-			return imageService.get(this.project.image, "portfolio", true)
+			return imageService.getThumb(this.project.image, "portfolio")
 		},
 	},
 }

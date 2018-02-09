@@ -17,7 +17,6 @@
 import BackButton from "@/components/shared/BackButton"
 import GithubTile from "@/components/profile/body-sections/portfolio/GithubTile"
 import PortfolioItem from "@/components/profile/body-sections/portfolio/PortfolioItem"
-import imageService from "@/helpers/imageService.js"
 import { mapGetters } from "vuex"
 
 export default {
@@ -27,9 +26,6 @@ export default {
 		PortfolioItem,
 	},
 	computed: { ...mapGetters(["projects"]) },
-	methods: {
-		imgLink: image => imageService.get(image, "portfolio", true),
-	},
 }
 </script>
 
