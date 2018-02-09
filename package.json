@@ -37,7 +37,7 @@
 		"copy-webpack-plugin": "^4.1.1",
 		"css-loader": "^0.28.7",
 		"cssnano": "^3.10.0",
-		"cypress": "^1.4.1",
+		"cypress": "1.4.2",
 		"eslint": "^3.19.0",
 		"eslint-config-prettier": "^2.9.0",
 		"eslint-config-standard": "^6.2.1",

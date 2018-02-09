@@ -27,6 +27,7 @@ module.exports = {
 		quotes: ["error", "double"],
 		"linebreak-style": ["warn", "unix"],
 		"no-undef": "off",
+		"no-console": "off",
 		"prettier/prettier": "warn",
 		"vue/require-default-prop": "off",
 	},
