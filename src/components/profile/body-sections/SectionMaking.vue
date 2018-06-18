@@ -5,11 +5,15 @@ SectionCard(title="Making Things")
 	p.
 		Coding is making too :)
 	.center-align
-		a(href="https://www.instagram.com/p/BQXN2cAgAO7/")
-			img.responsive-img(src="https://instagram.fmnl4-3.fna.fbcdn.net/t51.2885-15/s320x320/e35/14677420_424099854587814_266605086967332864_n.jpg" alt="3D printing at Builtable Makerspace")
-		a(href="https://www.instagram.com/p/BMdli-lAUpg/")
-			img.responsive-img(src="https://instagram.fmnl8-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/14693650_1226332430742915_2680398392609210368_n.jpg" alt="Lego creation")
-		img.responsive-img(v-bind:src="imgLink" alt="3D modelled skatepark design")
+		.row
+			.col.s6
+				a(href="https://www.instagram.com/p/BQXN2cAgAO7/")
+					img.responsive-img(v-bind:src="getImgLink('3d_printing')" alt="3D printing at Builtable Makerspace")
+			.col.s6
+				a(href="https://www.instagram.com/p/BMdli-lAUpg/")
+					img.responsive-img(v-bind:src="getImgLink('lego_dinosaur')" alt="Lego creation")
+		.row
+			img.responsive-img(v-bind:src="getImgLink('park_design')" alt="3D modelled skatepark design")
 </template>
 
 <script>
@@ -20,8 +24,8 @@ export default {
 	components: {
 		SectionCard,
 	},
-	computed: {
-		imgLink: () => imageService.get("portfolio/park_design.jpg"),
+	methods: {
+		getImgLink: image => imageService.get(`portfolio/${image}.jpg`),
 	},
 }
 </script>
