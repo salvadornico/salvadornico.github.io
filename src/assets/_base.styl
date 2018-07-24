@@ -4,6 +4,15 @@ TabletDown = "(max-width: 1024px)"
 TabletOnly = "(min-width: 769px) and (max-width: 1024px)"
 DesktopOnly = "(min-width: 1024px)"
 
+body
+	display flex
+	min-height 100vh
+	width 100%
+	flex-direction column
+
+main
+	flex 1 0 auto
+
 center(axis, position)
 	position position
 
@@ -22,3 +31,5 @@ center(axis, position)
 	content ""
 	display block
 	clear both
+
+bodyColor = #3949ab

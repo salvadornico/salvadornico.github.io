@@ -12,7 +12,7 @@ import { Component } from "vue-property-decorator"
 @Component({
 	metaInfo() {
 		return {
-			titleTemplate: "%s | Vue Typescript Template",
+			titleTemplate: "Nico Salvador",
 		}
 	},
 })
