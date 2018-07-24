@@ -4,10 +4,12 @@ footer.red.darken-4
 		© 2017 Nico Salvador
 </template>
 
-<script>
-export default {
-	name: "Footer",
-}
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+
+@Component
+export default class Footer extends Vue {}
 </script>
 
 <style lang="stylus">

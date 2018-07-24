@@ -6,6 +6,7 @@
 </template>
 
 <script lang="ts">
+import Footer from "@/components/shared/Footer.vue"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
@@ -14,6 +15,9 @@ import { Component } from "vue-property-decorator"
 		return {
 			titleTemplate: "Nico Salvador",
 		}
+	},
+	components: {
+		Footer,
 	},
 })
 export default class App extends Vue {}

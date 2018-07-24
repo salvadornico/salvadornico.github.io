@@ -10,7 +10,7 @@ header#app-banner.container
 					h3 Quezon City, Philippines
 					.center-align
 						a(v-for="link in links" v-bind:href="link.url")
-							FAIcon(v-bind:icon="link.icon")
+							FAIcon(:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -46,19 +46,19 @@ export default {
 			links: [
 				{
 					url: "mailto:salvador.nico@gmail.com",
-					icon: "envelope",
+					icon: { name: "envelope" },
 				},
 				{
 					url: "https://github.com/salvadornico",
-					icon: "github",
+					icon: { pack: "fab", name: "github" },
 				},
 				{
 					url: "https://www.linkedin.com/in/salvadornico",
-					icon: "linkedin",
+					icon: { pack: "fab", name: "linkedin" },
 				},
 				{
 					url: "https://www.facebook.com/salvador.nico",
-					icon: "facebook-official",
+					icon: { pack: "fab", name: "facebook-official" },
 				},
 			],
 		}
@@ -159,10 +159,11 @@ lowPoint = 6px
 	transition-duration 0.3s
 
 	&:before
-		content "\f078"
+		content "\f063"
 		text-align center
 		position absolute
-		font-family FontAwesome
+		font-family "Font Awesome 5 Free"
+		font-weight 900
 		transform translateZ(0)
 		animation-name hvr-icon-hang-sink, hvr-icon-hang
 		animation-duration 0.3s, 1.5s
