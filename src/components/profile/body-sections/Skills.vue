@@ -18,7 +18,7 @@
 
 <script>
 import BackButton from "@/components/shared/BackButton"
-import imageService from "@/helpers/imageService.js"
+import imageService from "@/helpers/imageService.ts"
 import _ from "lodash"
 import { mapGetters } from "vuex"
 

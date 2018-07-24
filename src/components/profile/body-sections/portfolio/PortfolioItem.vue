@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import imageService from "@/helpers/imageService.js"
+import imageService from "@/helpers/imageService.ts"
 
 export default {
 	props: {

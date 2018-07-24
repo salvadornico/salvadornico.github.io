@@ -18,7 +18,7 @@ SectionCard(title="Making Things")
 
 <script>
 import SectionCard from "@/components/shared/SectionCard"
-import imageService from "@/helpers/imageService.js"
+import imageService from "@/helpers/imageService.ts"
 
 export default {
 	components: {

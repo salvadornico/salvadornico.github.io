@@ -33,7 +33,7 @@ header#app-banner.container
 <script>
 import FAIcon from "@/components/shared/FAIcon"
 import MaterialIcon from "@/components/shared/MaterialIcon"
-import imageService from "@/helpers/imageService.js"
+import imageService from "@/helpers/imageService.ts"
 
 export default {
 	name: "AppBanner",
