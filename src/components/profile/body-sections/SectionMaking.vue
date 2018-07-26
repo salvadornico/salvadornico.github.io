@@ -8,17 +8,17 @@ SectionCard(title="Making Things")
 		.row
 			.col.s6
 				a(href="https://www.instagram.com/p/BQXN2cAgAO7/")
-					img.responsive-img(v-bind:src="imgLink('3d_printing')" alt="3D printing at Builtable Makerspace")
+					img.responsive-img(v-bind:src="imagePath( { file: '3d_printing.jpg', path: 'portfolio' })" alt="3D printing at Builtable Makerspace")
 			.col.s6
 				a(href="https://www.instagram.com/p/BMdli-lAUpg/")
-					img.responsive-img(v-bind:src="imgLink('lego_dinosaur')" alt="Lego creation")
+					img.responsive-img(v-bind:src="imagePath( { file: 'lego_dinosaur.jpg', path: 'portfolio' })" alt="Lego creation")
 		.row
-			img.responsive-img(v-bind:src="imgLink('park_design')" alt="3D modelled skatepark design")
+			img.responsive-img(v-bind:src="imagePath( { file: 'park_design.jpg', path: 'portfolio' })" alt="3D modelled skatepark design")
 </template>
 
 <script lang="ts">
 import SectionCard from "@/components/shared/SectionCard.vue"
-import imageService from "@/helpers/imageService.ts"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
@@ -26,10 +26,9 @@ import { Component } from "vue-property-decorator"
 	components: {
 		SectionCard,
 	},
+	mixins: [ImageService],
 })
-export default class SectionMaking extends Vue {
-	imgLink(image: string): string {
-		return imageService.get(`portfolio/${image}.jpg`)
-	}
+export default class SectionMaking extends Vue implements ImageService {
+	imagePath: (options: ImagePathOptions) => string
 }
 </script>
