@@ -4,7 +4,7 @@ header#app-banner.container
 		.col.s12.l5
 			.card.large.hoverable
 				.card-image
-					img(v-bind:src="portraitUrl" alt="That's me!")
+					img(v-bind:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
 				.card-content
 					h1 Nico Salvador
 					h3 Quezon City, Philippines
@@ -33,7 +33,7 @@ header#app-banner.container
 <script lang="ts">
 import FAIcon from "@/components/shared/FAIcon.vue"
 import MaterialIcon from "@/components/shared/MaterialIcon.vue"
-import imageService from "@/helpers/imageService.ts"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
@@ -42,9 +42,11 @@ import { Component } from "vue-property-decorator"
 		FAIcon,
 		MaterialIcon,
 	},
+	mixins: [ImageService],
 })
-export default class Banner extends Vue {
+export default class Banner extends Vue implements ImageService {
 	$eventBus: any
+	imagePath: (options: ImagePathOptions) => string
 
 	links = [
 		{
@@ -64,10 +66,6 @@ export default class Banner extends Vue {
 			icon: { pack: "fab", name: "facebook-official" },
 		},
 	]
-
-	get portraitUrl(): string {
-		return imageService.get("portrait.png")
-	}
 
 	openFab() {
 		this.$eventBus.$emit("openFab")

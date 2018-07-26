@@ -1,6 +1,6 @@
 <template lang="pug">
 .portfolio-item
-	img.responsive-img(v-bind:src="imgLink")
+	img.responsive-img(v-bind:src="imagePath({ file: project.image, path: 'portfolio' })")
 	.portfolio-item-description
 		a(v-bind:href="project.url")
 			h4 {{ project.title }}
@@ -8,17 +8,17 @@
 </template>
 
 <script lang="ts">
-import imageService from "@/helpers/imageService.ts"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 
-@Component
-export default class PortfolioItem extends Vue {
+@Component({
+	mixins: [ImageService],
+})
+export default class PortfolioItem extends Vue implements ImageService {
 	@Prop() project: any
 
-	get imgLink(): string {
-		return imageService.getThumb(this.project.image, "portfolio")
-	}
+	imagePath: (options: ImagePathOptions) => string
 }
 </script>
 

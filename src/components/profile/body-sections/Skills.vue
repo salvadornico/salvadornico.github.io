@@ -10,7 +10,7 @@
 					h5 {{ capitalize(category) }}
 					a(v-for="skill in items" v-bind:href="skill.url" )
 						figure.tech-skill
-							img(v-bind:src="imgLink(skill.icon)" v-bind:alt="skill.name")
+							img(v-bind:src="imagePath({ file: skill.icon, path: 'logos' })" v-bind:alt="skill.name")
 							figcaption {{ skill.name }}
 	BackButton
 	br
@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import BackButton from "@/components/shared/BackButton.vue"
-import imageService from "@/helpers/imageService"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import _ from "lodash"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
@@ -28,13 +28,11 @@ import { Getter } from "vuex-class"
 	components: {
 		BackButton,
 	},
+	mixins: [ImageService],
 })
-export default class Skills extends Vue {
+export default class Skills extends Vue implements ImageService {
 	@Getter skills: any
-
-	imgLink(image: string): string {
-		return imageService.get(image, "logos")
-	}
+	imagePath: (options: ImagePathOptions) => string
 
 	capitalize(raw: string): string {
 		return _.capitalize(raw)

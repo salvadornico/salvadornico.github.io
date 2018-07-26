@@ -3,7 +3,7 @@
 	.col.s12
 		.card.horizontal.section-card
 			.card-image(v-if="image")
-				img(v-bind:src="imgLink(image)")
+				img(v-bind:src="imagePath({ file: image })")
 			.card-stacked
 				.card-content
 					span.card-title {{ title }}
@@ -13,18 +13,18 @@
 </template>
 
 <script lang="ts">
-import imageService from "@/helpers/imageService.ts"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 
-@Component
+@Component({
+	mixins: [ImageService],
+})
 export default class SectionCard extends Vue {
 	@Prop() title: string
 	@Prop() image: string
 
-	imgLink(image: string): string {
-		return imageService.get(image)
-	}
+	imagePath: (options: ImagePathOptions) => string
 }
 </script>
 

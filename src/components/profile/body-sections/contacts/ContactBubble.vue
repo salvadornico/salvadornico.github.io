@@ -1,22 +1,22 @@
 <template lang="pug">
 a(v-bind:href="url").contact-bubble
-	img.hoverable(v-bind:src="imgLink(icon)" v-bind:alt="name")
+	img.hoverable(v-bind:src="imagePath({ file: `${icon}.png`, path: 'icons' })" v-bind:alt="name")
 </template>
 
 <script lang="ts">
-import imageService from "@/helpers/imageService.ts"
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 
-@Component
-export default class ContactBubble extends Vue {
+@Component({
+	mixins: [ImageService],
+})
+export default class ContactBubble extends Vue implements ImageService {
 	@Prop() name: string
 	@Prop() icon: string
 	@Prop() url: string
 
-	imgLink(image: string): string {
-		return imageService.get(`${image}.png`, "icons")
-	}
+	imagePath: (options: ImagePathOptions) => string
 }
 </script>
 
