@@ -14,12 +14,15 @@ SectionCard(title="Marketing/PR/events")
 				iframe(src="https://www.youtube.com/embed/iqqKuvqXKj4" frameborder="0" allowfullscreen)
 </template>
 
-<script>
-import SectionCard from "@/components/shared/SectionCard"
+<script lang="ts">
+import SectionCard from "@/components/shared/SectionCard.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
+@Component({
 	components: {
 		SectionCard,
 	},
-}
+})
+export default class SectionMarketing extends Vue {}
 </script>

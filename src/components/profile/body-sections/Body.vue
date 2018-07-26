@@ -8,14 +8,16 @@
 	OtherThings
 </template>
 
-<script>
-import SectionSoftware from "./SectionSoftware"
-import SectionMaking from "./SectionMaking"
-import SectionMarketing from "./SectionMarketing"
-import SectionBlading from "./SectionBlading"
-import OtherThings from "./OtherThings"
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import OtherThings from "./OtherThings.vue"
+import SectionBlading from "./SectionBlading.vue"
+import SectionMaking from "./SectionMaking.vue"
+import SectionMarketing from "./SectionMarketing.vue"
+import SectionSoftware from "./SectionSoftware.vue"
 
-export default {
+@Component({
 	components: {
 		SectionSoftware,
 		SectionMaking,
@@ -23,7 +25,8 @@ export default {
 		SectionBlading,
 		OtherThings,
 	},
-}
+})
+export default class Body extends Vue {}
 </script>
 
 <style lang="stylus" scoped>

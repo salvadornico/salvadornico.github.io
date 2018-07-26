@@ -16,16 +16,20 @@ SectionCard(title="Making Things")
 			img.responsive-img(v-bind:src="getImgLink('park_design')" alt="3D modelled skatepark design")
 </template>
 
-<script>
-import SectionCard from "@/components/shared/SectionCard"
+<script lang="ts">
+import SectionCard from "@/components/shared/SectionCard.vue"
 import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
+@Component({
 	components: {
 		SectionCard,
 	},
-	methods: {
-		getImgLink: image => imageService.get(`portfolio/${image}.jpg`),
-	},
+})
+export default class SectionMaking extends Vue {
+	imgLink(image: string): string {
+		return imageService.get(`portfolio/${image}.jpg`)
+	}
 }
 </script>

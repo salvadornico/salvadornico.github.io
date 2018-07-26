@@ -30,47 +30,48 @@ header#app-banner.container
 				a#seeMore.hvr-icon-hang.white-text(href="#app-body" target="_parent" data-scroll)
 </template>
 
-<script>
-import FAIcon from "@/components/shared/FAIcon"
-import MaterialIcon from "@/components/shared/MaterialIcon"
+<script lang="ts">
+import FAIcon from "@/components/shared/FAIcon.vue"
+import MaterialIcon from "@/components/shared/MaterialIcon.vue"
 import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
-	name: "AppBanner",
+@Component({
 	components: {
 		FAIcon,
 		MaterialIcon,
 	},
-	data() {
-		return {
-			links: [
-				{
-					url: "mailto:salvador.nico@gmail.com",
-					icon: { name: "envelope" },
-				},
-				{
-					url: "https://github.com/salvadornico",
-					icon: { pack: "fab", name: "github" },
-				},
-				{
-					url: "https://www.linkedin.com/in/salvadornico",
-					icon: { pack: "fab", name: "linkedin" },
-				},
-				{
-					url: "https://www.facebook.com/salvador.nico",
-					icon: { pack: "fab", name: "facebook-official" },
-				},
-			],
-		}
-	},
-	computed: {
-		portraitUrl: () => imageService.get("portrait.png"),
-	},
-	methods: {
-		openFab: function() {
-			this.$eventBus.$emit("openFab")
+})
+export default class Banner extends Vue {
+	$eventBus: any
+
+	links = [
+		{
+			url: "mailto:salvador.nico@gmail.com",
+			icon: { name: "envelope" },
 		},
-	},
+		{
+			url: "https://github.com/salvadornico",
+			icon: { pack: "fab", name: "github" },
+		},
+		{
+			url: "https://www.linkedin.com/in/salvadornico",
+			icon: { pack: "fab", name: "linkedin" },
+		},
+		{
+			url: "https://www.facebook.com/salvador.nico",
+			icon: { pack: "fab", name: "facebook-official" },
+		},
+	]
+
+	get portraitUrl(): string {
+		return imageService.get("portrait.png")
+	}
+
+	openFab() {
+		this.$eventBus.$emit("openFab")
+	}
 }
 </script>
 

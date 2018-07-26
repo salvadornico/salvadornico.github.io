@@ -11,21 +11,23 @@
 	FAB
 </template>
 
-<script>
-import Banner from "@/components/profile/body-sections/Banner"
-import Parallax from "@/components/shared/Parallax"
-import Contacts from "@/components/profile/body-sections/contacts/Contacts"
-import FAB from "@/components/profile/body-sections/FAB"
+<script lang="ts">
+import Banner from "@/components/profile/body-sections/Banner.vue"
+import Contacts from "@/components/profile/body-sections/contacts/Contacts.vue"
+import FAB from "@/components/profile/body-sections/FAB.vue"
+import Parallax from "@/components/shared/Parallax.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
-	name: "App",
+@Component({
 	components: {
 		Banner,
 		Parallax,
 		Contacts,
 		FAB,
 	},
-}
+})
+export default class Profile extends Vue {}
 </script>
 
 <style lang="stylus">
