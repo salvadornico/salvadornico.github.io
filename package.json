@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@types/lodash": "^4.14.113",
 		"vue": "^2.5.13",
+		"vue-analytics": "^5.12.2",
 		"vue-class-component": "^6.0.0",
 		"vue-meta": "^1.4.3",
 		"vue-property-decorator": "^6.0.0",
