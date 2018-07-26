@@ -1,31 +1,35 @@
 <template lang="pug">
 .parallax-container(v-bind:class="{ video:video }")
 		.parallax(ref="parallax")
-			img(v-if="type == 'image'" v-bind:src="imgLink" v-bind:alt="alt")
-			video(v-if="type == 'video'" muted autoplay loop v-bind:poster="imgLink")
+			img(v-if="type == 'image'" v-bind:src="imagePath({ file: image })" v-bind:alt="alt")
+			video(v-if="type == 'video'" muted autoplay loop v-bind:poster="imagePath({ file: image })")
 				source(v-bind:src="video" type="video/mp4")
 </template>
 
-<script>
-import imageService from "@/helpers/imageService.ts"
+<script lang="ts">
+import { ImagePathOptions, ImageService } from "@/helpers/images.service"
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
 
-export default {
-	props: {
-		type: { type: String, default: "image" },
-		image: { type: String },
-		video: { type: String, default: "" },
-		alt: { type: String },
-	},
-	computed: {
-		imgLink: function() {
-			return imageService.get(this.image)
-		},
-	},
-	mounted: function() {
+declare const M: any
+
+@Component({
+	mixins: [ImageService],
+})
+export default class Parallax extends Vue implements ImageService {
+	@Prop({ default: "image" })
+	type: string
+	@Prop() image: string
+	@Prop({ default: "" })
+	video: string
+	@Prop() alt: string
+
+	imagePath: (options: ImagePathOptions) => string
+
+	mounted() {
 		const elem = this.$refs.parallax
-		/* eslint-disable no-unused-vars */
-		const instance = M.Parallax.init(elem, {})
-	},
+		M.Parallax.init(elem, {})
+	}
 }
 </script>
 
