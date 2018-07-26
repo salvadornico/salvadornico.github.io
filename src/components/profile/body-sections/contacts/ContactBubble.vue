@@ -3,18 +3,20 @@ a(v-bind:href="url").contact-bubble
 	img.hoverable(v-bind:src="imgLink(icon)" v-bind:alt="name")
 </template>
 
-<script>
+<script lang="ts">
 import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
 
-export default {
-	props: {
-		name: { type: String },
-		icon: { type: String },
-		url: { type: String },
-	},
-	methods: {
-		imgLink: image => imageService.get(`${image}.png`, "icons"),
-	},
+@Component
+export default class ContactBubble extends Vue {
+	@Prop() name: string
+	@Prop() icon: string
+	@Prop() url: string
+
+	imgLink(image: string): string {
+		return imageService.get(`${image}.png`, "icons")
+	}
 }
 </script>
 

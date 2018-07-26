@@ -21,18 +21,23 @@
 
 		.row
 			a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico Salvador CV.pdf")
-				i.material-icons.left library_books
+				MaterialIcon(icon="library_books").left
 				span Resum&#233;
 </template>
 
-<script>
-import ContactBubble from "./ContactBubble"
+<script lang="ts">
+import MaterialIcon from "@/components/shared/MaterialIcon.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import ContactBubble from "./ContactBubble.vue"
 
-export default {
+@Component({
 	components: {
 		ContactBubble,
+		MaterialIcon,
 	},
-}
+})
+export default class Contacts extends Vue {}
 </script>
 
 <style lang="stylus" scoped>

@@ -13,19 +13,23 @@
 	br
 </template>
 
-<script>
-import BackButton from "@/components/shared/BackButton"
-import GithubTile from "@/components/profile/body-sections/portfolio/GithubTile"
-import PortfolioItem from "@/components/profile/body-sections/portfolio/PortfolioItem"
-import { mapGetters } from "vuex"
+<script lang="ts">
+import GithubTile from "@/components/profile/body-sections/portfolio/GithubTile.vue"
+import PortfolioItem from "@/components/profile/body-sections/portfolio/PortfolioItem.vue"
+import BackButton from "@/components/shared/BackButton.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import { Getter } from "vuex-class"
 
-export default {
+@Component({
 	components: {
 		BackButton,
 		GithubTile,
 		PortfolioItem,
 	},
-	computed: { ...mapGetters(["projects"]) },
+})
+export default class Portfolio extends Vue {
+	@Getter projects: any[]
 }
 </script>
 

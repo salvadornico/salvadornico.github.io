@@ -6,15 +6,19 @@
 			a.black-text(v-bind:href="repo.html_url") {{ repo.name }}
 </template>
 
-<script>
-import { mapGetters, mapActions } from "vuex"
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import { Action, Getter } from "vuex-class"
 
-export default {
-	computed: { ...mapGetters(["repos"]) },
+@Component
+export default class GithubTile extends Vue {
+	@Getter repos: any[]
+	@Action fetchRepos: () => void
+
 	created() {
 		this.fetchRepos()
-	},
-	methods: { ...mapActions(["fetchRepos"]) },
+	}
 }
 </script>
 
