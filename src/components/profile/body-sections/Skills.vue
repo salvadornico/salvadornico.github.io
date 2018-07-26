@@ -16,21 +16,29 @@
 	br
 </template>
 
-<script>
-import BackButton from "@/components/shared/BackButton"
-import imageService from "@/helpers/imageService.js"
+<script lang="ts">
+import BackButton from "@/components/shared/BackButton.vue"
+import imageService from "@/helpers/imageService"
 import _ from "lodash"
-import { mapGetters } from "vuex"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import { Getter } from "vuex-class"
 
-export default {
+@Component({
 	components: {
 		BackButton,
 	},
-	computed: { ...mapGetters(["skills"]) },
-	methods: {
-		imgLink: image => imageService.get(image, "logos"),
-		capitalize: string => _.capitalize(string),
-	},
+})
+export default class Skills extends Vue {
+	@Getter skills: any
+
+	imgLink(image: string): string {
+		return imageService.get(image, "logos")
+	}
+
+	capitalize(raw: string): string {
+		return _.capitalize(raw)
+	}
 }
 </script>
 

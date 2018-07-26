@@ -10,16 +10,20 @@ SectionCard(title="Software Development")
 		router-link(to="/skills") My Stack
 </template>
 
-<script>
-import SectionCard from "@/components/shared/SectionCard"
-import imageService from "@/helpers/imageService.js"
+<script lang="ts">
+import SectionCard from "@/components/shared/SectionCard.vue"
+import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
+@Component({
 	components: {
 		SectionCard,
 	},
-	computed: {
-		imgLink: () => imageService.get("vue-snippet.png"),
-	},
+})
+export default class SectionSoftware extends Vue {
+	get imgLink(): string {
+		return imageService.get("vue-snippet.png")
+	}
 }
 </script>

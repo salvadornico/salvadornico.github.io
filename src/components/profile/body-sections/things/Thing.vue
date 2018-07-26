@@ -8,20 +8,20 @@
 					span.black-text {{ name }}
 </template>
 
-<script>
-import imageService from "@/helpers/imageService.js"
+<script lang="ts">
+import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
 
-export default {
-	props: {
-		image: { type: String },
-		name: { type: String },
-		link: { type: String },
-	},
-	computed: {
-		imgLink: function() {
-			return imageService.get(this.image, "things")
-		},
-	},
+@Component
+export default class Thing extends Vue {
+	@Prop() image: string
+	@Prop() name: string
+	@Prop() link: string
+
+	get imgLink(): string {
+		return imageService.get(this.image, "things")
+	}
 }
 </script>
 

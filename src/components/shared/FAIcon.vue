@@ -1,16 +1,19 @@
 <template lang="pug">
-i.fa(v-bind:class="iconClass" aria-hidden="true")
+i(v-bind:class="iconClass" aria-hidden="true")
 </template>
 
-<script>
-export default {
-	props: {
-		icon: { type: String },
-	},
-	computed: {
-		iconClass: function() {
-			return `fa-${this.icon}`
-		},
-	},
+<script lang="ts">
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
+
+@Component
+export default class FAIcon extends Vue {
+	@Prop() icon: { pack: string; name: string }
+
+	get iconClass(): string {
+		const pack = this.icon.pack || "fas"
+
+		return `${pack} fa-${this.icon.name}`
+	}
 }
 </script>

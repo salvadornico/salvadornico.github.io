@@ -14,15 +14,20 @@
 		iframe(src="https://embed.spotify.com/?uri=spotify%3Auser%3A12175595202%3Aplaylist%3A0UmSRTsfZlo6dG4XrydQ4w" frameborder="0" allowtransparency="true")
 </template>
 
-<script>
-import Thing from "./things/Thing"
-import { mapGetters } from "vuex"
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import { Getter } from "vuex-class"
+import Thing from "./things/Thing.vue"
 
-export default {
+@Component({
 	components: {
 		Thing,
 	},
-	computed: { ...mapGetters(["inspirations", "things"]) },
+})
+export default class OtherThings extends Vue {
+	@Getter inspirations: any[]
+	@Getter things: any[]
 }
 </script>
 

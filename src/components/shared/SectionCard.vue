@@ -12,17 +12,19 @@
 				slot(name="links")
 </template>
 
-<script>
-import imageService from "@/helpers/imageService.js"
+<script lang="ts">
+import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
 
-export default {
-	props: {
-		title: { type: String },
-		image: { type: String },
-	},
-	methods: {
-		imgLink: image => imageService.get(image),
-	},
+@Component
+export default class SectionCard extends Vue {
+	@Prop() title: string
+	@Prop() image: string
+
+	imgLink(image: string): string {
+		return imageService.get(image)
+	}
 }
 </script>
 

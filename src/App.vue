@@ -5,17 +5,22 @@
 	Footer
 </template>
 
-<script>
-import Footer from "@/components/shared/Footer"
-import SmoothScroll from "smooth-scroll"
+<script lang="ts">
+import Footer from "@/components/shared/Footer.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-new SmoothScroll("a[href*='#']")
-
-export default {
+@Component({
+	metaInfo() {
+		return {
+			titleTemplate: "Nico Salvador",
+		}
+	},
 	components: {
 		Footer,
 	},
-}
+})
+export default class App extends Vue {}
 </script>
 
 <style lang="stylus">

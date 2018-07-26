@@ -1,4 +1,4 @@
-# Nico's portfolio v3
+# Nico's portfolio v4
 
 salvadornico.com
 
@@ -6,7 +6,7 @@ salvadornico.com
 
 ```bash
 # start dev server
-yarn run dev
+yarn run serve
 
 # build for production with minification and deploy to Firebase
 yarn run build

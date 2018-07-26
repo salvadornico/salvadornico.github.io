@@ -7,32 +7,34 @@
 		p {{ project.description }}
 </template>
 
-<script>
-import imageService from "@/helpers/imageService.js"
+<script lang="ts">
+import imageService from "@/helpers/imageService.ts"
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
 
-export default {
-	props: {
-		project: {
-			type: Object,
-		},
-	},
-	computed: {
-		imgLink() {
-			return imageService.getThumb(this.project.image, "portfolio")
-		},
-	},
+@Component
+export default class PortfolioItem extends Vue {
+	@Prop() project: any
+
+	get imgLink(): string {
+		return imageService.getThumb(this.project.image, "portfolio")
+	}
 }
 </script>
 
 <style lang="stylus" scoped>
 .portfolio-item
 	display grid
+
 	&:hover
 		grid-row span 2
+
 	.portfolio-item-description
 		display none
+
 	&:hover
 		display grid
+
 		.portfolio-item-description
 			display block
 </style>

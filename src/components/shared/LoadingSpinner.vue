@@ -9,8 +9,10 @@
 			.circle
 </template>
 
-<script>
-export default {
-	name: "LoadingSpinner",
-}
+<script lang="ts">
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+
+@Component
+export default class LoadingSpinner extends Vue {}
 </script>

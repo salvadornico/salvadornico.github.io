@@ -11,12 +11,15 @@ SectionCard(title="Inline skating")
 				iframe(src="https://player.vimeo.com/video/31335546?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
 </template>
 
-<script>
-import SectionCard from "@/components/shared/SectionCard"
+<script lang="ts">
+import SectionCard from "@/components/shared/SectionCard.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
 
-export default {
+@Component({
 	components: {
 		SectionCard,
 	},
-}
+})
+export default class SectionBlading extends Vue {}
 </script>

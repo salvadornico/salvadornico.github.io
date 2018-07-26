@@ -1,11 +1,13 @@
+import Body from "@/components/profile/body-sections/Body.vue"
+import Portfolio from "@/components/profile/body-sections/portfolio/Portfolio.vue"
+import Skills from "@/components/profile/body-sections/Skills.vue"
+import Profile from "@/components/profile/Profile.vue"
 import Vue from "vue"
+import Meta from "vue-meta"
 import Router from "vue-router"
-import Profile from "@/components/profile/Profile"
-import Body from "@/components/profile/body-sections/Body"
-import Portfolio from "@/components/profile/body-sections/portfolio/Portfolio"
-import Skills from "@/components/profile/body-sections/Skills"
 
 Vue.use(Router)
+Vue.use(Meta)
 
 export default new Router({
 	mode: "history",

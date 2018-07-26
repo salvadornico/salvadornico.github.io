@@ -1,4 +1,4 @@
-export default {
+export const defaultState = {
 	projects: [
 		{
 			title: "What's That Edit?",

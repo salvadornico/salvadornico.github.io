@@ -4,21 +4,23 @@
 		MaterialIcon(icon="arrow_back")
 </template>
 
-<script>
-import MaterialIcon from "./MaterialIcon"
+<script lang="ts">
+import Vue from "vue"
+import { Component, Prop } from "vue-property-decorator"
+import MaterialIcon from "./MaterialIcon.vue"
 
-export default {
+@Component({
 	components: {
 		MaterialIcon,
 	},
-	props: {
-		path: { type: String, default: "/" },
-	},
-	methods: {
-		goBack: function() {
-			this.$router.push({ path: this.path })
-		},
-	},
+})
+export default class BackButton extends Vue {
+	@Prop({ default: "/" })
+	path: string
+
+	goBack() {
+		this.$router.push({ path: this.path })
+	}
 }
 </script>
 
