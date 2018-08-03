@@ -1,4 +1,4 @@
-import { githubService } from "@/helpers/githubService"
+import { githubService } from "@/helpers/github.service"
 import { defaultState } from "@/store/defaultState"
 import Vue from "vue"
 import Vuex from "vuex"
