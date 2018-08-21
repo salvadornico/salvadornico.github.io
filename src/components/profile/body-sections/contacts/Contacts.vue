@@ -5,7 +5,7 @@
 			h4.center-align.section-header My Work
 			.center-align
 				ContactBubble(url="https://github.com/salvadornico", icon="github", name="GitHub")
-				ContactBubble(url="http://codepen.io/salvadornico", icon="codepen", name="CodePen")
+				ContactBubble(url="https://codepen.io/salvadornico", icon="codepen", name="CodePen")
 				ContactBubble(url="https://vimeo.com/roller4life", icon="vimeo", name="Vimeo")
 
 		.row

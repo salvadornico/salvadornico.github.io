@@ -4,7 +4,7 @@ SectionCard(title="Marketing/PR/events")
 		p.
 			I graduated from the University of the Philippines with a degree in Business Administration. And while most of my experience afterwards has been in marketing, I'm perfectly comfortable discussing economics, finance, corporate strategy, or management, and have even been called up to draft a contract or two.
 		p.
-			I've helped organize an <a href="https://youtu.be/hyKqQg_m8Ds">indie-orchestra mashup concert</a>, <a href="https://www.youtube.com/watch?v=iqqKuvqXKj4">football tournaments</a>, and an <a href="http://www.interaksyon.com/interaktv/kia-puts-up-contest-for-pba-team-name-15-finalists-to-win-us-trip-to-watch-nba-game">online contest to name a professional basketball team</a>, among many other less interesting things
+			I've helped organize an <a href="https://youtu.be/hyKqQg_m8Ds">indie-orchestra mashup concert</a>, <a href="https://www.youtube.com/watch?v=iqqKuvqXKj4">football tournaments</a>, and an <a href="https://motioncars.inquirer.net/28757/name-kias-pba-team-and-win-a-trip-to-an-nba-game-in-los-angeles">online contest to name a professional basketball team</a>, among many other less interesting things
 	.row
 		.col.s12.m6.center-align
 			.video-container

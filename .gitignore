@@ -2,6 +2,7 @@
 **/node_modules
 **/dist
 **/.cache
+.firebase/hosting.*.cache
 src/config.ts
 
 # local env files
