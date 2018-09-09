@@ -1,4 +1,3 @@
-import config from "@/config"
 import router from "@/router"
 import store from "@/store"
 import Vue from "vue"
@@ -9,7 +8,7 @@ Vue.config.productionTip = false
 Vue.prototype.$eventBus = new Vue()
 
 Vue.use(VueAnalytics, {
-	id: config.analyticsId,
+	id: "UA-92196324-1",
 	router,
 	debug: {
 		sendHitTask: process.env.NODE_ENV === "production",
