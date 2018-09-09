@@ -1,7 +1,7 @@
 <template lang="pug">
 footer.red.darken-4
 	p.center-align.
-		© 2017 Nico Salvador
+		© {{ currentYear }} Nico Salvador
 </template>
 
 <script lang="ts">
@@ -9,7 +9,11 @@ import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
 @Component
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+	get currentYear(): number {
+		return new Date().getFullYear()
+	}
+}
 </script>
 
 <style lang="stylus">
