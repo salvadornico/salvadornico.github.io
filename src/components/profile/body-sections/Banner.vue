@@ -23,7 +23,7 @@ header#app-banner.container
 					h3 Let's get in touch!
 			.row.center-align
 				.col.s12.m6.offset-m3.pull-l3
-					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll v-on:click="openFab()")
+					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll @click="openFab()")
 						MaterialIcon.left(icon="chat_bubble")
 						span Contact Me
 			.row

@@ -1,6 +1,6 @@
 <template lang="pug">
 .back-button
-	button.btn.waves-effect.waves-light.red.darken-1(v-on:click="goBack()")
+	button.btn.waves-effect.waves-light.red.darken-1(@click="goBack()")
 		MaterialIcon(icon="arrow_back")
 </template>
 

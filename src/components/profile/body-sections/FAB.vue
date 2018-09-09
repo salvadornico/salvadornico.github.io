@@ -1,6 +1,6 @@
 <template lang="pug">
 .fixed-action-btn.tooltipped(ref="tooltipped" data-position="left" data-delay="50" data-tooltip="Back to top")
-	a.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(ref="fabBtn" href="#app-banner" target="_parent" data-scroll v-on:click="hideFAB()")
+	a.waves-effect.waves-circle.waves-light.btn-floating.btn-large.red.scale-transition.scale-out(ref="fabBtn" href="#app-banner" target="_parent" data-scroll @click="hideFAB()")
 		MaterialIcon(icon="arrow_upward")
 </template>
 
