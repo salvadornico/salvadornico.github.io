@@ -4,12 +4,12 @@ header#app-banner.container
 		.col.s12.l5
 			.card.large.hoverable
 				.card-image
-					img(v-bind:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
+					img(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
 				.card-content
 					h1 Nico Salvador
 					h3 Quezon City, Philippines
 					.center-align
-						a(v-for="link in links" v-bind:href="link.url")
+						a(v-for="link in links" :href="link.url")
 							FAIcon(:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox

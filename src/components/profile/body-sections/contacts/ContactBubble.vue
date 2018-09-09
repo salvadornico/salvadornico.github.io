@@ -1,6 +1,6 @@
 <template lang="pug">
-a(v-bind:href="url").contact-bubble
-	img.hoverable(v-bind:src="imagePath({ file: `${icon}.png`, path: 'icons' })" v-bind:alt="name")
+a(:href="url").contact-bubble
+	img.hoverable(:src="imagePath({ file: `${icon}.png`, path: 'icons' })" :alt="name")
 </template>
 
 <script lang="ts">

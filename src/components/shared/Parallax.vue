@@ -1,9 +1,9 @@
 <template lang="pug">
-.parallax-container(v-bind:class="{ video:video }")
-		.parallax(ref="parallax")
-			img(v-if="type == 'image'" v-bind:src="imagePath({ file: image })" v-bind:alt="alt")
-			video(v-if="type == 'video'" muted autoplay loop v-bind:poster="imagePath({ file: image })")
-				source(v-bind:src="video" type="video/mp4")
+.parallax-container(:class="{ video:video }")
+	.parallax(ref="parallax")
+		img(v-if="type == 'image'" :src="imagePath({ file: image })" :alt="alt")
+		video(v-if="type == 'video'" muted autoplay loop :poster="imagePath({ file: image })")
+			source(:src="video" type="video/mp4")
 </template>
 
 <script lang="ts">

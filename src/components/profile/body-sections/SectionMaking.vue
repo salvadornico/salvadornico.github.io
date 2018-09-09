@@ -8,12 +8,12 @@ SectionCard(title="Making Things")
 		.row
 			.col.s6
 				a(href="https://www.instagram.com/p/BQXN2cAgAO7/")
-					img.responsive-img(v-bind:src="imagePath( { file: '3d_printing.jpg', path: 'portfolio' })" alt="3D printing at Builtable Makerspace")
+					img.responsive-img(:src="imagePath( { file: '3d_printing.jpg', path: 'portfolio' })" alt="3D printing at Builtable Makerspace")
 			.col.s6
 				a(href="https://www.instagram.com/p/BMdli-lAUpg/")
-					img.responsive-img(v-bind:src="imagePath( { file: 'lego_dinosaur.jpg', path: 'portfolio' })" alt="Lego creation")
+					img.responsive-img(:src="imagePath( { file: 'lego_dinosaur.jpg', path: 'portfolio' })" alt="Lego creation")
 		.row
-			img.responsive-img(v-bind:src="imagePath( { file: 'park_design.jpg', path: 'portfolio' })" alt="3D modelled skatepark design")
+			img.responsive-img(:src="imagePath( { file: 'park_design.jpg', path: 'portfolio' })" alt="3D modelled skatepark design")
 </template>
 
 <script lang="ts">

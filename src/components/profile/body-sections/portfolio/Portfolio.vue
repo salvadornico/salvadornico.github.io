@@ -8,7 +8,7 @@
 			.portfolio
 				GithubTile
 				template(v-for="(project, index) in projects")
-					PortfolioItem(v-bind:project="project")
+					PortfolioItem(:project="project")
 	BackButton
 	br
 </template>

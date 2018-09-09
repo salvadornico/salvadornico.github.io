@@ -8,9 +8,9 @@
 			#skillsList
 				.category(v-for="(items, category) in skills")
 					h5 {{ capitalize(category) }}
-					a(v-for="skill in items" v-bind:href="skill.url" )
+					a(v-for="skill in items" :href="skill.url" )
 						figure.tech-skill
-							img(v-bind:src="imagePath({ file: skill.icon, path: 'logos' })" v-bind:alt="skill.name")
+							img(:src="imagePath({ file: skill.icon, path: 'logos' })" :alt="skill.name")
 							figcaption {{ skill.name }}
 	BackButton
 	br

@@ -3,11 +3,11 @@
 	.col.s12
 		.card.horizontal.section-card
 			.card-image(v-if="image")
-				img(v-bind:src="imagePath({ file: image })")
+				img(:src="imagePath({ file: image })")
 			.card-stacked
 				.card-content
 					span.card-title {{ title }}
-					div(v-bind:class="{ margins: !image }")
+					div(:class="{ margins: !image }")
 						slot
 				slot(name="links")
 </template>

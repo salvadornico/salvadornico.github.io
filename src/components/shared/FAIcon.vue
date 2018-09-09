@@ -1,5 +1,5 @@
 <template lang="pug">
-i(v-bind:class="iconClass" aria-hidden="true")
+i(:class="iconClass" aria-hidden="true")
 </template>
 
 <script lang="ts">

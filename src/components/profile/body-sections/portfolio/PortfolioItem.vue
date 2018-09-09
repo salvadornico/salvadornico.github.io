@@ -1,8 +1,8 @@
 <template lang="pug">
 .portfolio-item
-	img.responsive-img(v-bind:src="imagePath({ file: project.image, path: 'portfolio', size: 'thumb' })")
+	img.responsive-img(:src="imagePath({ file: project.image, path: 'portfolio', size: 'thumb' })")
 	.portfolio-item-description
-		a(v-bind:href="project.url")
+		a(:href="project.url")
 			h4 {{ project.title }}
 		p {{ project.description }}
 </template>

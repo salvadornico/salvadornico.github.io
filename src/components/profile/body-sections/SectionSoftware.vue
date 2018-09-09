@@ -4,7 +4,7 @@ SectionCard(title="Software Development")
 		.col.s12.m8
 			p I've always enjoyed tinkering with technology and poking around the deepest levels of software settings, so programming was a natural next step. I love the way it demands both the ability to solve problems creatively and then the application of those ideas in a logical and systematic fashion.
 		.col.s12.m4
-			img.responsive-img(v-bind:src="imagePath( { file: 'vue-snippet.png' })")
+			img.responsive-img(:src="imagePath( { file: 'vue-snippet.png' })")
 	.card-action(slot="links")
 		router-link(to="/portfolio") Portfolio
 		router-link(to="/skills") My Stack

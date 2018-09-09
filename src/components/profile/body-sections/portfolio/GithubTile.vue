@@ -3,7 +3,7 @@
 	h5 Latest Github Activity
 	ul
 		li.repo(v-for="repo in repos")
-			a.black-text(v-bind:href="repo.html_url") {{ repo.name }}
+			a.black-text(:href="repo.html_url") {{ repo.name }}
 </template>
 
 <script lang="ts">
