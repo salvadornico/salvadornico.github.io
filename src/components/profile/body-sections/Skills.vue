@@ -7,7 +7,7 @@
 			span.card-title My Tech Stack
 			#skillsList
 				.category(v-for="(items, category) in skills")
-					h5 {{ capitalize(category) }}
+					h5 {{ category | capitalize }}
 					a(v-for="skill in items" :href="skill.url" )
 						figure.tech-skill
 							img(:src="imagePath({ file: skill.icon, path: 'logos' })" :alt="skill.name")
@@ -19,7 +19,7 @@
 <script lang="ts">
 import BackButton from "@/components/shared/BackButton.vue"
 import { ImagePathOptions, ImageService } from "@/helpers/images.service"
-import _ from "lodash"
+import { capitalize } from "@/helpers/utils"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 import { Getter } from "vuex-class"
@@ -29,14 +29,13 @@ import { Getter } from "vuex-class"
 		BackButton,
 	},
 	mixins: [ImageService],
+	filters: {
+		capitalize,
+	},
 })
 export default class Skills extends Vue implements ImageService {
 	@Getter skills: any
 	imagePath: (options: ImagePathOptions) => string
-
-	capitalize(raw: string): string {
-		return _.capitalize(raw)
-	}
 }
 </script>
 
