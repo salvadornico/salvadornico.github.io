@@ -17,7 +17,6 @@
 <script lang="ts">
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
-import { Getter } from "vuex-class"
 import Thing from "./things/Thing.vue"
 
 @Component({
@@ -26,8 +25,55 @@ import Thing from "./things/Thing.vue"
 	},
 })
 export default class OtherThings extends Vue {
-	@Getter inspirations: any[]
-	@Getter things: any[]
+	inspirations = [
+		{ text: "Stories behind great ideas" },
+		{ text: "Working with people who love their craft" },
+		{ text: "Elegant solutions to awkward problems" },
+	]
+
+	things = [
+		{
+			image: "DiRT4.png",
+			link: "http://www.codemasters.com/game/dirt-4",
+			name: "DiRT 4",
+		},
+		{
+			image: "etr.jpg",
+			link: "https://www.theminimalists.com/etr",
+			name: "Everything That Remains",
+		},
+		{
+			image: "wilderpeople.jpg",
+			link: "http://wilderpeople.film",
+			name: "Hunt for the Wilderpeople",
+		},
+		{
+			image: "switched-on-pop.png",
+			link: "http://www.switchedonpop.com",
+			name: "Switched On Pop",
+		},
+		{
+			image: "tested-logo.png",
+			link: "https://www.tested.com",
+			name: "Tested.com",
+		},
+		{
+			image: "racing_in_the_rain.jpg",
+			link:
+				"http://www.garthstein.com/works/the-art-of-racing-in-the-rain",
+			name: "The Art of Racing in the Rain",
+		},
+		{
+			image: "wiw.jpg",
+			link: "https://www.pri.org/programs/world-words",
+			name: "The World In Words",
+		},
+		{
+			image: "Valo4life.jpg",
+			link: "http://www.valo4life.com/",
+			name: "Valo 4 Life",
+		},
+	]
 }
 </script>
 
