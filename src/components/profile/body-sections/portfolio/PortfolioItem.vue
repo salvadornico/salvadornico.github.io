@@ -24,10 +24,12 @@ export default class PortfolioItem extends Vue implements ImageService {
 
 <style lang="stylus" scoped>
 .portfolio-item
+	padding 1rem
 	display grid
 
 	&:hover
 		grid-row span 2
+		background-color lightGrey
 
 	.portfolio-item-description
 		display none

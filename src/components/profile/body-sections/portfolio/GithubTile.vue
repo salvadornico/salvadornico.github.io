@@ -1,5 +1,5 @@
 <template lang="pug">
-.github-tile.card.grey
+.github-tile.card.grey.lighten-2
 	h5 Latest Github Activity
 	ul
 		li.repo(v-for="repo in repos")
