@@ -27,9 +27,9 @@ export default class GithubTile extends Vue {
 	padding 1rem
 	grid-column span 2
 
-	&:hover
-		grid-column span 3
-
 	a:hover
 		color blue !important
+
+	h5
+		font-weight bold
 </style>
