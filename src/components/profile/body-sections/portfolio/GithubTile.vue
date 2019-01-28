@@ -1,9 +1,9 @@
 <template lang="pug">
-.github-tile.card.grey
+.github-tile.card.grey.lighten-2
 	h5 Latest Github Activity
 	ul
 		li.repo(v-for="repo in repos")
-			a.black-text(:href="repo.html_url") {{ repo.name }}
+			a.black-text(:href="repo.html_url") {{ repo.name }} ({{ repo.language }})
 </template>
 
 <script lang="ts">
@@ -27,9 +27,9 @@ export default class GithubTile extends Vue {
 	padding 1rem
 	grid-column span 2
 
-	&:hover
-		grid-column span 3
-
 	a:hover
 		color blue !important
+
+	h5
+		font-weight bold
 </style>
