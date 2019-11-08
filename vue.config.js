@@ -11,17 +11,17 @@ module.exports = {
 		],
 	},
 	chainWebpack: config => {
-		config.module
-			.rule("vue")
-			.use("vue-loader")
-			.tap(options => {
-				options.loaders.stylus = options.loaders.stylus.concat({
-					loader: "stylus-resources-loader",
-					options: {
-						resources: path.resolve("./src/assets/_base.styl"),
-					},
-				})
-				return options
-			})
+		const types = ["vue-modules", "vue", "normal-modules", "normal"]
+		types.forEach(type =>
+			addStyleResource(config.module.rule("stylus").oneOf(type)),
+		)
 	},
+}
+
+function addStyleResource(rule) {
+	rule.use("style-resource")
+		.loader("style-resources-loader")
+		.options({
+			patterns: [path.resolve(__dirname, "./src/assets/_base.styl")],
+		})
 }
