@@ -20,7 +20,7 @@
 				ContactBubble(url="https://www.pinterest.com/roller4life/", icon="pinterest", name="Pinterest")
 
 		.row
-			a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico Salvador CV.pdf")
+			a#resumeLink.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="../static/files/Nico-Salvador-CV.pdf")
 				MaterialIcon(icon="library_books").left
 				span Resum&#233;
 </template>
@@ -42,16 +42,16 @@ export default class Contacts extends Vue {}
 
 <style lang="stylus" scoped>
 #contacts
-	height 100vh
-	min-height 40rem
-	color white
+  height 100vh
+  min-height 40rem
+  color white
 
-	& > div
-		width 100%
-		center Y absolute
+  & > div
+    width 100%
+    center Y absolute
 
 #resumeLink
-	margin 2rem auto
-	center X relative
-	width 12rem
+  margin 2rem auto
+  center X relative
+  width 12rem
 </style>
