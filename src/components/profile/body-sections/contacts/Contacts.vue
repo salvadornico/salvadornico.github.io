@@ -42,16 +42,16 @@ export default class Contacts extends Vue {}
 
 <style lang="stylus" scoped>
 #contacts
-  height 100vh
-  min-height 40rem
-  color white
+	height 100vh
+	min-height 40rem
+	color white
 
-  & > div
-    width 100%
-    center Y absolute
+	& > div
+		width 100%
+		center Y absolute
 
 #resumeLink
-  margin 2rem auto
-  center X relative
-  width 12rem
+	center X relative
+	margin 2rem auto
+	width 12rem
 </style>
