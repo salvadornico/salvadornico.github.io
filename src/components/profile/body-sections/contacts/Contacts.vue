@@ -13,7 +13,6 @@
 			.center-align
 				ContactBubble(url="mailto:salvador.nico@gmail.com", icon="email", name="Email")
 				ContactBubble(url="https://www.linkedin.com/in/salvadornico", icon="linkedin", name="LinkedIn")
-				ContactBubble(url="https://plus.google.com/u/0/+NicoSalvador", icon="google", name="Google+")
 				ContactBubble(url="https://www.instagram.com/nicolrnzo", icon="instagram", name="Instagram")
 				ContactBubble(url="https://www.facebook.com/salvador.nico", icon="fb", name="Facebook")
 				ContactBubble(url="https://twitter.com/nicoLorenzooo", icon="twitter", name="Twitter")
