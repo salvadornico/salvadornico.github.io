@@ -3,8 +3,9 @@
 	h2 Things I'm Into
 	SectionSoftware
 	SectionMaking
-	SectionMarketing
+	SectionRacing
 	SectionBlading
+	SectionMarketing
 	OtherThings
 </template>
 
@@ -15,14 +16,16 @@ import OtherThings from "./OtherThings.vue"
 import SectionBlading from "./SectionBlading.vue"
 import SectionMaking from "./SectionMaking.vue"
 import SectionMarketing from "./SectionMarketing.vue"
+import SectionRacing from "./SectionRacing.vue"
 import SectionSoftware from "./SectionSoftware.vue"
 
 @Component({
 	components: {
 		SectionSoftware,
 		SectionMaking,
-		SectionMarketing,
+		SectionRacing,
 		SectionBlading,
+		SectionMarketing,
 		OtherThings,
 	},
 })
