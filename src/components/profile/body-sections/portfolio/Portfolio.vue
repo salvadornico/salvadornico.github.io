@@ -30,6 +30,13 @@ import { Component } from "vue-property-decorator"
 export default class Portfolio extends Vue {
 	projects = [
 		{
+			title: "Team Leni Robredo",
+			description:
+				"Built the volunteer registration flow for a Philippine presidential campaign",
+			url: "https://www.teamlenirobredo.com/",
+			image: "tlr.png",
+		},
+		{
 			title: "Chef Plus",
 			description:
 				"A corporate website for a food service equipment company",
