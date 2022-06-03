@@ -1,9 +1,9 @@
 <template lang="pug">
 #app-body
 	h2 Things I'm Into
-	SectionSoftware
 	SectionMaking
 	SectionRacing
+	SectionSoftware
 	SectionBlading
 	SectionMarketing
 	OtherThings

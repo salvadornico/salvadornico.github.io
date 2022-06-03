@@ -9,9 +9,6 @@
 	#thingBox.row.page-section
 		div(v-for="thing in things")
 			Thing(:name="thing.name" :image="thing.image" :link="thing.link")
-
-	#music.row
-		iframe(src="https://embed.spotify.com/?uri=spotify%3Auser%3A12175595202%3Aplaylist%3A0UmSRTsfZlo6dG4XrydQ4w" frameborder="0" allowtransparency="true")
 </template>
 
 <script lang="ts">
@@ -33,24 +30,14 @@ export default class OtherThings extends Vue {
 
 	things = [
 		{
-			image: "DiRT4.png",
-			link: "http://www.codemasters.com/game/dirt-4",
-			name: "DiRT 4",
+			image: "dr2.jpg",
+			link: "https://dirtrally2.dirtgame.com/",
+			name: "Dirt Rally 2.0",
 		},
 		{
-			image: "etr.jpg",
-			link: "https://www.theminimalists.com/etr",
-			name: "Everything That Remains",
-		},
-		{
-			image: "wilderpeople.jpg",
-			link: "http://wilderpeople.film",
-			name: "Hunt for the Wilderpeople",
-		},
-		{
-			image: "switched-on-pop.png",
-			link: "http://www.switchedonpop.com",
-			name: "Switched On Pop",
+			image: "acc.jpg",
+			link: "https://acc.505games.com/",
+			name: "Assetto Corsa Competizione",
 		},
 		{
 			image: "tested-logo.png",
@@ -58,15 +45,26 @@ export default class OtherThings extends Vue {
 			name: "Tested.com",
 		},
 		{
+			image: "njb.jpg",
+			link: "https://www.youtube.com/channel/UC0intLFzLaudFG-xAvUEO-A",
+			name: "Not Just Bikes",
+		},
+		{
+			image: "eeaao.jpg",
+			link:
+				"https://a24films.com/films/everything-everywhere-all-at-once",
+			name: "Everything Everywhere All At Once",
+		},
+		{
+			image: "wilderpeople.jpg",
+			link: "http://wilderpeople.film",
+			name: "Hunt for the Wilderpeople",
+		},
+		{
 			image: "racing_in_the_rain.jpg",
 			link:
 				"http://www.garthstein.com/works/the-art-of-racing-in-the-rain",
 			name: "The Art of Racing in the Rain",
-		},
-		{
-			image: "wiw.jpg",
-			link: "https://www.pri.org/programs/world-words",
-			name: "The World In Words",
 		},
 		{
 			image: "Valo4life.jpg",
