@@ -7,37 +7,36 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build --modern",
-		"lint": "vue-cli-service lint",
-		"deploy": "npm run build && firebase deploy"
+		"lint": "vue-cli-service lint"
 	},
 	"dependencies": {
-		"pug-plain-loader": "^1.0.0",
-		"style-resources-loader": "^1.2.1",
-		"vue": "^2.5.13",
-		"vue-analytics": "^5.12.2",
+		"pug-plain-loader": "^1.1.0",
+		"style-resources-loader": "^1.5.0",
+		"vue": "^2.7.10",
+		"vue-analytics": "^5.22.1",
 		"vue-class-component": "^6.0.0",
 		"vue-meta": "^1.4.3",
 		"vue-property-decorator": "^6.0.0",
-		"vue-router": "^3.0.1",
-		"vuex": "^3.0.1",
+		"vue-router": "^3.6.5",
+		"vuex": "^3.6.2",
 		"vuex-class": "^0.3.0"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "^3.0.0-beta.1",
 		"@vue/cli-plugin-typescript": "^3.0.0-beta.1",
 		"@vue/cli-service": "^3.0.0-beta.1",
-		"postcss-cssnext": "^3.1.0",
+		"postcss-cssnext": "^3.1.1",
 		"prerender-spa-plugin": "^3.3.0",
-		"prettier": "^1.10.2",
+		"prettier": "^1.19.1",
 		"pug": "^2.0.0-rc.4",
 		"pug-loader": "^2.3.0",
-		"stylus": "^0.54.5",
+		"stylus": "^0.54.8",
 		"stylus-loader": "^3.0.1",
 		"tslint": "^5.9.1",
 		"tslint-config-prettier": "^1.8.0",
 		"tslint-config-standard": "^7.0.0",
 		"typescript": "^2.7.2",
-		"vue-template-compiler": "^2.5.13"
+		"vue-template-compiler": "^2.7.10"
 	},
 	"browserslist": [
 		"> 1%",
