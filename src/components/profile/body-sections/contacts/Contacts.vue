@@ -11,7 +11,7 @@
 		.row
 			h4.center-align Get In Touch
 			.center-align
-				ContactBubble(url="mailto:salvador.nico@gmail.com", icon="email", name="Email")
+				ContactBubble(:url="mailtoLink", icon="email", name="Email")
 				ContactBubble(url="https://www.linkedin.com/in/salvadornico", icon="linkedin", name="LinkedIn")
 				ContactBubble(url="https://www.instagram.com/nicolrnzo", icon="instagram", name="Instagram")
 				ContactBubble(url="https://www.facebook.com/salvador.nico", icon="fb", name="Facebook")
@@ -34,6 +34,13 @@ import ContactBubble from "./ContactBubble.vue"
 	components: {
 		ContactBubble,
 		MaterialIcon,
+	},
+	computed: {
+		mailtoLink() {
+			// https://css-tricks.com/how-to-safely-share-your-email-address-on-a-website/#aa-the-javascript-approach
+			const encodedEmail = "c2FsdmFkb3Iubmljb0BnbWFpbC5jb20="
+			return `mailto:${atob(encodedEmail)}`
+		},
 	},
 })
 export default class Contacts extends Vue {}
