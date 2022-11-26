@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
 
       <main class="bg-blue-800 min-h-screen">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center min-h-screen p-4">
           <div class="card md:max-w-[60vw] md:mr-4">
             <Image
               class="max-h-96"
@@ -76,6 +76,11 @@ export default function Home() {
             <h3 class="text-2xl">Let's get in touch!</h3>
           </div>
         </div>
+        <Image
+          class="w-screen max-h-96 object-cover"
+          file="clark.jpg"
+          alt="Clark International Speedway at sunset"
+        />
       </main>
     </>
   );

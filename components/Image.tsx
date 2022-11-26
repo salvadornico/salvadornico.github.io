@@ -30,6 +30,7 @@ export function Image(props: ImagePathOptions) {
     <img
       {...props}
       src={getUrl(props.sizeType)}
+      loading="lazy"
     />
   );
 }
