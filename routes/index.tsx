@@ -1,5 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
+import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
+import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
+import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
 
 export default function Home() {
   return (
@@ -11,16 +13,24 @@ export default function Home() {
       </Head>
 
       <div class="p-4 mx-auto max-w-screen-md">
-        <img
-          src="/logo.svg"
-          class="w-32 h-32"
-          alt="the fresh logo: a sliced lemon dripping with juice"
-        />
-        <p class="my-6">
-          Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
-          file, and refresh.
-        </p>
-        <Counter start={3} />
+        <h1 class="text-2xl mb-3">Nico Salvador</h1>
+
+        <h3>Mandaluyong, Philippines 🇵🇭</h3>
+        <span class="text-xs text-slate-300">(current)</span>
+        <h3>Quezon City, Philippines 🇵🇭</h3>
+        <span class="text-xs text-slate-300">(from)</span>
+
+        <div className="link-icons mt-3">
+          <a class="inline-block" href={'mailto:salvador.nico@gmail.com'}>
+            <IconMail class="w-6 h-6" />
+          </a>
+          <a class="inline-block" href="https://github.com/salvadornico">
+            <IconBrandGithub class="w-6 h-6" />
+          </a>
+          <a class="inline-block" href="https://www.linkedin.com/in/salvadornico">
+            <IconBrandLinkedin class="w-6 h-6" />
+          </a>
+        </div>
       </div>
     </>
   );
