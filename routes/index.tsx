@@ -125,6 +125,8 @@ export default function Home() {
             }
           />
         </div>
+        
+        <script src="js/index.js" defer />
       </main>
     </>
   );

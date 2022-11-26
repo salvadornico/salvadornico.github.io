@@ -6,8 +6,6 @@ interface CollapsibleCardOptions
   child?: ComponentChild;
 }
 
-// TODO: Convert to island
-// Scroll down to show fulll contents when opening
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#events
 
 export function CollapsibleCard(props: CollapsibleCardOptions) {
