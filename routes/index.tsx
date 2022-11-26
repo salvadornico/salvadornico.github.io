@@ -134,15 +134,6 @@ export default function Home() {
             alt="Made with Fresh"
           />
         </a>
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            console.log("Hello");
-
-            // TODO: details accordions
-            // collapse others when opening one
-            // scroll down to show full content (but not so much that top is no longer visible)
-          }); 
-        </script>
       </main>
     </>
   );

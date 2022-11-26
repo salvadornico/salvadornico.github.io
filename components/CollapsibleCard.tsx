@@ -6,6 +6,8 @@ interface CollapsibleCardOptions
   child?: ComponentChild;
 }
 
+// TODO: collapse others when opening one
+// scroll down to show full content (but not so much that top is no longer visible)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#events
 
 export function CollapsibleCard(props: CollapsibleCardOptions) {
