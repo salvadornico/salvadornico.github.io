@@ -125,8 +125,24 @@ export default function Home() {
             }
           />
         </div>
-        
-        <script src="js/index.js" defer />
+
+        <a href="https://fresh.deno.dev">
+          <img
+            width="197"
+            height="37"
+            src="https://fresh.deno.dev/fresh-badge.svg"
+            alt="Made with Fresh"
+          />
+        </a>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            console.log("Hello");
+
+            // TODO: details accordions
+            // collapse others when opening one
+            // scroll down to show full content (but not so much that top is no longer visible)
+          }); 
+        </script>
       </main>
     </>
   );
