@@ -11,8 +11,13 @@ interface CollapsibleCardOptions
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#events
 
 export function CollapsibleCard(props: CollapsibleCardOptions) {
+  const handleClick = () => {
+    console.log("hello");
+    // trigger event here?
+  };
+
   return (
-    <details class="bg-white p-4" {...props}>
+    <details class="bg-white p-4" {...props} onClick={handleClick}>
       <summary>{props.title}</summary>
       {props.child}
     </details>
