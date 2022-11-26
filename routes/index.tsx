@@ -75,6 +75,7 @@ export default function Home() {
               partnerships.
             </p>
             <h3 class="text-2xl">Let's get in touch!</h3>
+            {/* TODO: Add back hvr arrow icon */}
           </div>
         </div>
 
