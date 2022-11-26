@@ -104,7 +104,22 @@ export default function Home() {
                   engineering, business/economics, sport, and community. It's
                   something I love doing both in real life and in the simulator.
                   I've participated in the AAP's Motorsport Development Program,
-                  Touge Battle, and helped organize virtual events for MP Turbo.
+                  Touge Battle, the Philippine Rallycross Series, and helped
+                  organize virtual events for MP Turbo.
+                </p>
+              </>
+            }
+          />
+          <CollapsibleCard
+            title="Software Engineering"
+            child={
+              <>
+                <p>
+                  I've always enjoyed tinkering with technology and poking
+                  around the deepest levels of software settings, so programming
+                  was a natural next step. I love the way it demands both the
+                  ability to solve problems creatively and then the application
+                  of those ideas in a logical and systematic fashion.
                 </p>
               </>
             }
