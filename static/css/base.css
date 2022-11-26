@@ -1,8 +1,11 @@
 * {
-  position: relative
-  font-family: "Open Sans", sans-serif
+  position: relative;
+  font-family: "Open Sans", sans-serif;
 }
 
 .card {
-  font-family: "Monserrat", sans-serif
+  font-family: "Monserrat", sans-serif;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  width: fit-content;
+  max-width: 90vw;
 }
