@@ -2,6 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
+import { CollapsibleCard } from "../components/CollapsibleCard.tsx";
 import { Image } from "../components/Image.tsx";
 
 export default function Home() {
@@ -76,11 +77,47 @@ export default function Home() {
             <h3 class="text-2xl">Let's get in touch!</h3>
           </div>
         </div>
+
         <Image
           class="w-screen max-h-96 object-cover"
           file="clark.jpg"
           alt="Clark International Speedway at sunset"
         />
+
+        <div
+          id="interest-cards"
+          className="flex flex-col items-center gap-4 p-6"
+        >
+          <CollapsibleCard
+            open
+            title="Making Things"
+            child={
+              <>
+                <p>
+                  Design thinking has always been my mindset. There's just
+                  something special about creating something new with your
+                  hands, whatever it is... 3D modelling and printing, Lego,
+                  basic woodworking, and hopefully electronics as well soon.
+                </p>
+                <p>Coding is making too :)</p>
+              </>
+            }
+          />
+          <CollapsibleCard
+            title="Racing"
+            child={
+              <>
+                <p>
+                  Design thinking has always been my mindset. There's just
+                  something special about creating something new with your
+                  hands, whatever it is... 3D modelling and printing, Lego,
+                  basic woodworking, and hopefully electronics as well soon.
+                </p>
+                <p>Coding is making too :)</p>
+              </>
+            }
+          />
+        </div>
       </main>
     </>
   );
