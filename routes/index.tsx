@@ -19,10 +19,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans"
           rel="stylesheet"
         />
-        <link
-          href="css/base.css"
-          rel="stylesheet"
-        />
+        <link href="css/base.css" rel="stylesheet" />
       </Head>
 
       <main class="bg-blue-800 min-h-screen">
@@ -40,16 +37,10 @@ export default function Home() {
               <span class="text-xs text-slate-300">(current)</span>
               <h3>Quezon City, Philippines 🇵🇭</h3>
               <div class="link-icons mt-3">
-                <a
-                  class="inline-block"
-                  href={"mailto:salvador.nico@gmail.com"}
-                >
+                <a class="inline-block" href={"mailto:salvador.nico@gmail.com"}>
                   <IconMail class="w-6 h-6" />
                 </a>
-                <a
-                  class="inline-block"
-                  href="https://github.com/salvadornico"
-                >
+                <a class="inline-block" href="https://github.com/salvadornico">
                   <IconBrandGithub class="w-6 h-6" />
                 </a>
                 <a
@@ -109,12 +100,12 @@ export default function Home() {
             child={
               <>
                 <p>
-                  Design thinking has always been my mindset. There's just
-                  something special about creating something new with your
-                  hands, whatever it is... 3D modelling and printing, Lego,
-                  basic woodworking, and hopefully electronics as well soon.
+                  Racing brings together a lot of my varied interests:
+                  engineering, business/economics, sport, and community. It's
+                  something I love doing both in real life and in the simulator.
+                  I've participated in the AAP's Motorsport Development Program,
+                  Touge Battle, and helped organize virtual events for MP Turbo.
                 </p>
-                <p>Coding is making too :)</p>
               </>
             }
           />
