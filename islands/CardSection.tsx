@@ -1,4 +1,18 @@
+import { getUrl, ImageSize } from "../services/image.service.ts";
 import CollapsibleCard from "./CollapsibleCard.tsx";
+
+const getCardImage = (file: string, alt = "") => (
+  <img
+    class="inline-block"
+    src={getUrl({
+      file,
+      path: "portfolio",
+      sizeType: ImageSize.Thumb,
+    })}
+    alt={alt}
+    loading="lazy"
+  />
+);
 
 export default function CardSection() {
   return (
@@ -7,6 +21,20 @@ export default function CardSection() {
       className="flex flex-col items-center gap-4 p-6"
     >
       <CollapsibleCard open title="Making Things">
+        <div className="max-w-full text-center mb-2">
+          {getCardImage(
+            "PXL_20201115_100450227.jpg",
+            "3D printing in progress",
+          )}
+          {getCardImage(
+            "PXL_20201101_022145074.jpg",
+            "Flight stick mods",
+          )}
+          {getCardImage(
+            "park_design.jpg",
+            "3D printing in progress3D modelled skatepark design",
+          )}
+        </div>
         <p>
           Design thinking has always been my mindset. There's just something
           special about creating something new with your hands, whatever it
