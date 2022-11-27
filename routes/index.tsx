@@ -2,7 +2,6 @@ import { Head } from "$fresh/runtime.ts";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
-import { CollapsibleCard } from "../components/CollapsibleCard.tsx";
 import { Image } from "../components/Image.tsx";
 import CardSection from "../islands/CardSection.tsx";
 
