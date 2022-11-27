@@ -93,6 +93,7 @@
     "https://deno.land/x/importmap@0.2.1/_util.ts": "ada9a9618b537e6c0316c048a898352396c882b9f2de38aba18fd3f2950ede89",
     "https://deno.land/x/importmap@0.2.1/mod.ts": "ae3d1cd7eabd18c01a4960d57db471126b020f23b37ef14e1359bbb949227ade",
     "https://deno.land/x/rutt@0.0.13/mod.ts": "af981cfb95131152bf50fc9140fc00cb3efb6563df2eded1d408361d8577df20",
+    "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/arrow-down.tsx": "464edaa5acaef01d6c0087d0a03e9dfe5762a5dfb02ed0b25f4b014abbeaf4e7",
     "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx": "9d0d78307f0a82f35c472b0d7067ed455dbeab3e247ef6e844397a5596d94f44",
     "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx": "bb7cfcba1102b08bdf0d634ed6a036e1a33fe5baefe45121f28bb753d0e94959",
     "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx": "f334700f502203c920a4a8e223d2985a2d817d7ef2c7789754b076de66761170",

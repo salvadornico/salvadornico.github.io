@@ -9,3 +9,19 @@
   width: fit-content;
   max-width: 90vw;
 }
+
+@keyframes hvr-icon-hang {
+	0% {
+    transform: translateY(6px)
+  }
+	50% {
+    transform: translateY(-2px)
+  }
+	100% {
+    transform: translateY(6px)
+  }
+}
+
+.hvr-icon-hang {
+  animation: infinite ease-in-out 1.5s hvr-icon-hang
+}

@@ -1,4 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
+import IconArrowDown from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/arrow-down.tsx";
 import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
@@ -52,7 +53,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div class="card-text text-white">
+          <div class="card-text text-white mt-2 md:mt-0">
             <h1 class="text-2xl mb-3">Hi, I'm Nico.</h1>
             <p class="mb-2">
               I'm into all sorts of things. Maybe we can work on something
@@ -66,7 +67,7 @@ export default function Home() {
               partnerships.
             </p>
             <h3 class="text-2xl">Let's get in touch!</h3>
-            {/* TODO: Add back hvr arrow icon */}
+            <IconArrowDown class="hvr-icon-hang mt-6" />
           </div>
         </div>
 
