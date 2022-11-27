@@ -1,11 +1,6 @@
-import { useEffect } from "preact/hooks";
 import CollapsibleCard from "./CollapsibleCard.tsx";
 
 export default function CardSection() {
-  useEffect(() => {
-    console.log("effect hook");
-  }, []);
-
   return (
     <div
       id="interest-cards"
