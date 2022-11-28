@@ -11,7 +11,7 @@ export default function CollapsibleCard(props: CollapsibleCardOptions) {
     const target = event.target as HTMLElement;
     const currentTitle = target.textContent;
 
-    target.scrollIntoView({ behavior: "smooth" });
+    // target.scrollIntoView({ behavior: "smooth" });
 
     document.querySelectorAll("details").forEach((el) => {
       if (el.getAttribute("title") !== currentTitle) {
@@ -21,9 +21,13 @@ export default function CollapsibleCard(props: CollapsibleCardOptions) {
   };
 
   return (
-    <details class="bg-white p-4" {...props} onClick={handleClick}>
+    <details
+      class="bg-white p-4 drop-shadow-lg rounded-lg"
+      {...props}
+      onClick={handleClick}
+    >
       <summary class="font-bold">{props.title}</summary>
-      {props.children}
+      <div class="content">{props.children}</div>
     </details>
   );
 }

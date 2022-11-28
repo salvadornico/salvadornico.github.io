@@ -1,3 +1,5 @@
+import { useEffect } from "preact/hooks";
+import { Accordion } from "../services/details-accordion.ts";
 import { getUrl, ImageSize } from "../services/image.service.ts";
 import CollapsibleCard from "./CollapsibleCard.tsx";
 
@@ -19,6 +21,12 @@ const getImageSection = (images: { file: string; alt: string }[]) => (
 );
 
 export default function CardSection() {
+  useEffect(() => {
+    document.querySelectorAll("details").forEach((el) => {
+      new Accordion(el);
+    });
+  }, []);
+
   return (
     <div
       id="interest-cards"
