@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
 
       <main class="bg-blue-800 min-h-screen">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center min-h-screen p-4">
+        <section class="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center min-h-screen p-4">
           <div class="card md:max-w-[60vw] md:mr-4">
             <Image
               class="max-h-96"
@@ -71,7 +71,7 @@ export default function Home() {
             <h3 class="text-2xl">Let's get in touch!</h3>
             <IconArrowDown class="hvr-icon-hang mt-6" />
           </div>
-        </div>
+        </section>
 
         <Image
           class="w-screen max-h-96 object-cover"
@@ -80,6 +80,10 @@ export default function Home() {
         />
 
         <CardSection />
+
+        <section class="flex flex-col p-6 items-center">
+          <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
+        </section>
 
         <a href="https://fresh.deno.dev">
           <img

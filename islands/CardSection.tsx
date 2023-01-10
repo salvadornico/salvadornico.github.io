@@ -28,7 +28,7 @@ export default function CardSection() {
   }, []);
 
   return (
-    <div
+    <section
       id="interest-cards"
       className="flex flex-col items-center gap-4 p-6"
     >
@@ -153,6 +153,6 @@ export default function CardSection() {
           />
         </div>
       </CollapsibleCard>
-    </div>
+    </section>
   );
 }
