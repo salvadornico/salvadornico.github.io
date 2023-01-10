@@ -4,7 +4,25 @@ import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/bran
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
 import { Image } from "../components/Image.tsx";
+import { enjoying } from "../data/enjoying.ts";
 import CardSection from "../islands/CardSection.tsx";
+
+const renderEnjoyedObjects = () => {
+  return enjoying.map((thing) => (
+    <a class="h-[300px] bg-gray-100" href={thing.link}>
+      <div class="overflow-y-hidden max-h-[80%]">
+        <Image
+          file={thing.image}
+          path="things"
+          alt={thing.name}
+        />
+      </div>
+      <div class="text-center text-lg p-2">
+        {thing.name}
+      </div>
+    </a>
+  ));
+};
 
 export default function Home() {
   return (
@@ -83,6 +101,9 @@ export default function Home() {
 
         <section class="flex flex-col p-6 items-center">
           <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
+          <div className="grid md:grid-cols-4 md:gap-4 p-6">
+            {renderEnjoyedObjects()}
+          </div>
         </section>
 
         <a href="https://fresh.deno.dev">
