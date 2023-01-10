@@ -34,8 +34,10 @@ export default function Home() {
             />
             <div class="bg-gray-100 p-4">
               <h1 class="text-2xl mb-3">Nico Salvador</h1>
-              <h3>Mandaluyong, Philippines 🇵🇭</h3>
-              <span class="text-xs text-slate-300">(current)</span>
+              <h3>
+                Mandaluyong, Philippines 🇵🇭{" "}
+                <span class="text-xs text-slate-300">(current)</span>
+              </h3>
               <h3>Quezon City, Philippines 🇵🇭</h3>
               <div class="link-icons mt-3">
                 <a class="inline-block" href={"mailto:salvador.nico@gmail.com"}>
