@@ -6,10 +6,11 @@ import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
 import { Image } from "../components/Image.tsx";
 import { enjoying } from "../data/enjoying.ts";
 import CardSection from "../islands/CardSection.tsx";
+import Footer from "../islands/Footer.tsx";
 
 const renderEnjoyedObjects = () => {
   return enjoying.map((thing) => (
-    <a class="h-[300px] bg-gray-100" href={thing.link}>
+    <a class="rounded h-[300px] bg-gray-100" href={thing.link}>
       <div class="overflow-y-hidden max-h-[80%]">
         <Image
           file={thing.image}
@@ -101,19 +102,12 @@ export default function Home() {
 
         <section class="flex flex-col p-6 items-center">
           <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
-          <div className="grid md:grid-cols-4 md:gap-4 p-6">
+          <div className="grid sm:grid-cols-4 gap-4 p-6">
             {renderEnjoyedObjects()}
           </div>
         </section>
 
-        <a href="https://fresh.deno.dev">
-          <img
-            width="197"
-            height="37"
-            src="https://fresh.deno.dev/fresh-badge.svg"
-            alt="Made with Fresh"
-          />
-        </a>
+        <Footer />
       </main>
     </>
   );
