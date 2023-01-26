@@ -4,7 +4,7 @@ import { getUrl, ImageSize } from "../services/image.service.ts";
 import CollapsibleCard from "./CollapsibleCard.tsx";
 
 const getImageSection = (images: { file: string; alt: string }[]) => (
-  <div className="max-w-full text-center m-2">
+  <div class="max-w-full text-center m-2">
     {images.map(({ file, alt }) => (
       <img
         class="inline-block m-1"
@@ -30,11 +30,11 @@ export default function CardSection() {
   return (
     <section
       id="interest-cards"
-      className="flex flex-col items-center gap-4 p-6"
+      class="flex flex-col items-center gap-4 p-6"
     >
       <h1 class="text-2xl text-white">Things I'm Into</h1>
       <CollapsibleCard open title="Making">
-        <div className="grid md:grid-cols-2">
+        <div class="grid md:grid-cols-2">
           {getImageSection([
             {
               file: "PXL_20201115_100450227.jpg",
@@ -57,9 +57,8 @@ export default function CardSection() {
           </div>
         </div>
       </CollapsibleCard>
-
       <CollapsibleCard title="Racing">
-        <div className="grid md:grid-cols-2">
+        <div class="grid md:grid-cols-2">
           {getImageSection([
             {
               file: "mirage-cis",
@@ -91,7 +90,7 @@ export default function CardSection() {
         </p>
       </CollapsibleCard>
       <CollapsibleCard title="Inline Skating">
-        <div className="grid md:grid-cols-[repeat(2,auto)] gap-2 justify-items-center">
+        <div class="grid md:grid-cols-[repeat(2,auto)] gap-2 justify-items-center">
           <div>
             <p>
               I've been at it on and off since 2002 (see my lame 2011-era video

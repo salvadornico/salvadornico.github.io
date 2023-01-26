@@ -10,7 +10,7 @@ import Footer from "../islands/Footer.tsx";
 
 const renderEnjoyedObjects = () => {
   return enjoying.map((thing) => (
-    <a class="rounded h-[300px] bg-gray-100" href={thing.link}>
+    <a class="rounded h-[320px] bg-gray-100" href={thing.link}>
       <div class="overflow-y-hidden max-h-[80%]">
         <Image
           file={thing.image}
@@ -19,7 +19,7 @@ const renderEnjoyedObjects = () => {
         />
       </div>
       <div class="text-center text-lg p-2">
-        {thing.name}
+        <span class="pb-2">{thing.name}</span>
       </div>
     </a>
   ));
@@ -102,7 +102,7 @@ export default function Home() {
 
         <section class="flex flex-col p-6 items-center">
           <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
-          <div className="grid sm:grid-cols-4 gap-4 p-6">
+          <div class="grid sm:grid-cols-4 gap-4 p-6 max-w-screen-lg">
             {renderEnjoyedObjects()}
           </div>
         </section>

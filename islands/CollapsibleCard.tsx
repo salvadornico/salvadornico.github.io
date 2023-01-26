@@ -22,7 +22,7 @@ export default function CollapsibleCard(props: CollapsibleCardOptions) {
 
   return (
     <details
-      class="bg-white p-4 drop-shadow-lg rounded-lg"
+      class="bg-white p-4 drop-shadow-lg rounded-lg max-w-screen-lg"
       {...props}
       onClick={handleClick}
     >
