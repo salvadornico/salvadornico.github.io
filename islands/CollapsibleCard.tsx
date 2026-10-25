@@ -1,7 +1,7 @@
 import { ComponentChildren, JSX } from "preact";
 
 interface CollapsibleCardOptions
-  extends JSX.HTMLAttributes<HTMLDetailsElement> {
+  extends JSX.DetailsHTMLAttributes<HTMLDetailsElement> {
   title: string;
   children?: ComponentChildren;
 }
@@ -22,7 +22,7 @@ export default function CollapsibleCard(props: CollapsibleCardOptions) {
 
   return (
     <details
-      class="bg-white p-4 drop-shadow-lg rounded-lg max-w-screen-lg"
+      class="bg-white p-4 drop-shadow-lg rounded-lg max-w-5xl"
       {...props}
       onClick={handleClick}
     >

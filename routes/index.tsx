@@ -1,8 +1,10 @@
-import { Head } from "$fresh/runtime.ts";
-import IconArrowDown from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/arrow-down.tsx";
-import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
-import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
-import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
+import { Head } from "fresh/runtime";
+import {
+  IconArrowDown,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+} from "@tabler/icons-preact";
 import { Image } from "../components/Image.tsx";
 import { EnjoyedThing, getEnjoying } from "../data/enjoying.ts";
 import CardSection from "../islands/CardSection.tsx";
@@ -36,15 +38,17 @@ export default async function Home() {
       <Head>
         <title>Nico Salvador</title>
         <link
+          key="favicon"
           rel="shortcut icon"
           type="image/png"
           href="https://res.cloudinary.com/salvadornico/image/upload/v1507347645/Portfolio/icon.png"
         />
         <link
+          key="fonts"
           href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans"
           rel="stylesheet"
         />
-        <link href="css/base.css" rel="stylesheet" />
+        <link key="base-css" href="css/base.css" rel="stylesheet" />
       </Head>
 
       <main class="bg-blue-800 min-h-screen">
@@ -107,7 +111,7 @@ export default async function Home() {
         {enjoying.length > 0 && (
           <section class="flex flex-col p-6 items-center">
             <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
-            <div class="grid sm:grid-cols-4 gap-4 p-6 max-w-screen-lg">
+            <div class="grid sm:grid-cols-4 gap-4 p-6 max-w-5xl">
               {renderEnjoyedObjects(enjoying)}
             </div>
           </section>
