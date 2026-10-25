@@ -60,7 +60,7 @@ export class Accordion {
       {
         duration: 400,
         easing: "ease-out",
-      }
+      },
     );
 
     // When the animation is complete, call onAnimationFinish()
@@ -103,7 +103,7 @@ export class Accordion {
       {
         duration: 400,
         easing: "ease-out",
-      }
+      },
     );
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => this.onAnimationFinish(true);

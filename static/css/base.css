@@ -5,23 +5,24 @@
 
 .card {
   font-family: "Monserrat", sans-serif;
-  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0
+    0 0 / 0.08));
   width: fit-content;
   max-width: 90vw;
 }
 
 @keyframes hvr-icon-hang {
-	0% {
-    transform: translateY(6px)
+  0% {
+    transform: translateY(6px);
   }
-	50% {
-    transform: translateY(-2px)
+  50% {
+    transform: translateY(-2px);
   }
-	100% {
-    transform: translateY(6px)
+  100% {
+    transform: translateY(6px);
   }
 }
 
 .hvr-icon-hang {
-  animation: infinite ease-in-out 1.5s hvr-icon-hang
+  animation: infinite ease-in-out 1.5s hvr-icon-hang;
 }
