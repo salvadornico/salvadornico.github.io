@@ -2,7 +2,7 @@ import { JSX } from "preact";
 import { getUrl, ImagePathOptions } from "../services/image.service.ts";
 
 export function Image(
-  props: JSX.HTMLAttributes<HTMLImageElement> & ImagePathOptions,
+  props: JSX.ImgHTMLAttributes<HTMLImageElement> & ImagePathOptions,
 ) {
   return (
     <img

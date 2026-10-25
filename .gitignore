@@ -1,1 +1,6 @@
 .env
+
+# Fresh build directory
+_fresh/
+# npm + other dependencies
+node_modules/
