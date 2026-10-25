@@ -4,19 +4,22 @@ import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/bran
 import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-linkedin.tsx";
 import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/mail.tsx";
 import { Image } from "../components/Image.tsx";
-import { enjoying } from "../data/enjoying.ts";
+import { EnjoyedThing, getEnjoying } from "../data/enjoying.ts";
 import CardSection from "../islands/CardSection.tsx";
 import Footer from "../islands/Footer.tsx";
 
-const renderEnjoyedObjects = () => {
+const renderEnjoyedObjects = (enjoying: EnjoyedThing[]) => {
   return enjoying.map((thing) => (
-    <a class="rounded h-[320px] bg-gray-100" href={thing.link}>
-      <div class="overflow-y-hidden max-h-[80%]">
-        <Image
-          file={thing.image}
-          path="things"
-          alt={thing.name}
-        />
+    <a class="flex flex-col rounded h-[320px] bg-gray-100" href={thing.link}>
+      <div class="flex-1 min-h-0 overflow-hidden">
+        {thing.image && (
+          <img
+            class="w-full h-full object-cover"
+            src={thing.image}
+            alt={thing.name}
+            loading="lazy"
+          />
+        )}
       </div>
       <div class="text-center text-lg p-2">
         <span class="pb-2">{thing.name}</span>
@@ -25,7 +28,9 @@ const renderEnjoyedObjects = () => {
   ));
 };
 
-export default function Home() {
+export default async function Home() {
+  const enjoying = await getEnjoying();
+
   return (
     <>
       <Head>
@@ -99,12 +104,14 @@ export default function Home() {
 
         <CardSection />
 
-        <section class="flex flex-col p-6 items-center">
-          <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
-          <div class="grid sm:grid-cols-4 gap-4 p-6 max-w-screen-lg">
-            {renderEnjoyedObjects()}
-          </div>
-        </section>
+        {enjoying.length > 0 && (
+          <section class="flex flex-col p-6 items-center">
+            <h1 class="text-2xl text-white">Things I'm Enjoying Lately</h1>
+            <div class="grid sm:grid-cols-4 gap-4 p-6 max-w-screen-lg">
+              {renderEnjoyedObjects(enjoying)}
+            </div>
+          </section>
+        )}
 
         <Footer />
       </main>

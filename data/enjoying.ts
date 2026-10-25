@@ -1,42 +1,24 @@
-export const enjoying = [
-  {
-    image: "dr2.jpg",
-    link: "https://dirtrally2.dirtgame.com/",
-    name: "Dirt Rally 2.0",
-  },
-  {
-    image: "acc.jpg",
-    link: "https://acc.505games.com/",
-    name: "Assetto Corsa Competizione",
-  },
-  {
-    image: "tested-logo.png",
-    link: "https://www.tested.com",
-    name: "Tested.com",
-  },
-  {
-    image: "njb.jpg",
-    link: "https://www.youtube.com/channel/UC0intLFzLaudFG-xAvUEO-A",
-    name: "Not Just Bikes",
-  },
-  {
-    image: "eeaao.jpg",
-    link: "https://a24films.com/films/everything-everywhere-all-at-once",
-    name: "Everything Everywhere All At Once",
-  },
-  {
-    image: "wilderpeople.jpg",
-    link: "http://wilderpeople.film",
-    name: "Hunt for the Wilderpeople",
-  },
-  {
-    image: "racing_in_the_rain.jpg",
-    link: "http://www.garthstein.com/works/the-art-of-racing-in-the-rain",
-    name: "The Art of Racing in the Rain",
-  },
-  {
-    image: "Valo4life.jpg",
-    link: "http://www.valo4life.com/",
-    name: "Valo 4 Life",
-  },
-];
+import { cached } from "../services/kv-cache.ts";
+import { getRecentlyPlayed } from "../services/steam.service.ts";
+import { getRecentlyWatched } from "../services/trakt.service.ts";
+
+export type EnjoyedThing = {
+  name: string;
+  link: string;
+  image?: string;
+};
+
+const CACHE_TTL = 60 * 60 * 1000; // 1 hour
+
+export const getEnjoying = async (): Promise<EnjoyedThing[]> => {
+  const results = await Promise.allSettled([
+    cached(["enjoying", "steam"], CACHE_TTL, () => getRecentlyPlayed(4)),
+    cached(["enjoying", "trakt"], CACHE_TTL, () => getRecentlyWatched(4)),
+  ]);
+
+  return results.flatMap((result) => {
+    if (result.status === "fulfilled") return result.value;
+    console.error("Failed to load enjoyed things", result.reason);
+    return [];
+  });
+};
